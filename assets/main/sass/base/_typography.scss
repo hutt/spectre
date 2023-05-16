@@ -66,6 +66,7 @@
 		font-weight: _font(weight-heading);
 		line-height: 1.5;
 		letter-spacing: 0.075em;
+		text-transform: uppercase;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
 
 		a {
@@ -79,7 +80,6 @@
 		font-size: 4rem;
 		line-height: 1.1;
 		margin: 0 0 _size(element-margin) 0;
-		text-transform: uppercase;
 	}
 
 	h2 {
