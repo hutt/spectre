@@ -1949,7 +1949,7 @@ input[type=checkbox] + label:before,
 input[type=radio] + label:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
   font-style: normal;
   font-weight: normal;
   text-transform: none !important;
@@ -2076,7 +2076,7 @@ input[type=radio]:focus + label:before {
 .icon:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
   font-style: normal;
   font-weight: normal;
   text-transform: none !important;
@@ -2547,7 +2547,7 @@ table.alt tbody tr td {
 .pagination .next:before, .pagination .previous:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
   font-style: normal;
   font-weight: normal;
   text-transform: none !important;
@@ -3684,7 +3684,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #navPanelToggle:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
   font-style: normal;
   font-weight: normal;
   text-transform: none !important;
@@ -3783,7 +3783,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #navPanel .close:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
   font-style: normal;
   font-weight: normal;
   text-transform: none !important;
