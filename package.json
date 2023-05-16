@@ -1,8 +1,8 @@
 {
-    "name": "massively",
-    "description": "This is Massively, a text-heavy, article-oriented theme for Ghost.",
+    "name": "schulzingly",
+    "description": "This is Schulzingly, a text-heavy, article-oriented theme for Ghost.",
     "demo": "https://massively.ghost.io",
-    "version": "1.1.0",
+    "version": "1.0",
     "engines": {
         "ghost": ">=4.0.0",
         "ghost-api": "v4"
@@ -21,15 +21,15 @@
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Jannis Hutt",
+        "email": "themes@hutt.io",
+        "url": "https://hutt.io"
     },
     "gpm": {
         "type": "theme",
         "categories": [
             "Minimal",
-            "Magazine"
+            "Onepager"
         ]
     },
     "keywords": [
@@ -39,14 +39,14 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Massively.git"
+        "url": "https://github.com/hutt/Schulzingly.git"
     },
-    "bugs": "https://github.com/TryGhost/Massively/issues",
+    "bugs": "https://github.com/hutt/Schulzingly/issues",
     "contributors": [
         {
-            "name": "ajlkn",
-            "email": "aj@lkn.io",
-            "url": "https://twitter.com/ajlkn"
+            "name": "hutt",
+            "email": "themes@hutt.io",
+            "url": "https://hutt.io"
         }
     ],
     "devDependencies": {
