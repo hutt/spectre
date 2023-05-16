@@ -1,7 +1,7 @@
-# Massively
+# Schulzingly
 
-This is Massively, a text-heavy, article-oriented design built around a huge background
-image and scroll effects powered by Scrollex. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org)
+This is Schulzingly, a text-heavy, article-oriented design built around a huge background
+image and scroll effects powered by Scrollex. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org). Now forked by [hutt](https://github.com/hutt) to meet the needs of a new project.
 
 **Demo: https://massively.ghost.io**
 
