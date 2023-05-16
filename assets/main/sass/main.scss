@@ -5,13 +5,13 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import 'libs/fixed-grid';
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:400,900');
 
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+// Fonts
+// Merriweather.
+@import 'base/merriweather';
+
+// Source Sans.
+@import 'base/source-sans-pro';
 
 // Breakpoints.
 
@@ -69,107 +69,7 @@
 	@import 'layout/main';
 	@import 'layout/footer';
 	@import 'layout/navPanel';
-    @import 'layout/ghost';
+  @import 'layout/ghost';
 
-/*!
- * Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- * Copyright 2023 Fonticons, Inc.
- */
-// -------------------------
-
-@import 'fontawesome/functions';
-@import 'fontawesome/variables';
-@import 'fontawesome/mixins';
-@import 'fontawesome/core';
-@import 'fontawesome/sizing';
-@import 'fontawesome/fixed-width';
-@import 'fontawesome/list';
-@import 'fontawesome/bordered-pulled';
-@import 'fontawesome/animated';
-@import 'fontawesome/rotated-flipped';
-@import 'fontawesome/stacked';
-@import 'fontawesome/icons';
-@import 'fontawesome/screen-reader';
-
-/*!
- * Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- * Copyright 2023 Fonticons, Inc.
- * Regular
- */
-
-:root, :host {
-  --#{$fa-css-prefix}-style-family-classic: '#{ $fa-style-family }';
-  --#{$fa-css-prefix}-font-regular: normal 400 1em/1 '#{ $fa-style-family }';
-}
-
-@font-face {
-  font-family: 'Font Awesome 6 Free';
-  font-style: normal;
-  font-weight: 400;
-  font-display: $fa-font-display;
-  src: url('#{$fa-font-path}/fa-regular-400.woff2') format('woff2'),
-    url('#{$fa-font-path}/fa-regular-400.ttf') format('truetype');
-}
-
-.far,
-.#{$fa-css-prefix}-regular {
-  font-weight: 400;
-}
-
-
-/*!
- * Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- * Copyright 2023 Fonticons, Inc.
- * Brands
- */
-:root, :host {
-  --#{$fa-css-prefix}-style-family-brands: 'Font Awesome 6 Brands';
-  --#{$fa-css-prefix}-font-brands: normal 400 1em/1 'Font Awesome 6 Brands';
-}
-
-@font-face {
-  font-family: 'Font Awesome 6 Brands';
-  font-style: normal;
-  font-weight: 400;
-  font-display: $fa-font-display;
-  src: url('#{$fa-font-path}/fa-brands-400.woff2') format('woff2'),
-    url('#{$fa-font-path}/fa-brands-400.ttf') format('truetype');
-}
-
-.fab,
-.#{$fa-css-prefix}-brands {
-  font-weight: 400;
-}
-
-@each $name, $icon in $fa-brand-icons {
-  .#{$fa-css-prefix}-#{$name}:before { content: unquote("\"#{ $icon }\""); }
-}
-
-/*!
- * Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- * Copyright 2023 Fonticons, Inc.
- * Solid
- */
-
-:root, :host {
-  --#{$fa-css-prefix}-style-family-classic: '#{ $fa-style-family }';
-  --#{$fa-css-prefix}-font-solid: normal 900 1em/1 '#{ $fa-style-family }';
-}
-
-@font-face {
-  font-family: 'Font Awesome 6 Free';
-  font-style: normal;
-  font-weight: 900;
-  font-display: $fa-font-display;
-  src: url('#{$fa-font-path}/fa-solid-900.woff2') format('woff2'),
-    url('#{$fa-font-path}/fa-solid-900.ttf') format('truetype');
-}
-
-.fas,
-.#{$fa-css-prefix}-solid {
-  font-weight: 900;
-}
+// Font Awesome.
+@import	'base/fa';
