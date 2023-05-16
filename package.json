@@ -2,7 +2,7 @@
     "name": "schulzingly",
     "description": "This is Schulzingly, a text-heavy, article-oriented theme for Ghost.",
     "demo": "https://massively.ghost.io",
-    "version": "1.0",
+    "version": "1.0.0",
     "engines": {
         "ghost": ">=4.0.0",
         "ghost-api": "v4"
