@@ -43,7 +43,7 @@
 	@mixin fixed-grid-columns($columns) {
 
 		> * {
-			$cell-width: 100% / $columns;
+			$cell-width: calc(100% / $columns);
 			width: #{$cell-width};
 		}
 
@@ -56,7 +56,7 @@
 
 		// Apply padding.
 			> * {
-				$cell-width: 100% / $columns;
+				$cell-width: calc(100% / $columns);
 
 				padding: ($gutters * 0.5);
 				width: $cell-width;

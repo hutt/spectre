@@ -51,7 +51,7 @@
 		.previous {
 			&:before {
 				content: '\f104';
-				margin-right: (0.75em / 0.8);
+				margin-right: calc(0.75em / 0.8);
 			}
 		}
 
@@ -59,7 +59,7 @@
 			&:before {
 				content: '\f105';
 				float: right;
-				margin-left: (0.75em / 0.8);
+				margin-left: calc(0.75em / 0.8);
 			}
 		}
 
