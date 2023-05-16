@@ -39,41 +39,32 @@
   font-weight: 700;
   src: url("../fonts/merriweather-v30-cyrillic_latin_latin-ext-700italic.woff2") format("woff2"), url("../fonts/merriweather-v30-cyrillic_latin_latin-ext-700italic.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* source-code-pro-regular - cyrillic_greek_latin_latin-ext */
+/* source-sans-pro-regular - cyrillic_greek_latin_latin-ext */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Source Code Pro";
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-regular.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-regular.woff2") format("woff2"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-regular.woff") format("woff"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-regular.ttf") format("truetype"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-regular.svg#SourceCodePro") format("svg"); /* Legacy iOS */
+  src: url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-regular.woff2") format("woff2"), url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-regular.woff") format("woff"), url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-regular.ttf") format("truetype"), url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-regular.svg#SourceSansPro") format("svg"); /* Legacy iOS */
 }
-/* source-code-pro-italic - cyrillic_greek_latin_latin-ext */
+/* source-sans-pro-900 - cyrillic_greek_latin_latin-ext */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Source Code Pro";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-italic.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-italic.woff2") format("woff2"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-italic.woff") format("woff"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-italic.ttf") format("truetype"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-italic.svg#SourceCodePro") format("svg"); /* Legacy iOS */
-}
-/* source-code-pro-900 - cyrillic_greek_latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Source Code Pro";
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 900;
-  src: url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-900.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-900.eot?#iefix") format("embedded-opentype"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-900.woff2") format("woff2"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-900.woff") format("woff"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-900.ttf") format("truetype"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-900.svg#SourceCodePro") format("svg"); /* Legacy iOS */
+  src: url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-900.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-900.eot?#iefix") format("embedded-opentype"), url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-900.woff2") format("woff2"), url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-900.woff") format("woff"), url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-900.ttf") format("truetype"), url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-900.svg#SourceSansPro") format("svg"); /* Legacy iOS */
 }
-/* source-code-pro-900italic - cyrillic_greek_latin_latin-ext */
+/* source-sans-pro-900italic - cyrillic_greek_latin_latin-ext */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Source Code Pro";
+  font-family: "Source Sans Pro";
   font-style: italic;
   font-weight: 900;
-  src: url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-900italic.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-900italic.eot?#iefix") format("embedded-opentype"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-900italic.woff2") format("woff2"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-900italic.woff") format("woff"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-900italic.ttf") format("truetype"), url("../fonts/source-code-pro-v22-cyrillic_greek_latin_latin-ext-900italic.svg#SourceCodePro") format("svg"); /* Legacy iOS */
+  src: url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-900italic.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-900italic.eot?#iefix") format("embedded-opentype"), url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-900italic.woff2") format("woff2"), url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-900italic.woff") format("woff"), url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-900italic.ttf") format("truetype"), url("../fonts/source-sans-pro-v21-cyrillic_greek_latin_latin-ext-900italic.svg#SourceSansPro") format("svg"); /* Legacy iOS */
 }
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
