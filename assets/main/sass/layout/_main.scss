@@ -41,6 +41,8 @@
 						font-size: 4rem;
 						line-height: 1.1;
 						margin: 0 0 _size(element-margin) 0;
+						-webkit-hyphens: auto;
+						hyphens: auto;
 					}
 				}
 			}
@@ -67,6 +69,8 @@
 							font-size: 2.5rem;
 							line-height: 1.2;
 							margin: 0 0 (_size(element-margin) * 0.75) 0;
+							-webkit-hyphens: auto;
+							hyphens: auto;
 						}
 					}
 				}
@@ -110,6 +114,8 @@
 					gutters:			(_size(padding) * 2.5),
 					flush:				false
 				));
+				-webkit-hyphens: auto;
+				hyphens: auto;
 			}
 
 			@include breakpoint('<=small') {

@@ -3097,6 +3097,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   font-size: 4rem;
   line-height: 1.1;
   margin: 0 0 2rem 0;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 #main > .post.featured {
   text-align: center;
@@ -3118,6 +3120,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     font-size: 2.5rem;
     line-height: 1.2;
     margin: 0 0 1.5rem 0;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
 }
 #main > .posts {
@@ -3171,6 +3175,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   border-top-width: 0;
 }
 @media screen and (max-width: 980px) {
+  #main > .posts {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
   #main > .posts > * {
     width: 50%;
   }
