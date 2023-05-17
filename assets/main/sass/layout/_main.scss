@@ -152,7 +152,7 @@
 			}
 		}
 
-		> .posts .home {
+		> .posts .home article {
 			@include fixed-grid((
 				columns:			2,
 				gutters:			(_size(padding) * 4),
@@ -163,7 +163,7 @@
 			width: 100%;
 			padding: 0;
 
-			> article div.img {
+			> div.img {
 				&:nth-child(2n - 1) {
 					border-left-width: 2px;
 				}
@@ -187,7 +187,7 @@
 				}
 			}
 
-			> article div.txt {
+			> div.txt {
 				&:nth-child(2n - 1) {
 					border-left-width: 2px;
 				}
