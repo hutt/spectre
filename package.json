@@ -81,32 +81,32 @@
             },
             "twitter": {
                 "type": "text",
-                "default": "https://twitter.com/felixsschulz",
+                "default": "#",
                 "group": "site-wide"
             },
             "mastodon": {
                 "type": "text",
-                "default": "https://mastodon.social/@felixsschulz",
+                "default": "#",
                 "group": "site-wide"
             },
             "instagram": {
                 "type": "text",
-                "default": "https://instagram.com/felixsschulz",
+                "default": "#",
                 "group": "site-wide"
             },
             "tiktok": {
                 "type": "text",
-                "default": "https://tiktok.com/@felixsschulz",
+                "default": "#",
                 "group": "site-wide"
             },
             "youtube": {
                 "type": "text",
-                "default": "https://youtube.com/felixsschulz",
+                "default": "#",
                 "group": "site-wide"
             },
             "facebook": {
                 "type": "text",
-                "default": "https://facebook.com/felixsschulz",
+                "default": "#",
                 "group": "site-wide"
             }
         }
