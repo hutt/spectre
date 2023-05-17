@@ -6,8 +6,7 @@ into the {body} of the default.hbs template --}}
 <main id="main">
 
     {{!-- Featured Post --}}
-    {{#is "home"}}
-    {{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
+    {{#get "pages" filter="featured:true+tag:aboutme" limit="1" as |featured_post|}}
         {{#foreach featured_post}}
             <article class="post featured">
                 <header class="major">
@@ -19,35 +18,32 @@ into the {body} of the default.hbs template --}}
                 <a href="{{url}}" class="image main"><img src="{{img_url feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" /></a>
                 {{/if}}
                 <ul class="actions special">
-                    <li><a href="{{url}}" class="button large">{{t "Full Story"}}</a></li>
+                    <li><a href="{{url}}" class="button large">{{t "Read more"}}</a></li>
                 </ul>
             </article>
         {{/foreach}}
     {{/get}}
-    {{/is}}
 
-    {{!-- Posts --}}
+    {{!-- Pages with tag start --}}
     <section class="posts">
 
-        {{#foreach posts}}
-        <article>
-            <header>
-                <span class="date">{{date format="MMM D, YYYY"}}</span>
-                <h2><a href="{{url}}">{{title}}</a></h2>
-            </header>
-            {{#if feature_image}}
-            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-            {{/if}}
-            <p>{{excerpt words="33"}}</p>
-            <ul class="actions special">
-                <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
-            </ul>
-        </article>
-        {{/foreach}}
-
+        {{#get "pages" filter="tag:start"}}
+            {{#foreach pages}}
+            <article>
+                <header>
+                    <span class="date">{{date format="MMM D, YYYY"}}</span>
+                    <h2><a href="{{url}}">{{title}}</a></h2>
+                </header>
+                {{#if feature_image}}
+                <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+                {{/if}}
+                <p>{{excerpt words="33"}}</p>
+                <ul class="actions special">
+                    <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
+                </ul>
+            </article>
+            {{/foreach}}
+        {{/get}}
     </section>
-
-    {{!-- Pagination --}}
-    {{pagination}}
 
 </main>
