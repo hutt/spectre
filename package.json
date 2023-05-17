@@ -81,33 +81,32 @@
             },
             "twitter": {
                 "type": "text",
-                "default": "#",
-                "group": "site-wide"
+                "default": "#"
             },
             "mastodon": {
                 "type": "text",
-                "default": "#",
-                "group": "site-wide"
+                "default": "#"
             },
             "instagram": {
                 "type": "text",
-                "default": "#",
-                "group": "site-wide"
+                "default": "#"
             },
             "tiktok": {
                 "type": "text",
-                "default": "#",
-                "group": "site-wide"
+                "default": "#"
             },
             "youtube": {
                 "type": "text",
-                "default": "#",
-                "group": "site-wide"
+                "default": "#"
             },
             "facebook": {
                 "type": "text",
-                "default": "#",
-                "group": "site-wide"
+                "default": "#"
+            },
+            "show_social_media_links_under_blogposts": {
+                "type": "boolean",
+                "default": false,
+                "group": "post"
             }
         }
     }

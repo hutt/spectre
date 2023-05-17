@@ -4058,6 +4058,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   margin: 4rem auto 0;
   max-width: 700px;
 }
+.post-footer ul.icons li a {
+  color: #333333;
+}
 
 .authors {
   display: flex;
