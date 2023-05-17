@@ -3310,45 +3310,80 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   flex-grow: 0;
 }
 #main > .posts .home article > * {
-  width: 50%;
+  width: 100%;
 }
 #main > .posts .home article > * {
   padding: 4rem;
+  width: 100%;
+}
+#main > .posts .home article > div.img {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -moz-align-items: -moz-stretch;
+  -webkit-align-items: -webkit-stretch;
+  -ms-align-items: -ms-stretch;
+  align-items: stretch;
+  text-align: center;
+}
+#main > .posts .home article > div.img > * {
+  -moz-flex-shrink: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  -moz-flex-grow: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+}
+#main > .posts .home article > div.img > * {
   width: 50%;
 }
-#main > .posts .home article > div.img:nth-child(2n-1) {
-  border-left-width: 2px;
-}
-#main > .posts .home article > div.img:nth-child(-n+2) {
-  border-top-width: 2px;
-}
-#main > .posts .home article > div.img:nth-child(n) {
-  border-left-width: 0;
-}
-#main > .posts .home article > div.img:nth-child(-n+1) {
-  border-top-width: 0;
+#main > .posts .home article > div.img > * {
+  padding: 4rem;
+  width: 50%;
 }
 #main > .posts .home article > div.img .image {
   max-width: 25rem;
   margin-left: auto;
   margin-right: auto;
 }
-#main > .posts .home article > div.txt:nth-child(2n-1) {
-  border-left-width: 2px;
+#main > .posts .home article > div.txt {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -moz-align-items: -moz-stretch;
+  -webkit-align-items: -webkit-stretch;
+  -ms-align-items: -ms-stretch;
+  align-items: stretch;
+  text-align: center;
 }
-#main > .posts .home article > div.txt:nth-child(-n+2) {
-  border-top-width: 2px;
+#main > .posts .home article > div.txt > * {
+  -moz-flex-shrink: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  -moz-flex-grow: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
 }
-#main > .posts .home article > div.txt:nth-child(n) {
-  border-left-width: 0;
+#main > .posts .home article > div.txt > * {
+  width: 50%;
 }
-#main > .posts .home article > div.txt:nth-child(-n+1) {
-  border-top-width: 0;
-}
-#main > .posts .home article > div.txt .image {
-  max-width: 25rem;
-  margin-left: auto;
-  margin-right: auto;
+#main > .posts .home article > div.txt > * {
+  padding: 4rem;
+  width: 50%;
 }
 @media screen and (max-width: 736px) {
   #main > * {
