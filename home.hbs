@@ -5,8 +5,8 @@ into the {body} of the default.hbs template --}}
 {{!-- Main --}}
 <main id="main">
 
-    {{!-- Pages with internal tag #aboutme --}}
-    {{#get "pages" filter="tag:hash-aboutme" limit="1"}}
+    {{!-- Pages with internal tag #aboutpage --}}
+    {{#get "pages" filter="tag:hash-aboutpage" limit="1"}}
         {{#foreach pages}}
             <article class="post featured">
                 <header class="major">
@@ -35,8 +35,6 @@ into the {body} of the default.hbs template --}}
                         <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
                         {{/if}}
                     </article>
-                </section>
-                <section class="posts">
                     <article>
                         <header>
                             <span class="date">{{date format="MMM D, YYYY"}}</span>
@@ -63,8 +61,6 @@ into the {body} of the default.hbs template --}}
                             <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
                         </ul>
                     </article>
-                </section>
-                <section class="posts">
                     <article>
                         {{#if feature_image}}
                         <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
