@@ -5,9 +5,9 @@ into the {body} of the default.hbs template --}}
 {{!-- Main --}}
 <main id="main">
 
-    {{!-- Featured Post --}}
-    {{#get "pages" filter="featured:true+tag:aboutme" limit="1" as |featured_post|}}
-        {{#foreach featured_post}}
+    {{!-- Pages with internal tag #aboutme --}}
+    {{#get "pages" filter="tag:hash-aboutme" limit="1"}}
+        {{#foreach pages}}
             <article class="post featured">
                 <header class="major">
                     <span class="date">{{date format="MMM D, YYYY"}}</span>
@@ -24,26 +24,53 @@ into the {body} of the default.hbs template --}}
         {{/foreach}}
     {{/get}}
 
-    {{!-- Pages with tag start --}}
-    <section class="posts">
-
-        {{#get "pages" filter="tag:start"}}
-            {{#foreach pages}}
-            <article>
-                <header>
-                    <span class="date">{{date format="MMM D, YYYY"}}</span>
-                    <h2><a href="{{url}}">{{title}}</a></h2>
-                </header>
-                {{#if feature_image}}
-                <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-                {{/if}}
-                <p>{{excerpt words="33"}}</p>
-                <ul class="actions special">
-                    <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
-                </ul>
-            </article>
-            {{/foreach}}
-        {{/get}}
-    </section>
+    {{!-- Pages with internal tag #start --}}
+    {{#get "pages" filter="tag:hash-start"}}
+        {{#foreach pages}}
+            {{!-- Odd page --}}
+            {{#if @odd}}
+                <section class="posts">
+                        <article>
+                            {{#if feature_image}}
+                            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+                            {{/if}}
+                        </article>
+                    </section>
+                    <section class="posts">
+                        <article>
+                            <header>
+                                <span class="date">{{date format="MMM D, YYYY"}}</span>
+                                <h2><a href="{{url}}">{{title}}</a></h2>
+                            </header>
+                            <p>{{excerpt words="64"}}</p>
+                            <ul class="actions special">
+                                <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
+                            </ul>
+                        </article>
+                    </section>
+            {{else}}
+            {{!-- Even page --}}
+                <section class="posts">
+                        <article>
+                            <header>
+                                <span class="date">{{date format="MMM D, YYYY"}}</span>
+                                <h2><a href="{{url}}">{{title}}</a></h2>
+                            </header>
+                            <p>{{excerpt words="64"}}</p>
+                            <ul class="actions special">
+                                <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
+                            </ul>
+                        </article>
+                    </section>
+                    <section class="posts">
+                        <article>
+                            {{#if feature_image}}
+                            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+                            {{/if}}
+                        </article>
+                    </section>
+            {{/if}}
+        {{/foreach}}
+    {{/get}}
 
 </main>
