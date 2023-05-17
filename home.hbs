@@ -25,50 +25,52 @@ into the {body} of the default.hbs template --}}
     {{/get}}
 
     {{!-- Pages with internal tag #start --}}
-    {{#get "pages" filter="tag:hash-start"}}
+    {{#get "pages" limit="all" filter="tag:hash-start"}}
         {{#foreach pages}}
             {{!-- Odd page --}}
             {{#if @odd}}
                 <section class="posts">
-                        <article>
-                            {{#if feature_image}}
-                            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-                            {{/if}}
-                        </article>
-                    </section>
-                    <section class="posts">
-                        <article>
-                            <header>
-                                <span class="date">{{date format="MMM D, YYYY"}}</span>
-                                <h2><a href="{{url}}">{{title}}</a></h2>
-                            </header>
-                            <p>{{excerpt words="64"}}</p>
-                            <ul class="actions special">
-                                <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
-                            </ul>
-                        </article>
-                    </section>
-            {{else}}
-            {{!-- Even page --}}
+                    <article>
+                        {{#if feature_image}}
+                        <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+                        {{/if}}
+                    </article>
+                </section>
                 <section class="posts">
-                        <article>
-                            <header>
-                                <span class="date">{{date format="MMM D, YYYY"}}</span>
-                                <h2><a href="{{url}}">{{title}}</a></h2>
-                            </header>
-                            <p>{{excerpt words="64"}}</p>
-                            <ul class="actions special">
-                                <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
-                            </ul>
-                        </article>
-                    </section>
-                    <section class="posts">
-                        <article>
-                            {{#if feature_image}}
-                            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-                            {{/if}}
-                        </article>
-                    </section>
+                    <article>
+                        <header>
+                            <span class="date">{{date format="MMM D, YYYY"}}</span>
+                            <h2><a href="{{url}}">{{title}}</a></h2>
+                        </header>
+                        <p>{{excerpt words="64"}}</p>
+                        <ul class="actions special">
+                            <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
+                        </ul>
+                    </article>
+                </section>
+            {{/if}}
+
+            {{!-- Even page --}}
+            {{#if @even}}
+                <section class="posts">
+                    <article>
+                        <header>
+                            <span class="date">{{date format="MMM D, YYYY"}}</span>
+                            <h2><a href="{{url}}">{{title}}</a></h2>
+                        </header>
+                        <p>{{excerpt words="64"}}</p>
+                        <ul class="actions special">
+                            <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
+                        </ul>
+                    </article>
+                </section>
+                <section class="posts">
+                    <article>
+                        {{#if feature_image}}
+                        <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+                        {{/if}}
+                    </article>
+                </section>
             {{/if}}
         {{/foreach}}
     {{/get}}
