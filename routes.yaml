@@ -1,8 +1,5 @@
 routes:
   /: home
-  /blog/rss/:
-    template: rss
-    content_type: text/xml
 
 collections:
   /blog/:
