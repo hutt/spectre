@@ -77,7 +77,37 @@
                     "Modern sans-serif",
                     "Elegant serif"
                 ],
-                "default": "Elegant serif"
+                "default": "Modern sans-serif"
+            },
+            "twitter": {
+                "type": "text",
+                "default": "https://twitter.com/felixsschulz",
+                "group": "site-wide"
+            },
+            "mastodon": {
+                "type": "text",
+                "default": "https://mastodon.social/@felixsschulz",
+                "group": "site-wide"
+            },
+            "instagram": {
+                "type": "text",
+                "default": "https://instagram.com/felixsschulz",
+                "group": "site-wide"
+            },
+            "tiktok": {
+                "type": "text",
+                "default": "https://tiktok.com/@felixsschulz",
+                "group": "site-wide"
+            },
+            "youtube": {
+                "type": "text",
+                "default": "https://youtube.com/felixsschulz",
+                "group": "site-wide"
+            },
+            "facebook": {
+                "type": "text",
+                "default": "https://facebook.com/felixsschulz",
+                "group": "site-wide"
             }
         }
     }
