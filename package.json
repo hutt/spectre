@@ -110,7 +110,8 @@
             },
             "show_feature_image_in_background": {
                 "type": "boolean",
-                "default": true
+                "default": true,
+                "group": "post"
             }
         }
     }
