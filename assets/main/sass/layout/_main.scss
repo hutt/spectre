@@ -152,44 +152,6 @@
 			}
 		}
 
-		> .posts .home article {
-			@include fixed-grid((
-				columns:			1,
-				gutters:			(_size(padding) * 4),
-				horizontal-align:	center,
-				vertical-align:		flex-start,
-				flush:				false
-			));
-			width: 100%;
-			padding: 0;
-
-			> div.img {
-				@include fixed-grid((
-					columns:			2,
-					gutters:			(_size(padding) * 4),
-					horizontal-align:	center,
-					vertical-align:		flex-start,
-					flush:				false
-				));
-
-				.image {
-					max-width: 25rem;
-					margin-left: auto;
-					margin-right: auto;
-				}
-			}
-
-			> div.txt {
-				@include fixed-grid((
-					columns:			2,
-					gutters:			(_size(padding) * 4),
-					horizontal-align:	center,
-					vertical-align:		flex-start,
-					flush:				false
-				));
-			}
-		}
-
 		@include breakpoint('<=small') {
 			> * {
 				@include padding((_size(padding) * 1), (_size(padding) * 1));
