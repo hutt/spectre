@@ -31,19 +31,15 @@ into the {body} of the default.hbs template --}}
             {{#foreach pages}}
             <article>
                 {{#if feature_image}}
-                <div class="img">
-                    <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-                </div>
+                <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
                 {{/if}}
-                <div class="txt">
-                    <header>
-                        <h2><a href="{{url}}">{{title}}</a></h2>
-                    </header>
-                    <p>{{excerpt words="64"}}</p>
-                    <ul class="actions special">
-                        <li><a href="{{url}}" class="button">{{t "Read more"}}</a></li>
-                    </ul>
-                </div>
+                <header>
+                    <h2><a href="{{url}}">{{title}}</a></h2>
+                </header>
+                <p>{{excerpt words="64"}}</p>
+                <ul class="actions special">
+                    <li><a href="{{url}}" class="button">{{t "Read more"}}</a></li>
+                </ul>
             </article>
             {{/foreach}}
         </section>
