@@ -10,9 +10,8 @@ into the {body} of the default.hbs template --}}
         {{#foreach pages}}
             <article class="post featured">
                 <header class="major">
-                    <span class="date">{{date format="MMM D, YYYY"}}</span>
                     <h2><a href="{{url}}">{{title}}</a></h2>
-                    <p>{{excerpt words="64"}}</p>
+                    <p class="home">{{excerpt words="140"}}</p>
                 </header>
                 {{#if feature_image}}
                 <a href="{{url}}" class="image main"><img src="{{img_url feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" /></a>
@@ -26,49 +25,26 @@ into the {body} of the default.hbs template --}}
 
     {{!-- Pages with internal tag #start --}}
     {{#get "pages" limit="all" filter="tag:hash-start"}}
-        {{#foreach pages}}
-            {{!-- Odd page --}}
-            {{#if @odd}}
-                <section class="posts">
-                    <article>
-                        {{#if feature_image}}
-                        <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-                        {{/if}}
-                    </article>
-                    <article>
-                        <header>
-                            <span class="date">{{date format="MMM D, YYYY"}}</span>
-                            <h2><a href="{{url}}">{{title}}</a></h2>
-                        </header>
-                        <p>{{excerpt words="64"}}</p>
-                        <ul class="actions special">
-                            <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
-                        </ul>
-                    </article>
-                </section>
-            {{/if}}
-
-            {{!-- Even page --}}
-            {{#if @even}}
-                <section class="posts">
-                    <article>
-                        <header>
-                            <span class="date">{{date format="MMM D, YYYY"}}</span>
-                            <h2><a href="{{url}}">{{title}}</a></h2>
-                        </header>
-                        <p>{{excerpt words="64"}}</p>
-                        <ul class="actions special">
-                            <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
-                        </ul>
-                    </article>
-                    <article>
-                        {{#if feature_image}}
-                        <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-                        {{/if}}
-                    </article>
-                </section>
-            {{/if}}
-        {{/foreach}}
+        <section class="posts home">
+            {{#foreach pages}}
+            <article>
+                {{#if feature_image}}
+                <div class="img">
+                    <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+                </div>
+                {{/if}}
+                <div class="txt">
+                    <header>
+                        <h2><a href="{{url}}">{{title}}</a></h2>
+                    </header>
+                    <p>{{excerpt words="64"}}</p>
+                    <ul class="actions special">
+                        <li><a href="{{url}}" class="button">{{t "Read more"}}</a></li>
+                    </ul>
+                </div>
+            </article>
+            {{/foreach}}
+        </section>
     {{/get}}
 
 </main>
