@@ -107,6 +107,10 @@
                 "type": "boolean",
                 "default": false,
                 "group": "post"
+            },
+            "show_feature_image_in_background": {
+                "type": "boolean",
+                "default": true
             }
         }
     }

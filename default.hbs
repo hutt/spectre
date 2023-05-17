@@ -15,6 +15,21 @@
     <link rel="stylesheet" type="text/css" href="{{asset "main/css/main.css"}}" />
     <noscript><link rel="stylesheet" href="{{asset "main/css/noscript.css"}}" /></noscript>
 
+    {{!-- CSS background replacement script--}}
+    <script>
+     function addCss(css) {
+        var head = document.getElementsByTagName('head')[0];
+        var s = document.createElement('style');
+        s.setAttribute('type', 'text/css');
+        if (s.styleSheet) {   // IE
+            s.styleSheet.cssText = css;
+        } else {                // the world
+            s.appendChild(document.createTextNode(css));
+        }
+        head.appendChild(s);
+     }
+    </script>
+
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
