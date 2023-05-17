@@ -3659,6 +3659,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   color: #ffffff;
   position: relative;
   color: #ffffff;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   cursor: default;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 0.8rem;
