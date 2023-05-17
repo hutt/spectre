@@ -4057,7 +4057,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 .post-footer {
   margin: 4rem auto 0;
   max-width: 700px;
-  text-align: center;
 }
 .post-footer ul.icons li a {
   color: #333333;
