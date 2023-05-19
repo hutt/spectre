@@ -1,6 +1,6 @@
 {
-    "name": "schulzingly",
-    "description": "This is Schulzingly, a text-heavy, article-oriented theme for Ghost.",
+    "name": "spectre",
+    "description": "A spectre is haunting Europe. This is it's ghost theme. (Ghost theme for DIE LINKE).",
     "demo": "https://felixschulz.eu",
     "version": "1.0.0",
     "engines": {
@@ -39,9 +39,9 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/hutt/Schulzingly.git"
+        "url": "https://github.com/hutt/spectre.git"
     },
-    "bugs": "https://github.com/hutt/Schulzingly/issues",
+    "bugs": "https://github.com/hutt/spectre/issues",
     "contributors": [
         {
             "name": "hutt",

@@ -1,9 +1,6 @@
-# Schulzingly
+# Spectre
 
-This is Schulzingly, a text-heavy, article-oriented design built around a huge background
-image and scroll effects powered by Scrollex. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org). Now forked by [hutt](https://github.com/hutt) to meet the needs of a new project.
-
-**Demo: https://massively.ghost.io**
+A spectre is haunting Europe. This is it's corresponding theme. Ghost theme for DIE LINKE blogs. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org). Now forked by [hutt](https://github.com/hutt) to meet the needs of a new project.
 
 &nbsp;
 
@@ -61,4 +58,4 @@ Original template files and design by [@ajlkn](https://twitter.com/ajlkn)
 
 # Copyright & License
 
-Copyright (c) 2013-2022 [HTML5 UP](https://htmlup.net) & [Ghost Foundation](https://ghost.org) - This theme is licensed under both the [MIT and Creative Commons Attribution 3.0](LICENSE). Please note that the terms of the Creative Commons license require that you maintain the footer attribution to freely use this theme.
+Copyright (c) 2013-2023 [HTML5 UP](https://htmlup.net), [Ghost Foundation](https://ghost.org) and [Jannis Hutt](https://hutt.io) - This theme is licensed under both the [MIT and Creative Commons Attribution 3.0](LICENSE). Please note that the terms of the Creative Commons license require that you maintain the footer attribution to freely use this theme.
