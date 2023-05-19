@@ -4122,7 +4122,16 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.kg-embed-card iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .kg-image {
