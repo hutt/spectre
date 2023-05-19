@@ -15,9 +15,7 @@ You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="{{asset "main/css/main.css"}}" />
 
-    {{#if @site.cover_image}}
-    <style>#wrapper>.bg {background-image: url({{asset "images/overlay.png"}}),linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url("{{img_url @site.cover_image}}") }</style>
-    {{/if}}
+    <style>#wrapper>.bg {background-image: url({{asset "images/overlay.png"}}), linear-gradient(to top right, rgba(227, 6, 19, 1) 0%, rgba(196, 17, 68, 1) 30%, rgba(167, 27, 113, 1) 100%); }</style>
 </head>
 
 <body class="error-template">
@@ -25,9 +23,13 @@ You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in 
 
         <header id="header">
             {{#if @site.logo}}
-            <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+                {{#if @custom.alternate_publication_logo_for_posts_and_pages}}
+                    <a href="{{@site.url}}" class="logo image"><img src="{{img_url @custom.alternate_publication_logo_for_posts_and_pages}}" alt="{{@site.title}}" /></a>
+                {{else}}
+                    <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+                {{/if}}
             {{else}}
-            <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
+                <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
             {{/if}}
         </header>
 
