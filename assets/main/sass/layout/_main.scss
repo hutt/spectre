@@ -62,8 +62,10 @@
 					h1, h2 {
 						position: relative;
 						margin-top: -10%;
+
 						color: _palette(bg);
 						background-color: _palette(bg);
+						background-image: none;
 					}
 
 					p {

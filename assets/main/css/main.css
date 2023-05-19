@@ -3219,6 +3219,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   margin-top: -10%;
   color: #ffffff;
   background-color: #ffffff;
+  background-image: none;
 }
 #main > .post.featured {
   text-align: center;
