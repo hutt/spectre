@@ -103,16 +103,6 @@ into the {body} of the default.hbs template --}}
 
 </main>
 
-{{!-- code below: replace background image with featured page image, if available and activated in settings. --}}
-{{#if @custom.show_feature_image_in_background}}
-    {{#if feature_image}}
-        <script>
-        let css = '#wrapper>.bg {background-image: url({{asset "images/overlay.png"}}),linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url("{{img_url feature_image}}") !important; }';
-        addCss(css);
-        </script>
-    {{/if}}
-{{/if}}
-
 {{/post}}
 
 <script>
