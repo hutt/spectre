@@ -22,14 +22,7 @@
                 {{!-- show featured image --}}
                 <style>#wrapper>.bg {background-image: url({{asset "images/overlay.png"}}), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("{{img_url feature_image}}") !important; }</style>
                 }
-            {{else}}
-                {{!-- show bg gradient --}}
-                <style>#wrapper>.bg {background-image: url({{asset "images/overlay.png"}}), linear-gradient(to top right, rgba(227, 6, 19, 1) 0%, rgba(196, 17, 68, 1) 30%, rgba(167, 27, 113, 1) 100%); }</style>
             {{/if}}
-        {{/match}}
-        {{#match @custom.post_and_page_background_img "red gradient"}}
-            {{!-- show bg gradient --}}
-            <style>#wrapper>.bg {background-image: url({{asset "images/overlay.png"}}), linear-gradient(to top right, rgba(227, 6, 19, 1) 0%, rgba(196, 17, 68, 1) 30%, rgba(167, 27, 113, 1) 100%); }</style>
         {{/match}}
     {{/is}}
 

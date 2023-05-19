@@ -184,7 +184,6 @@
 		@include color-typography(invert);
 		position: relative;
 		color: _palette(invert, footer);
-		text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 		cursor: default;
 		font-family: _font(family-heading);
 		font-size: 0.8rem;
