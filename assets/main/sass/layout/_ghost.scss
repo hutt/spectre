@@ -410,3 +410,17 @@ figcaption {
 .error-code {
     margin: 0;
 }
+
+// Ghost Portal / Subscription Button
+// --------------------------------------------
+.gh-portal-triggerbtn-container {
+    background-color: #ffffff !important;
+    
+    > svg {
+        color: #333333 !important;
+    }
+
+    gh-portal-triggerbtn-label {
+        color: #333333 !important;
+    }
+}

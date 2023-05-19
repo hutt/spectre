@@ -4331,6 +4331,16 @@ figcaption {
   margin: 0;
 }
 
+.gh-portal-triggerbtn-container {
+  background-color: #ffffff !important;
+}
+.gh-portal-triggerbtn-container > svg {
+  color: #333333 !important;
+}
+.gh-portal-triggerbtn-container gh-portal-triggerbtn-label {
+  color: #333333 !important;
+}
+
 .fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Free");
   font-weight: var(--fa-style, 900);

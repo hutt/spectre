@@ -46,6 +46,13 @@
         {{/if}}
     {{/is}}
 
+    {{!-- Ghost Portal / Subscription Button --}}
+    {{#is "home"}}
+    .gh-portal-triggerbtn-container {
+        background-image: url('../../images/overlay.png'),    linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), linear-gradient(to top right, rgba(227, 6, 19, 1) 0%, rgba(196, 17, 68, 1) 30%, rgba(167, 27, 113, 1) 100%);
+    }
+    {{/is}}
+
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
