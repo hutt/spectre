@@ -362,7 +362,7 @@ strong, b {
 
 h1, h2, h3, h4, h5, h6 {
   color: #212931;
-  background-image: #212931;
+  background-image: linear-gradient(to top right, #212931 0%, #212931 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2793,7 +2793,7 @@ body.is-preload #wrapper.fade-in:before {
 }
 #intro h1, #intro h2, #intro h3, #intro h4, #intro h5, #intro h6 {
   color: #ffffff;
-  background-image: #ffffff;
+  background-image: linear-gradient(to top right, #ffffff 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2978,7 +2978,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
   color: #ffffff;
-  background-image: #ffffff;
+  background-image: linear-gradient(to top right, #ffffff 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -3085,7 +3085,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
   color: #ffffff;
-  background-image: #ffffff;
+  background-image: linear-gradient(to top right, #ffffff 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -3369,7 +3369,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
   color: #717981;
-  background-image: #717981;
+  background-image: linear-gradient(to top right, #717981 0%, #717981 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -3728,7 +3728,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #copyright h1, #copyright h2, #copyright h3, #copyright h4, #copyright h5, #copyright h6 {
   color: #ffffff;
-  background-image: #ffffff;
+  background-image: linear-gradient(to top right, #ffffff 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
