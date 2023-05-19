@@ -20,15 +20,9 @@ You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in 
     <div id="wrapper">
 
         <header id="header">
-            {{#if @site.logo}}
-                {{#if @custom.alternate_publication_logo_for_posts_and_pages}}
-                    <a href="{{@site.url}}" class="logo image"><img src="{{img_url @custom.alternate_publication_logo_for_posts_and_pages}}" alt="{{@site.title}}" /></a>
-                {{else}}
-                    <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-                {{/if}}
-            {{else}}
-                <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
-            {{/if}}
+            <a href="{{@site.url}}" class="logo image"><img src="/assets/images/pfeil_weiss.png" alt="{{@site.title}}" /></a>
+            {{!--<a href="{{@site.url}}" class="logo">{{@site.title}}</a>--}}
+
         </header>
 
         {{!-- Nav --}}

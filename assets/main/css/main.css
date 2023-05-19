@@ -353,7 +353,7 @@ a {
 }
 a:hover {
   border-bottom-color: transparent;
-  color: var(--color-primary) !important;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 strong, b {
@@ -2783,7 +2783,7 @@ body.is-preload #wrapper.fade-in:before {
 }
 #intro a:hover {
   border-bottom-color: transparent;
-  color: var(--color-primary) !important;
+  color: rgba(255, 255, 255, 0.5);
 }
 #intro strong, #intro b {
   color: #ffffff;
@@ -2965,7 +2965,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #header a:hover {
   border-bottom-color: transparent;
-  color: var(--color-primary) !important;
+  color: rgba(255, 255, 255, 0.5);
 }
 #header strong, #header b {
   color: #ffffff;
@@ -3069,7 +3069,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #nav a:hover {
   border-bottom-color: transparent;
-  color: var(--color-primary) !important;
+  color: rgba(255, 255, 255, 0.5);
 }
 #nav strong, #nav b {
   color: #ffffff;
@@ -3350,7 +3350,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #footer a:hover {
   border-bottom-color: transparent;
-  color: var(--color-primary) !important;
+  color: rgba(255, 255, 255, 0.5);
 }
 #footer strong, #footer b {
   color: #717981;
@@ -3706,7 +3706,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #copyright a:hover {
   border-bottom-color: transparent;
-  color: var(--color-primary) !important;
+  color: rgba(255, 255, 255, 0.5);
 }
 #copyright strong, #copyright b {
   color: #ffffff;

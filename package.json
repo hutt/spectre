@@ -116,10 +116,6 @@
                 ],
                 "default": "red gradient",
                 "group": "post"
-            },
-            "alternate_publication_logo_for_posts_and_pages": {
-                "type": "image",
-                "group": "post"
             }
         }
     }
