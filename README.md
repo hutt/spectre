@@ -18,7 +18,8 @@ We've documented our default theme pretty heavily so that it should be fairly ea
 **The main files are:**
 
 - `default.hbs` - The main template file
-- `index.hbs` - Used for the home page
+- `home.hbs` - Used for the home page
+- `index.hbs` - Used for the blog page
 - `post.hbs` - Used for individual posts
 - `page.hbs` - Used for individual pages
 - `tag.hbs` - Used for tag archives
@@ -30,6 +31,24 @@ One neat trick is that you can also create custom one-off templates just by addi
 - `tag-news.hbs` - Custom template for `/tag/news/` archive
 - `author-ali.hbs` - Custom template for `/author/ali/` archive
 
+# Routes
+
+This website offers a onepager homepage as well as a blog. You'll need to update your routes in order to make the homepage work.
+
+This is the content of the [routes.yaml file](routes.yaml):
+```yaml
+routes:
+  /: home
+
+collections:
+  /blog/:
+    permalink: /blog/{slug}/
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /autor/{slug}/
+```
 
 # Development
 
