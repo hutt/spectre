@@ -3202,21 +3202,15 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-hyphens: auto;
   hyphens: auto;
 }
-#main > .post header.major .home {
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-#main > .post header.major .home > img {
+#main > .post header.home > img {
+  display: block;
   object-fit: cover;
   pointer-events: none;
-  position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
-#main > .post header.major .home > h1, #main > .post header.major .home h2 {
+#main > .post header.home h1, #main > .post header.home h2 {
   margin-top: -6rem;
   position: relative;
   color: #ffffff;

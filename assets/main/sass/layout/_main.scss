@@ -46,25 +46,25 @@
 					}
 				}
 
-				&.major .home {
-					display: inline-block;
-					overflow: hidden;
-					position: relative;
-					width: 100%;
+				&.home {
 
 					> img {
+						display: block;
 						object-fit: cover;
 						pointer-events: none;
-						position: absolute;
 						width: 100%;
 						height: 100%;
 						z-index: -1;
 					}
 
-					> h1, h2 {
+					h1, h2 {
 						margin-top: -6rem;
 						position: relative;
 						color: _palette(bg);
+					}
+
+					p {
+
 					}
 				}
 
