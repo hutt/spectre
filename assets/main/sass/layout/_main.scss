@@ -53,6 +53,7 @@
 					width: 100%;
 
 					> img {
+						object-fit: cover;
 						pointer-events: none;
 						position: absolute;
 						width: 100%;
@@ -60,7 +61,9 @@
 						z-index: -1;
 					}
 
-					> h1, h2, p {
+					> h1, h2 {
+						margin-top: -6rem;
+						position: relative;
 						color: _palette(bg);
 					}
 				}
