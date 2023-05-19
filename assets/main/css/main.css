@@ -4099,12 +4099,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 .kg-card {
   margin: 0 0 2rem 0;
 }
-.kg-card.kg-style-image > h1, .kg-card.kg-style-image h2 {
-  background-image: none;
-  background-color: #ffffff;
-  color: #ffffff;
-}
-
 .kg-embed-card {
   display: flex;
   flex-direction: column;
