@@ -38,7 +38,8 @@
 			'color #{_duration(transition)} ease-in-out',
 			'background-color #{_duration(transition)} ease-in-out',
 			'border-color #{_duration(transition)} ease-in-out',
-			'box-shadow #{_duration(transition)} ease-in-out'
+			'box-shadow #{_duration(transition)} ease-in-out',
+			'background-image #{_duration(transition)} ease-in-out'
 		));
 		border-bottom: dotted 1px;
 		text-decoration: none;
