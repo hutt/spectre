@@ -163,7 +163,8 @@ html {
 }
 
 body {
-  background-color: #1e252d;
+  /** background-color: _palette(invert, bg); */
+  background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%);
 }
 body.is-preload *, body.is-preload *:before, body.is-preload *:after {
   -moz-animation: none !important;
@@ -1842,9 +1843,6 @@ button:hover,
 .button:hover {
   box-shadow: inset 0 0 0 2px var(--color-primary);
   color: var(--color-primary) !important;
-  background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 input[type=submit].primary,
 input[type=reset].primary,
@@ -2824,9 +2822,6 @@ body.is-preload #wrapper.fade-in:before {
 #intro .button:hover {
   box-shadow: inset 0 0 0 2px var(--color-primary);
   color: var(--color-primary) !important;
-  background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 #intro input[type=submit].primary,
 #intro input[type=reset].primary,
@@ -3397,9 +3392,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #footer .button:hover {
   box-shadow: inset 0 0 0 2px var(--color-primary);
   color: var(--color-primary) !important;
-  background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 #footer input[type=submit].primary,
 #footer input[type=reset].primary,
