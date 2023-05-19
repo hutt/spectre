@@ -47,6 +47,8 @@
 				}
 
 				&.home {
+					position: relative;
+					display: inline-block;
 
 					> img {
 						display: block;
@@ -58,13 +60,15 @@
 					}
 
 					h1, h2 {
-						margin-top: -6rem;
-						position: relative;
+						margin-top: -10%;
 						color: _palette(bg);
+						background-color: _palette(bg);
 					}
 
 					p {
+						a {
 
+						}
 					}
 				}
 

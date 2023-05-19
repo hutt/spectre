@@ -3202,6 +3202,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-hyphens: auto;
   hyphens: auto;
 }
+#main > .post header.home {
+  position: relative;
+  display: inline-block;
+}
 #main > .post header.home > img {
   display: block;
   object-fit: cover;
@@ -3211,9 +3215,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   z-index: -1;
 }
 #main > .post header.home h1, #main > .post header.home h2 {
-  margin-top: -6rem;
-  position: relative;
+  margin-top: -10%;
   color: #ffffff;
+  background-color: #ffffff;
 }
 #main > .post.featured {
   text-align: center;
