@@ -4134,6 +4134,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   height: 100%;
 }
 
+.kg-card .kg-header-card .kg-width-full .kg-style-image > h2 .kg-header-card-header {
+  background-image: none;
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
 .kg-image {
   width: 100%;
 }
