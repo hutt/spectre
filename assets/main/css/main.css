@@ -3183,6 +3183,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .post header.major > .date {
   margin-top: -2rem;
 }
+#main > .post header.major > h1 {
+  background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 #main > .post header.major > h1, #main > .post header.major h2 {
   font-size: 4rem;
   line-height: 1.1;
