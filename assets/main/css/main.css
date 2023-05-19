@@ -3215,6 +3215,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   z-index: -1;
 }
 #main > .post header.home h1, #main > .post header.home h2 {
+  position: relative;
   margin-top: -10%;
   color: #ffffff;
   background-color: #ffffff;
