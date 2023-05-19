@@ -362,9 +362,8 @@ strong, b {
 
 h1, h2, h3, h4, h5, h6 {
   color: #212931;
-  background-image: linear-gradient(to top right, #212931 0%, #212931 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-image: none;
+  background-color: #212931;
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%);
@@ -2793,9 +2792,8 @@ body.is-preload #wrapper.fade-in:before {
 }
 #intro h1, #intro h2, #intro h3, #intro h4, #intro h5, #intro h6 {
   color: #ffffff;
-  background-image: linear-gradient(to top right, #ffffff 0%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-image: none;
+  background-color: #ffffff;
 }
 #intro h1 a:hover, #intro h2 a:hover, #intro h3 a:hover, #intro h4 a:hover, #intro h5 a:hover, #intro h6 a:hover {
   background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%);
@@ -2978,9 +2976,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
   color: #ffffff;
-  background-image: linear-gradient(to top right, #ffffff 0%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-image: none;
+  background-color: #ffffff;
 }
 #header h1 a:hover, #header h2 a:hover, #header h3 a:hover, #header h4 a:hover, #header h5 a:hover, #header h6 a:hover {
   background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%);
@@ -3085,9 +3082,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
   color: #ffffff;
-  background-image: linear-gradient(to top right, #ffffff 0%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-image: none;
+  background-color: #ffffff;
 }
 #nav h1 a:hover, #nav h2 a:hover, #nav h3 a:hover, #nav h4 a:hover, #nav h5 a:hover, #nav h6 a:hover {
   background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%);
@@ -3369,9 +3365,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
   color: #717981;
-  background-image: linear-gradient(to top right, #717981 0%, #717981 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-image: none;
+  background-color: #717981;
 }
 #footer h1 a:hover, #footer h2 a:hover, #footer h3 a:hover, #footer h4 a:hover, #footer h5 a:hover, #footer h6 a:hover {
   background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%);
@@ -3728,9 +3723,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #copyright h1, #copyright h2, #copyright h3, #copyright h4, #copyright h5, #copyright h6 {
   color: #ffffff;
-  background-image: linear-gradient(to top right, #ffffff 0%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-image: none;
+  background-color: #ffffff;
 }
 #copyright h1 a:hover, #copyright h2 a:hover, #copyright h3 a:hover, #copyright h4 a:hover, #copyright h5 a:hover, #copyright h6 a:hover {
   background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%);
