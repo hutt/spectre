@@ -245,6 +245,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.075em;
   text-transform: uppercase;
   margin: 0 0 1rem 0;
+  background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   border-bottom: 0;

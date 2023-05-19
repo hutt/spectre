@@ -69,6 +69,10 @@
 		text-transform: uppercase;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
 
+		background-image: linear-gradient(to top right, rgba(227, 6, 19, 1) 0%, rgba(196, 17, 68, 1) 30%, rgba(167, 27, 113, 1) 100%);
+		 -webkit-background-clip: text;
+		 -webkit-text-fill-color: transparent;
+
 		a {
 			border-bottom: 0;
 			color: inherit;
