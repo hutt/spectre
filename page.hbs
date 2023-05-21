@@ -1,6 +1,12 @@
 {{!< default}}
 
 {{#post}}
+{{!-- check page language --}}
+{{#has tag="hash-en"}}
+    {{#contentFor "language"}}en{{/contentFor}}
+{{else}}
+    {{#contentFor "language"}}{{@site.locale}}{{/contentFor}}
+{{/has}}
 {{!-- Everything inside the #post tags pulls data from the page --}}
 
 <main id="main">

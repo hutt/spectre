@@ -1,11 +1,20 @@
 routes:
-  /: home
+  /: 
+    template: home
+    data: page.start
+  /en/:
+    template: home
+    data: page.start-en
 
 collections:
   /blog/:
     permalink: /blog/{slug}/
     template: index
+    filter: 'tag:-hash-en'
+  /blog/en/:
+    permalink: /blog/en/{slug}/
+    template: index
+    filter: 'tag:hash-en'
 
 taxonomies:
   tag: /tag/{slug}/
-  author: /autor/{slug}/

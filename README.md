@@ -1,6 +1,6 @@
 # Spectre
 
-A spectre is haunting Europe. This is it's corresponding theme. Ghost theme for DIE LINKE blogs. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org). Now forked by [hutt](https://github.com/hutt) to meet the needs of a new project.
+A spectre is haunting Europe. This is it's corresponding theme. Ghost theme for DIE LINKE blogs.
 
 &nbsp;
 
@@ -23,13 +23,11 @@ We've documented our default theme pretty heavily so that it should be fairly ea
 - `post.hbs` - Used for individual posts
 - `page.hbs` - Used for individual pages
 - `tag.hbs` - Used for tag archives
-- `author.hbs` - Used for author archives
 
 One neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
 
 - `page-about.hbs` - Custom template for the `/about/` page
 - `tag-news.hbs` - Custom template for `/tag/news/` archive
-- `author-ali.hbs` - Custom template for `/author/ali/` archive
 
 # Routes
 
@@ -38,43 +36,32 @@ This website offers a onepager homepage as well as a blog. You'll need to update
 This is the content of the [routes.yaml file](routes.yaml):
 ```yaml
 routes:
-  /: home
+  /: 
+    template: home
+    data: page.start
+  /en/:
+    template: home
+    data: page.start-en
 
 collections:
   /blog/:
     permalink: /blog/{slug}/
     template: index
+    filter: 'tag:-hash-en'
+  /blog/en/:
+    permalink: /en/blog/{slug}/
+    template: index
+    filter: 'tag:hash-en'
 
 taxonomies:
   tag: /tag/{slug}/
-  author: /autor/{slug}/
 ```
 
-# Development
+# Multi-language support
+As you can see in the routes file, this theme supports posts and pages in multiple languages. 
 
-This implementation tries to stay as true as possible to the original template without making too many modifications. The original code is unmodified, preserving the ability to update it later.
+## Posting in another language
+If you usually blog in German, but you want to publish a post in English, simply tag the post with the internal tag `#en`. Posts with this internal tag won't be displayed in the posts archive on `yourdomain.tld/blog/`, but under `yourdomain.tld/en/blog/`.
 
-There are two main changes compared to the original template files:
-
-- The original template contained separate `/assets` and `/images` directories. Ghost Themes require that all assets be nested under a top-level `/assets` directory, so these are moved to `/assets/main` and `/assets/images`, respectively.
-- In order to make minor modifications and add some new custom styles, one additional SaSS file is added under `/assets/main/sass/layout/ghost.sass` and included at the bottom of the `main.sass` file.
-
-To work on styles in this theme, you'll need to run a local development environment to build/watch for changes. Once cloned and installed with npm/yarn, the following `gulp` build tasks are available:
-
-```bash
-# Build files locally and watch for changes
-gulp
-
-# Build production zip locally and save to /dist
-gulp zip
-
-# Run compatibility test against latest version of Ghost
-yarn test
-```
-
-Original template files and design by [@ajlkn](https://twitter.com/ajlkn)
-
-
-# Copyright & License
-
-Copyright (c) 2013-2023 [HTML5 UP](https://htmlup.net), [Ghost Foundation](https://ghost.org) and [Jannis Hutt](https://hutt.io) - This theme is licensed under both the [MIT and Creative Commons Attribution 3.0](LICENSE). Please note that the terms of the Creative Commons license require that you maintain the footer attribution to freely use this theme.
+## Pages in another language
+To publish a page in another language, simply note its slug and create an additional route in the `routes.yaml` file. The example above features an additional homepage in English. While the German home page's slug is `start`, the english page's slug is `start-en`. It will then be displayed under `yourdomain.tld/en/`. It's as easy as that.
