@@ -2,13 +2,10 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
+{{!-- set page language --}}
+{{#contentFor "language"}}{{@site.locale}}{{/contentFor}}
+
 {{#post}}
-{{!-- check page language --}}
-{{#has tag="hash-en"}}
-    {{#contentFor "language"}}en{{/contentFor}}
-{{else}}
-    {{#contentFor "language"}}{{@site.locale}}{{/contentFor}}
-{{/has}}
 <main id="main">
     <article class="post featured">
         <header class="major home">

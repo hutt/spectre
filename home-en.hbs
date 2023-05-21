@@ -1,23 +1,16 @@
 {{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{!-- set page language --}}
+{{#contentFor "language"}}en{{/contentFor}}
 
 {{#post}}
-
-{{!-- check page language --}}
-{{#has tag="hash-en"}}
-    {{#contentFor "language"}}en{{/contentFor}}
-{{else}}
-    {{#contentFor "language"}}{{@site.locale}}{{/contentFor}}
-{{/has}}
-
-{{!-- Everything inside the #post tags pulls data from the page --}}
-
 <main id="main">
-    <section class="post">
-
-        <header class="major">
-            <h1>{{title}}</h1>
+    <article class="post featured">
+        <header class="major home">
+            <h2><a href="{{url}}">{{title}}</a></h2>
         </header>
-
         {{#if feature_image}}
         <figure class="image main">
             <img src="{{img_url feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
@@ -26,12 +19,9 @@
             {{/if}}
         </figure>
         {{/if}}
-
         <div class="content">
             {{content}}
         </div>
-
-    </section>
+    </article>
 </main>
-
 {{/post}}

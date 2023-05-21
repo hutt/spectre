@@ -3,7 +3,7 @@ routes:
     template: home
     data: page.start
   /en/:
-    template: home
+    template: home-en
     data: page.start-en
 
 collections:

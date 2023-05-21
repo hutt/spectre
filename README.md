@@ -40,7 +40,7 @@ routes:
     template: home
     data: page.start
   /en/:
-    template: home
+    template: home-en
     data: page.start-en
 
 collections:
@@ -49,7 +49,7 @@ collections:
     template: index
     filter: 'tag:-hash-en'
   /blog/en/:
-    permalink: /en/blog/{slug}/
+    permalink: /blog/en/{slug}/
     template: index
     filter: 'tag:hash-en'
 
