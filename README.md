@@ -49,7 +49,7 @@ collections:
     template: index
     filter: 'tag:-hash-en'
   /blog/en/:
-    permalink: /blog/en/{slug}/
+    permalink: /en/blog/{slug}/
     template: index
     filter: 'tag:hash-en'
 
