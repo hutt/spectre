@@ -4362,6 +4362,9 @@ figcaption {
   padding: 6px 48px !important;
   font-size: 1rem !important;
 }
+.gh-announcement-bar button {
+  box-shadow: none !important;
+}
 .gh-announcement-bar.accent > button, .gh-announcement-bar.dark > button {
   color: #ffffff !important;
 }

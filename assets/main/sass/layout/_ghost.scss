@@ -449,6 +449,10 @@ figcaption {
     padding: 6px 48px !important;
     font-size: 1rem !important;
 
+    button {
+        box-shadow: none !important;
+    }
+
     &.accent > button, &.dark > button {
         color: #ffffff !important;
     }
