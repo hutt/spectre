@@ -65,3 +65,6 @@ If you usually blog in German, but you want to publish a post in English, simply
 
 ## Pages in another language
 To publish a page in another language, simply note its slug and create an additional route in the `routes.yaml` file. The example above features an additional homepage in English. While the German home page's slug is `start`, the english page's slug is `start-en`. It will then be displayed under `yourdomain.tld/en/`. It's as easy as that.
+
+# Copyright & License
+Copyright (c) 2013-2022 [HTML5 UP](https://htmlup.net) & [Ghost Foundation](https://ghost.org); 2023 [Jannis Hutt](https://hutt.io). This theme is based on [HTML5 UP](https://htmlup.net)'s & [Ghost Foundation](https://ghost.org)'s theme [Massively](https://github.com/TryGhost/Massively) and licensed under both the [MIT and Creative Commons Attribution 3.0](LICENSE).
