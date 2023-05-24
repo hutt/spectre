@@ -442,3 +442,18 @@ figcaption {
         color: #333333 !important;
     }
 }
+
+// Announcement Bar
+// --------------------------------------------
+.gh-announcement-bar {
+    padding: 6px 48px !important;
+    font-size: 1rem !important;
+
+    &.accent > button, &.dark > button {
+        color: #ffffff !important;
+    }
+
+    .gh-announcement-bar-content {
+        font-family: _font(family-heading) !important;
+    }
+}

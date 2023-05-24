@@ -4358,6 +4358,17 @@ figcaption {
   color: #333333 !important;
 }
 
+.gh-announcement-bar {
+  padding: 6px 48px !important;
+  font-size: 1rem !important;
+}
+.gh-announcement-bar.accent > button, .gh-announcement-bar.dark > button {
+  color: #ffffff !important;
+}
+.gh-announcement-bar .gh-announcement-bar-content {
+  font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+}
+
 .fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Free");
   font-weight: var(--fa-style, 900);
