@@ -28,6 +28,15 @@
 			text-align: center;
 		}
 
+		/* Line Heights */
+		> .post {
+			line-height: 1.5;
+		}
+
+		> .posts {
+			line-height: 1.75;
+		}
+
 		> .post {
 			@include padding((_size(padding) * 4), (_size(padding) * 4));
 

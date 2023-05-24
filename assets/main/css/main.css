@@ -3172,6 +3172,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   width: calc(100% - 4rem);
   max-width: 72rem;
   z-index: 2;
+  /* Line Heights */
 }
 #main > * {
   padding: 4rem 4rem 2rem 4rem;
@@ -3183,6 +3184,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #main > footer {
   text-align: center;
+}
+#main > .post {
+  line-height: 1.5;
+}
+#main > .posts {
+  line-height: 1.75;
 }
 #main > .post {
   padding: 8rem 8rem 6rem 8rem;
@@ -4370,6 +4377,7 @@ figcaption {
 }
 .gh-announcement-bar .gh-announcement-bar-content {
   font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+  line-height: 1.5;
 }
 
 .fa {
