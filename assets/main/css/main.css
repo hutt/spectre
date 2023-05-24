@@ -3188,8 +3188,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .post {
   line-height: 1.5;
 }
-#main > .posts {
+#main > .post .major {
   line-height: 1.75;
+}
+#main > .posts {
+  line-height: 1.5;
 }
 #main > .post {
   padding: 8rem 8rem 6rem 8rem;

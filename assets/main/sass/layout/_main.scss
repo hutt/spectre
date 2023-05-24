@@ -31,10 +31,14 @@
 		/* Line Heights */
 		> .post {
 			line-height: 1.5;
+
+			.major {
+				line-height: 1.75;
+			}
 		}
 
 		> .posts {
-			line-height: 1.75;
+			line-height: 1.5;
 		}
 
 		> .post {
