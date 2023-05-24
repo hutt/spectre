@@ -2027,7 +2027,7 @@ input[type=radio] + label:before {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
   font-style: normal;
-  font-weight: normal;
+  /*font-weight: normal;*/
   text-transform: none !important;
 }
 input[type=checkbox] + label:before,
@@ -2154,7 +2154,7 @@ input[type=radio]:focus + label:before {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
   font-style: normal;
-  font-weight: normal;
+  /*font-weight: normal;*/
   text-transform: none !important;
 }
 .icon > .label {
@@ -2628,7 +2628,7 @@ table.alt tbody tr td {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
   font-style: normal;
-  font-weight: normal;
+  /*font-weight: normal;*/
   text-transform: none !important;
 }
 .pagination .next:before, .pagination .previous:before {
@@ -3812,7 +3812,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
   font-style: normal;
-  font-weight: normal;
+  /*font-weight: normal;*/
   text-transform: none !important;
 }
 #navPanelToggle:before {
@@ -3911,7 +3911,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
   font-style: normal;
-  font-weight: normal;
+  /*font-weight: normal;*/
   text-transform: none !important;
 }
 #navPanel .close:before {
