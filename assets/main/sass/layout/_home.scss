@@ -37,18 +37,11 @@
 				width: 100%;
 				max-width: 100%;
 
-				div {
+				> h2 .kg-header-card-header, h3 .kg-header-card-subheader {
 					max-width: 700px;
 				}
 
-				.kg-width-full {
-					max-width: 100% !important;
-
-					h2, h3 {
-						max-width: 700px;
-					}
-				}
-				p {
+				> p {
 					max-width: 700px;
 				}
 			}

@@ -3371,16 +3371,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   width: 100%;
   max-width: 100%;
 }
-#home > .post .featured .home div {
+#home > .post .featured .home > h2 .kg-header-card-header, #home > .post .featured .home h3 .kg-header-card-subheader {
   max-width: 700px;
 }
-#home > .post .featured .home .kg-width-full {
-  max-width: 100% !important;
-}
-#home > .post .featured .home .kg-width-full h2, #home > .post .featured .home .kg-width-full h3 {
-  max-width: 700px;
-}
-#home > .post .featured .home p {
+#home > .post .featured .home > p {
   max-width: 700px;
 }
 #home > .post .featured .major {
