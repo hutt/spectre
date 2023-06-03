@@ -29,30 +29,27 @@
 		}
 
 		/* Line Heights */
-		> .post {
+		> .post .featured {
 			line-height: 1.5;
+			padding-top: 0 !important;
 
-			&.featured-home {
-				padding-top: 0 !important;
+			.home {
+				width: 100%;
+				max-width: 100%;
 
-				.home {
-					width: 100%;
-					max-width: 100%;
+				div {
+					max-width: 700px;
+				}
 
-					div {
+				.kg-width-full {
+					max-width: 100% !important;
+
+					h2, h3 {
 						max-width: 700px;
 					}
-
-					.kg-width-full {
-						max-width: 100% !important;
-
-						h2, h3 {
-							max-width: 700px;
-						}
-					}
-					p {
-						max-width: 700px;
-					}
+				}
+				p {
+					max-width: 700px;
 				}
 			}
 			.major {

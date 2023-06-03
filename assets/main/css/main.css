@@ -3363,29 +3363,27 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #home > footer {
   text-align: center;
 }
-#home > .post {
+#home > .post .featured {
   line-height: 1.5;
-}
-#home > .post.featured-home {
   padding-top: 0 !important;
 }
-#home > .post.featured-home .home {
+#home > .post .featured .home {
   width: 100%;
   max-width: 100%;
 }
-#home > .post.featured-home .home div {
+#home > .post .featured .home div {
   max-width: 700px;
 }
-#home > .post.featured-home .home .kg-width-full {
+#home > .post .featured .home .kg-width-full {
   max-width: 100% !important;
 }
-#home > .post.featured-home .home .kg-width-full h2, #home > .post.featured-home .home .kg-width-full h3 {
+#home > .post .featured .home .kg-width-full h2, #home > .post .featured .home .kg-width-full h3 {
   max-width: 700px;
 }
-#home > .post.featured-home .home p {
+#home > .post .featured .home p {
   max-width: 700px;
 }
-#home > .post .major {
+#home > .post .featured .major {
   line-height: 1.75;
 }
 
