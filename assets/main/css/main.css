@@ -3352,16 +3352,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   z-index: 2;
   /* Line Heights */
 }
-#home article .home {
-  width: 100%;
-  max-width: 100%;
-}
-#home article .home h2 .kg-header-card-header, #home article .home h3 .kg-header-card-subheader {
-  max-width: 700px;
-}
-#home article .home p {
-  max-width: 700px;
-}
 #home > * {
   padding: 4rem 4rem 2rem 4rem;
   border-top: solid 2px #eeeeee;
@@ -3369,6 +3359,18 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #home > *:first-child {
   border-top: 0;
+  padding-top: 0;
+}
+#home article .home {
+  max-width: 100%;
+}
+#home article .home .kg-width-full h2 .kg-header-card-header, #home article .home .kg-width-full h3 .kg-header-card-subheader {
+  max-width: 700px;
+  margin: 0 auto;
+}
+#home article .home p {
+  max-width: 700px;
+  margin: 0 auto;
 }
 #home > footer {
   text-align: center;

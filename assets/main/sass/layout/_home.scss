@@ -14,21 +14,6 @@
 		max-width: 100%;
 		z-index: 2;
 
-		article {
-			.home {
-				width: 100%;
-				max-width: 100%;
-
-				h2 .kg-header-card-header, h3 .kg-header-card-subheader {
-					max-width: 700px;
-				}
-
-				p {
-					max-width: 700px;
-				}
-			}
-		}
-
 		> * {
 			@include padding((_size(padding) * 2), (_size(padding) * 2));
 			border-top: solid 2px _palette(border);
@@ -36,6 +21,26 @@
 
 			&:first-child {
 				border-top: 0;
+				padding-top: 0;
+			}
+		}
+
+		article {
+
+			.home {
+				max-width: 100%;
+
+				.kg-width-full {
+					h2 .kg-header-card-header, h3 .kg-header-card-subheader {
+						max-width: 700px;
+						margin: 0 auto;
+					}
+				}
+
+				p {
+					max-width: 700px;
+					margin: 0 auto;
+				}
 			}
 		}
 
