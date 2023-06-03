@@ -3342,6 +3342,61 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
 }
 
+/* Main */
+#home {
+  background-color: #ffffff;
+  position: relative;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 2;
+  /* Line Heights */
+}
+#home > * {
+  padding: 4rem 4rem 2rem 4rem;
+  border-top: solid 2px #eeeeee;
+  margin: 0;
+}
+#home > *:first-child {
+  border-top: 0;
+}
+#home > footer {
+  text-align: center;
+}
+#home > .post {
+  line-height: 1.5;
+}
+#home > .post.featured-home {
+  padding-top: 0 !important;
+}
+#home > .post.featured-home > .home {
+  width: 100%;
+  max-width: 100%;
+}
+#home > .post.featured-home > .home div {
+  max-width: 700px;
+}
+#home > .post.featured-home > .home > .kg-width-full {
+  max-width: 100% !important;
+}
+#home > .post.featured-home > .home > p {
+  max-width: 700px;
+}
+#home > .post .major {
+  line-height: 1.75;
+}
+
+.has-serif-title #main > .posts header > h2,
+.has-serif-title #main > .post header.major > h1,
+.has-serif-title #main > .post header.major > h2 {
+  font-family: "Merriweather", Georgia, serif;
+}
+
+.has-sans-body header.major > p,
+.has-sans-body .posts article p {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
 /* Footer */
 #footer {
   color: #717981;

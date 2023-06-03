@@ -6,11 +6,8 @@ into the {body} of the default.hbs template --}}
 {{#contentFor "language"}}{{@site.locale}}{{/contentFor}}
 
 {{#post}}
-<main id="main">
-    <article class="post featured">
-        <header class="major home">
-            <h2><a href="{{url}}">{{title}}</a></h2>
-        </header>
+<main id="home">
+    <article class="post featured-home">
         {{#if feature_image}}
         <figure class="image main">
             <img src="{{img_url feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
@@ -19,7 +16,7 @@ into the {body} of the default.hbs template --}}
             {{/if}}
         </figure>
         {{/if}}
-        <div class="content">
+        <div class="home">
             {{content}}
         </div>
     </article>
