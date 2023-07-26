@@ -15,34 +15,25 @@
     <link rel="stylesheet" type="text/css" href="{{asset "main/css/main.css"}}" />
     <noscript><link rel="stylesheet" href="{{asset "main/css/noscript.css"}}" /></noscript>
 
-    {{!-- code below: replace background image with featured page image, if available and activated in settings. Else, show red background gradient. --}}
-    {{#is "post, page"}}
-        {{#match @custom.post_and_page_background_img "featured post image"}}
-            {{#if feature_image}}
-                {{!-- show featured image --}}
-                <style>
-                    #wrapper>.bg {
-                        background-image: url({{asset "images/overlay.png"}}), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("{{img_url feature_image}}") !important; 
-                    }
-                </style>
-                }
-            {{/if}}
-        {{/match}}
-    {{/is}}
-
-    {{!-- show site cover, if home and available--}}
+    {{!-- show site cover, if home and available --}}
     {{#is "home"}}
-    <style>
-        #nav > ul.icons > li > a:hover {
-            color: #e10000;
-        }
-    </style>
-        {{#if @site.cover_image}}
         <style>
-            #wrapper>.bg {
-                background-image: url({{asset "images/overlay.png"}}), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url("{{img_url @site.cover_image}}");
+            #nav > ul.icons > li > a:hover {
+                color: #e10000;
             }
         </style>
+        {{#if @site.cover_image}}
+            <style>
+                {{!-- show cover image --}}
+                #wrapper>.bg {
+                    background-image: url({{asset "images/overlay.png"}}), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url("{{img_url @site.cover_image}}");
+                }
+
+                {{!-- hide gradient --}}
+                body {
+                    background-image: unset;
+                }
+            </style>
         {{/if}}
     {{/is}}
 
