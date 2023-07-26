@@ -263,11 +263,13 @@
 			bottom: '5vh',
 			enter: function() {
 				// cover image visible
-				$body.css('background-image', 'unset');
+				// show cover image
+				$wrapper.removeClass('hidden');
 			},
 			leave: function() {
-				// user scrolled past the cover image
-				$body.css('background-image', 'url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%)');
+				// user scrolled 5vh past the cover image
+				// hide cover image
+				$wrapper.addClass('hidden');
 			}
 		});
 

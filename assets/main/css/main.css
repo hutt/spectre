@@ -2726,6 +2726,9 @@ table.alt tbody tr td {
   width: 100vw;
   height: 100vh;
 }
+#wrapper > .bg.hidden {
+  background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%) !important;
+}
 #wrapper.fade-in:before {
   pointer-events: none;
   -moz-transition: opacity 1s ease-in-out;
