@@ -3368,17 +3368,21 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   border-top: 0;
   padding-top: 0;
 }
-#home article .home {
+#home > article {
+  padding-left: 0;
+  padding-right: 0;
+}
+#home > article .home {
   max-width: 100%;
 }
-#home article .home .kg-width-full {
+#home > article .home .kg-width-full {
   background-position-y: 8%;
 }
-#home article .home .kg-width-full .kg-header-card-header, #home article .home .kg-width-full .kg-header-card-subheader {
+#home > article .home .kg-width-full .kg-header-card-header, #home > article .home .kg-width-full .kg-header-card-subheader {
   max-width: 700px;
   margin: 0 auto;
 }
-#home article .home p {
+#home > article .home p {
   max-width: 700px;
   margin: 0 auto;
 }

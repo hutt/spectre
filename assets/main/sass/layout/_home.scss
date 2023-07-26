@@ -25,7 +25,10 @@
 			}
 		}
 
-		article {
+		> article {
+
+			padding-left: 0;
+			padding-right: 0;
 
 			.home {
 				max-width: 100%;
