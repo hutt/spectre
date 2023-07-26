@@ -3373,6 +3373,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #home > article .home .kg-width-full {
   background-position-y: 8%;
+  margin-left: -4rem;
+  margin-right: -4rem;
+  width: calc(100% + 8rem);
 }
 #home > article .home .kg-width-full .kg-header-card-header, #home > article .home .kg-width-full .kg-header-card-subheader {
   max-width: 700px;

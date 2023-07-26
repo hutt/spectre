@@ -32,6 +32,9 @@
 
 				.kg-width-full {
 					background-position-y: 8%;
+					margin-left: -4rem;
+					margin-right: -4rem;
+					width: calc(100% + 8rem);
 
 					.kg-header-card-header, .kg-header-card-subheader {
 						max-width: 700px;
