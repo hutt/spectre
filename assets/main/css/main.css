@@ -2687,10 +2687,7 @@ table.alt tbody tr td {
 }
 
 .kg-button-card {
-  margin-top: 2rem;
-}
-.kg-button-card a .kg-btn {
-  font-size: 1.1em;
+  margin-top: 2rem !important;
 }
 
 /* Wrapper */
