@@ -9,7 +9,7 @@
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
-		$wrapperbg = $('#wrapper > .bg'),
+		$wrapperbg = $('#wrapper .bg'),
 		$header = $('#header'),
 		$nav = $('#nav'),
 		$main = $('#main'),
