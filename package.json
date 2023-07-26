@@ -85,7 +85,8 @@
                     "Klassisches Logo",
                     "Pfeil"
                 ],
-                "default": "Pfeil"
+                "default": "Pfeil",
+                "group": "post"
             },
             "twitter": {
                 "type": "text",
