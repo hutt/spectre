@@ -68,10 +68,30 @@
         {{!-- Header --}}
         <header id="header">
             {{#is "home"}}
-                <a href="{{@site.url}}" class="logo image"><img src="/assets/images/pfeil_rot.png" alt="{{@site.title}}" /></a>
+                {{#if @custom.use_die_linke_arrows_as_publication_logo}}
+                    <a href="{{@site.url}}" class="logo image"><img src="/assets/images/pfeil_rot.png" alt="{{@site.title}}" /></a>
+                {{else}}
+                    {{#if @custom.alt_publication_logo_for_homepage}}
+                        <a href="{{@site.url}}" class="logo image"><img src="{{@custom.alt_publication_logo_for_homepage}}" alt="{{@site.title}}" /></a>
+                    {{else}}
+                        {{#if @site.logo}}
+                            <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+                        {{else}}
+                            <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
+                        {{/if}}
+                    {{/if}}
+                {{/if}}
             {{/is}}
             {{^is "home"}}
-                <a href="{{@site.url}}" class="logo image"><img src="/assets/images/pfeil_weiss.png" alt="{{@site.title}}" /></a>
+                {{#if @custom.use_die_linke_arrows_as_publication_logo}}
+                    <a href="{{@site.url}}" class="logo image"><img src="/assets/images/pfeil_weiss.png" alt="{{@site.title}}" /></a>
+                {{else}}
+                    {{#if @site.logo}}
+                        <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+                    {{else}}
+                        <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
+                    {{/if}}
+                {{/if}}
             {{/is}}
             {{!--<a href="{{@site.url}}" class="logo">{{@site.title}}</a>--}}
         </header>

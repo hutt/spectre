@@ -79,6 +79,15 @@
                 ],
                 "default": "Modern sans-serif"
             },
+            "use_die_linke_arrows_as_publication_logo": {
+                "type": "boolean",
+                "group": "homepage",
+                "default": true
+            },
+            "alt_publication_logo_for_homepage": {
+                "type": "image",
+                "group": "homepage"
+            },
             "twitter": {
                 "type": "text",
                 "default": "#"
