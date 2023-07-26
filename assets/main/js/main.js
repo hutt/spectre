@@ -9,6 +9,7 @@
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
+		$bg = $('#wrapper > .bg'),
 		$header = $('#header'),
 		$nav = $('#nav'),
 		$main = $('#main'),
@@ -264,12 +265,12 @@
 			enter: function() {
 				// cover image visible
 				// show cover image
-				$wrapper.removeClass('hidden');
+				$bg.removeClass('hidden');
 			},
 			leave: function() {
 				// user scrolled 5vh past the cover image
 				// hide cover image
-				$wrapper.addClass('hidden');
+				$bg.addClass('hidden');
 			}
 		});
 
