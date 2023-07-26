@@ -68,29 +68,15 @@
         {{!-- Header --}}
         <header id="header">
             {{#is "home"}}
-                {{#if @custom.use_die_linke_arrows_as_publication_logo}}
-                    <a href="{{@site.url}}" class="logo image"><img src="/assets/images/pfeil_rot.png" alt="{{@site.title}}" /></a>
+                {{#if @site.logo}}
+                    <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
                 {{else}}
-                    {{#if @custom.alt_publication_logo_for_homepage}}
-                        <a href="{{@site.url}}" class="logo image"><img src="{{@custom.alt_publication_logo_for_homepage}}" alt="{{@site.title}}" /></a>
-                    {{else}}
-                        {{#if @site.logo}}
-                            <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-                        {{else}}
-                            <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
-                        {{/if}}
-                    {{/if}}
-                {{/if}}
-            {{/is}}
-            {{^is "home"}}
-                {{#if @custom.use_die_linke_arrows_as_publication_logo}}
-                    <a href="{{@site.url}}" class="logo image"><img src="/assets/images/pfeil_weiss.png" alt="{{@site.title}}" /></a>
-                {{else}}
-                    {{#if @site.logo}}
-                        <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-                    {{else}}
-                        <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
-                    {{/if}}
+                    {{#match @custom.die_linke_publication_logo "=" "Klassisches Logo"}}
+                        <a href="{{@site.url}}" class="logo image"><img src="/assets/images/logo_die_linke_rot.png" alt="{{@site.title}}" /></a>
+                    {{/match}}
+                    {{#match @custom.die_linke_publication_logo "=" "Pfeil"}}
+                        <a href="{{@site.url}}" class="logo image"><img src="/assets/images/pfeil_rot.png" alt="{{@site.title}}" /></a>
+                    {{/match}}
                 {{/if}}
             {{/is}}
             {{!--<a href="{{@site.url}}" class="logo">{{@site.title}}</a>--}}
