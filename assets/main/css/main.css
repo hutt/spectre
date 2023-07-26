@@ -2917,9 +2917,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     padding: 4rem 4rem 2rem 4rem;
     min-height: 90vh;
   }
-  #intro h1 {
-    font-size: 5.5rem;
-  }
   #intro p br {
     display: none;
   }
@@ -2933,9 +2930,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     min-height: 80vh;
   }
   #intro h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
     line-height: 1.1;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
   }
   #intro p {
     font-size: 1.5rem;

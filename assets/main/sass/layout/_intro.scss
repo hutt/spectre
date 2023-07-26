@@ -82,10 +82,6 @@
 			@include padding(_size(padding) * 2, _size(padding) * 2);
 			min-height: 90vh;
 
-			h1 {
-				font-size: 5.5rem;
-			}
-
 			p {
 				br {
 					display: none;
@@ -102,9 +98,9 @@
 			min-height: 80vh;
 
 			h1 {
-				font-size: 5rem;
+				font-size: 4.5rem;
 				line-height: 1.1;
-				margin-bottom: _size(element-margin) * 0.5;
+				margin-bottom: _size(element-margin) * 0.4;
 			}
 
 			p {
