@@ -262,7 +262,7 @@
 		$intro.unscrollex();
 
 		$intro.scrollex({
-			bottom: '5vh',
+			bottom: '-15vh',
 			enter: function() {
 				// cover image visible
 				// show cover image
