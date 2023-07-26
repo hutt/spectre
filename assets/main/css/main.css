@@ -2920,9 +2920,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   #intro h1 {
     font-size: 5.5rem;
   }
-  #intro p {
-    font-size: 1.7rem;
-  }
   #intro p br {
     display: none;
   }
