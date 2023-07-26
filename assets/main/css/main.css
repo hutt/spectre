@@ -2935,7 +2935,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     margin-bottom: 0.8rem;
   }
   #intro p {
-    font-size: 1.5rem;
     margin-top: 0rem;
   }
   #intro .actions {
