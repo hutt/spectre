@@ -3379,10 +3379,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   background-position-y: 8%;
 }
 #home > article .home .kg-width-full .kg-header-card-header, #home > article .home .kg-width-full .kg-header-card-subheader {
+  padding: 4rem 4rem 2rem 4rem;
   max-width: 700px;
   margin: 0 auto;
 }
 #home > article .home p {
+  padding: 4rem 4rem 2rem 4rem;
   max-width: 700px;
   margin: 0 auto;
 }

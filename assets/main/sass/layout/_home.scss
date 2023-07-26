@@ -37,12 +37,14 @@
 					background-position-y: 8%;
 
 					.kg-header-card-header, .kg-header-card-subheader {
+						@include padding((_size(padding) * 2), (_size(padding) * 2));
 						max-width: 700px;
 						margin: 0 auto;
 					}
 				}
 
 				p {
+					@include padding((_size(padding) * 2), (_size(padding) * 2));
 					max-width: 700px;
 					margin: 0 auto;
 				}
