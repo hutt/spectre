@@ -79,6 +79,18 @@
                     {{/match}}
                 {{/if}}
             {{/is}}
+            {{^is "home"}}
+                {{#if @site.logo}}
+                    <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+                {{else}}
+                    {{#match @custom.die_linke_publication_logo "=" "Klassisches Logo"}}
+                        <a href="{{@site.url}}" class="logo image"><img src="/assets/images/logo_die_linke_weiss.png" alt="{{@site.title}}" /></a>
+                    {{/match}}
+                    {{#match @custom.die_linke_publication_logo "=" "Pfeil"}}
+                        <a href="{{@site.url}}" class="logo image"><img src="/assets/images/pfeil_weiss.png" alt="{{@site.title}}" /></a>
+                    {{/match}}
+                {{/if}}
+            {{/is}}
             {{!--<a href="{{@site.url}}" class="logo">{{@site.title}}</a>--}}
         </header>
 
