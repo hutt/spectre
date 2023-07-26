@@ -3386,6 +3386,16 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   max-width: 700px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1280px) {
+  #home > article .home .kg-width-full .kg-header-card-header h2, #home > article .home .kg-width-full .kg-header-card-subheader h2 {
+    font-size: 5em;
+  }
+}
+@media screen and (max-width: 980px) {
+  #home > article .home .kg-width-full .kg-header-card-header h2, #home > article .home .kg-width-full .kg-header-card-subheader h2 {
+    font-size: 6em;
+  }
+}
 #home > article .home p {
   max-width: 700px;
   margin: 0 auto;
