@@ -2917,6 +2917,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     padding: 4rem 4rem 2rem 4rem;
     min-height: 90vh;
   }
+  #intro h1 {
+    font-size: 5.5rem;
+  }
+  #intro p {
+    font-size: 1.7rem;
+  }
   #intro p br {
     display: none;
   }
@@ -2930,12 +2936,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     min-height: 80vh;
   }
   #intro h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 1.1;
     margin-bottom: 1rem;
   }
   #intro p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-top: 0rem;
   }
   #intro .actions {
