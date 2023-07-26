@@ -242,7 +242,7 @@
 
 					$home.scrollex({
 						mode: 'middle',
-						top: '15vh',
+						top: '20vh',
 						bottom: '-15vh',
 						enter: function() {
 							$intro.addClass('hidden');
