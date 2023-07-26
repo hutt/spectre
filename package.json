@@ -63,22 +63,6 @@
     "config": {
         "posts_per_page": 12,
         "custom": {
-            "title_font": {
-                "type": "select",
-                "options": [
-                    "Modern sans-serif",
-                    "Elegant serif"
-                ],
-                "default": "Modern sans-serif"
-            },
-            "body_font": {
-                "type": "select",
-                "options": [
-                    "Modern sans-serif",
-                    "Elegant serif"
-                ],
-                "default": "Modern sans-serif"
-            },
             "die_linke_publication_logo": {
                 "type": "select",
                 "options": [
