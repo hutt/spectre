@@ -2930,7 +2930,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     min-height: 80vh;
   }
   #intro h1 {
-    font-size: 3.25rem;
+    font-size: 4rem;
     line-height: 1.1;
     margin-bottom: 1rem;
   }
@@ -3385,16 +3385,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #home > article .home .kg-width-full .kg-header-card-header, #home > article .home .kg-width-full .kg-header-card-subheader {
   max-width: 700px;
   margin: 0 auto;
-}
-@media screen and (max-width: 1280px) {
-  #home > article .home .kg-width-full .kg-header-card-header h2, #home > article .home .kg-width-full .kg-header-card-subheader h2 {
-    font-size: 5em;
-  }
-}
-@media screen and (max-width: 980px) {
-  #home > article .home .kg-width-full .kg-header-card-header h2, #home > article .home .kg-width-full .kg-header-card-subheader h2 {
-    font-size: 6em;
-  }
 }
 #home > article .home p {
   max-width: 700px;
