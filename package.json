@@ -116,15 +116,6 @@
                 "type": "boolean",
                 "default": false,
                 "group": "post"
-            },
-            "post_and_page_background_img": {
-                "type": "select",
-                "options": [
-                    "red gradient",
-                    "featured post image"
-                ],
-                "default": "red gradient",
-                "group": "post"
             }
         }
     }
