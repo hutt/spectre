@@ -2686,6 +2686,13 @@ table.alt tbody tr td {
   box-shadow: none;
 }
 
+.kg-button-card {
+  margin-top: 2rem;
+}
+.kg-button-card a .kg-btn {
+  font-size: 1.1em;
+}
+
 /* Wrapper */
 #wrapper {
   -moz-transition: opacity 0.5s ease;
@@ -3364,7 +3371,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #home article .home {
   max-width: 100%;
 }
-#home article .home .kg-width-full h2 .kg-header-card-header, #home article .home .kg-width-full h3 .kg-header-card-subheader {
+#home article .home .kg-width-full {
+  background-position-y: 8%;
+}
+#home article .home .kg-width-full .kg-header-card-header, #home article .home .kg-width-full .kg-header-card-subheader {
   max-width: 700px;
   margin: 0 auto;
 }
