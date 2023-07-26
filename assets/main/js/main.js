@@ -9,7 +9,6 @@
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
-		$wrapperbg = $('#wrapper .bg'),
 		$header = $('#header'),
 		$nav = $('#nav'),
 		$main = $('#main'),
@@ -258,6 +257,8 @@
 		}
 
 	// Replace cover image with gradient when scrolling
+		var $wrapperbg = $('#wrapper > .bg');
+		
 		$intro.unscrollex();
 
 		$intro.scrollex({
