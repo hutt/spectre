@@ -12,6 +12,7 @@
 		$header = $('#header'),
 		$nav = $('#nav'),
 		$main = $('#main'),
+		$home = $('#home'),
 		$navPanelToggle, $navPanel, $navPanelInner;
 
 	// Breakpoints.
@@ -218,9 +219,9 @@
 			// Hide intro on scroll (> small).
 				breakpoints.on('>small', function() {
 
-					$main.unscrollex();
+					$home.unscrollex();
 
-					$main.scrollex({
+					$home.scrollex({
 						mode: 'bottom',
 						top: '25vh',
 						bottom: '-50vh',
@@ -237,9 +238,9 @@
 			// Hide intro on scroll (<= small).
 				breakpoints.on('<=small', function() {
 
-					$main.unscrollex();
+					$home.unscrollex();
 
-					$main.scrollex({
+					$home.scrollex({
 						mode: 'middle',
 						top: '15vh',
 						bottom: '-15vh',
