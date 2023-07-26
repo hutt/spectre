@@ -82,8 +82,8 @@
             "die_linke_publication_logo": {
                 "type": "select",
                 "options": [
-                    "Klassisches Logo",
-                    "Pfeil"
+                    "Pfeil",
+                    "Klassisches Logo"
                 ],
                 "default": "Pfeil",
                 "group": "post"
