@@ -2799,7 +2799,7 @@ body.is-preload #wrapper.fade-in:before {
 }
 #intro a:hover {
   border-bottom-color: transparent;
-  color: #18bfef;
+  color: rgba(255, 255, 255, 0.5);
 }
 #intro strong, #intro b {
   color: #ffffff;
@@ -2981,7 +2981,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #header a:hover {
   border-bottom-color: transparent;
-  color: #18bfef;
+  color: rgba(255, 255, 255, 0.5);
 }
 #header strong, #header b {
   color: #ffffff;
@@ -3086,7 +3086,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #nav a:hover {
   border-bottom-color: transparent;
-  color: #18bfef;
+  color: rgba(255, 255, 255, 0.5);
 }
 #nav strong, #nav b {
   color: #ffffff;
@@ -3796,7 +3796,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #copyright a:hover {
   border-bottom-color: transparent;
-  color: #18bfef;
+  color: rgba(255, 255, 255, 0.5);
 }
 #copyright strong, #copyright b {
   color: #ffffff;
