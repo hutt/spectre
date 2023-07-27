@@ -3325,6 +3325,16 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   justify-content: center;
   text-align: center;
 }
+@media screen and (max-width: 1280px) {
+  #main > .post header.feature-image {
+    margin: -6rem -6rem 2rem -6rem;
+  }
+}
+@media screen and (max-width: 736px) {
+  #main > .post header.feature-image {
+    margin: -6rem -4rem 2rem -4rem;
+  }
+}
 #main > .post header.feature-image h1, #main > .post header.feature-image p, #main > .post header.feature-image a {
   color: #ffffff;
 }

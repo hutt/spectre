@@ -97,6 +97,13 @@
 					min-height: 40vh;
 					margin: (-(_size(padding) * 4)) (-(_size(padding) * 4)) (_size(padding) * 1) (-(_size(padding) * 4));
 
+					@include breakpoint('<=large') {
+						margin: (-(_size(padding) * 3)) (-(_size(padding) * 3)) (_size(padding) * 1) (-(_size(padding) * 3));
+					}
+					@include breakpoint('<=small') {
+						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 1) (-(_size(padding) * 2));
+					}
+
 					display: flex;
 					flex-direction: column;
 					align-items: center;
