@@ -2404,7 +2404,6 @@ ul {
   list-style: disc;
   margin: 0 0 2rem 0;
   padding-left: 1rem;
-  line-height: 1.75;
 }
 ul li {
   padding-left: 0.5rem;
@@ -3228,8 +3227,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .post .content > p {
   line-height: 1.75;
 }
-#main > .posts {
-  line-height: 1.5;
+#main > .post .content > ul {
+  line-height: 1.75;
+}
+#main > .posts > p {
+  line-height: 1.75;
 }
 #main > .post {
   padding: 8rem 8rem 6rem 8rem;
@@ -3417,6 +3419,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   max-width: 700px;
   margin: 0 auto;
   margin-block-end: 1em;
+}
+#home > article > .home > ul {
+  line-height: 1.75;
 }
 #home > article > .home > div.kg-width-full:first-child {
   margin-top: -4rem;

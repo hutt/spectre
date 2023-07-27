@@ -35,13 +35,20 @@
 			.major {
 				line-height: 1.75;
 			}
-			.content > p {
-				line-height: 1.75;
+			.content {
+				> p {
+					line-height: 1.75;
+				}
+				> ul {
+					line-height: 1.75;
+				}
 			}
 		}
 
 		> .posts {
-			line-height: 1.5;
+			> p {
+				line-height: 1.75;
+			}
 		}
 
 		> .post {
