@@ -275,6 +275,16 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 3 3;
+}
+
 h1, h2 {
   text-transform: uppercase;
 }
@@ -3418,7 +3428,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #home > article > .home > p {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 -2em auto -2em;
   margin-block-end: 1em;
 }
 #home > article > .home > ul {
