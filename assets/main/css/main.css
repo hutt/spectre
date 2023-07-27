@@ -2902,6 +2902,8 @@ body.is-preload #wrapper.fade-in:before {
   line-height: 0.8;
   letter-spacing: 0.01em;
   margin-bottom: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 #intro p {
   font-size: 1.25rem;
