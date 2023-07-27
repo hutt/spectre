@@ -3236,9 +3236,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .post {
   padding: 8rem 8rem 6rem 8rem;
 }
-#main > .post header.major {
-  margin-bottom: 0;
-}
 #main > .post header.major > .date {
   margin-top: -2rem;
 }
