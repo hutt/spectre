@@ -113,8 +113,11 @@
     margin: 4rem auto 0;
     max-width: 700px;
     
-    ul.icons li a {
-        color: #333333;
+    ul.icons {
+        margin: 0;
+        > li a {
+            color: #333333;
+        }
     }
 }
 
