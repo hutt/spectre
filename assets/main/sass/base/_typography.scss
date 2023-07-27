@@ -10,11 +10,11 @@
 		font-size: 15pt;
 
 		@include breakpoint('<=xlarge') {
-			font-size: 13pt;
+			font-size: 14pt;
 		}
 
 		@include breakpoint('<=medium') {
-			font-size: 12pt;
+			font-size: 13pt;
 		}
 
 		@include breakpoint('<=xxsmall') {
