@@ -81,6 +81,10 @@
 
 			&.featured {
 				text-align: center;
+
+				> a.image.main {
+					margin: 2rem 0;
+				}
 			}
 
 			@include breakpoint('<=large') {
@@ -137,6 +141,15 @@
 
 				&:nth-child(-n + 2) {
 					border-top-width: 0;
+				}
+
+				> header {
+					> .date {
+
+					}
+					> h2 {
+						margin-top: 1rem;
+					}
 				}
 			}
 

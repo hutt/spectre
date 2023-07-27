@@ -2223,7 +2223,7 @@ input[type=radio]:focus + label:before {
 }
 .image.fit {
   display: block;
-  margin: 2.5rem 0;
+  margin: 1.8rem 0;
   width: 100%;
 }
 .image.fit:first-child {
@@ -2504,7 +2504,7 @@ header > h4 + p {
   margin-top: -0.75rem;
 }
 header.major {
-  margin: 0 0 4rem 0;
+  margin: 0 0 2rem 0;
   text-align: center;
 }
 header.major > :last-child {
@@ -2516,7 +2516,7 @@ header.major > p {
 }
 header.major > .date {
   font-size: 1rem;
-  margin: 0 0 4rem 0;
+  margin: 0 0 2rem 0;
 }
 header.major > .date:before, header.major > .date:after {
   content: "";
@@ -3273,6 +3273,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .post.featured {
   text-align: center;
 }
+#main > .post.featured > a.image.main {
+  margin: 2rem 0;
+}
 @media screen and (max-width: 1280px) {
   #main > .post {
     padding: 6rem 4rem 4rem 4rem;
@@ -3343,6 +3346,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #main > .posts > article:nth-child(-n+2) {
   border-top-width: 0;
+}
+#main > .posts > article > header > h2 {
+  margin-top: 1rem;
 }
 @media screen and (max-width: 980px) {
   #main > .posts {
