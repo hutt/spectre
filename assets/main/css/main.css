@@ -3354,6 +3354,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
+  line-height: 1.5;
 }
 #main > .post.featured {
   text-align: center;
