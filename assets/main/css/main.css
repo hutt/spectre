@@ -3428,7 +3428,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #home > article > .home > p {
   max-width: 700px;
-  margin: 0 -2em auto -2em;
+  margin: 0 auto;
   margin-block-end: 1em;
 }
 #home > article > .home > ul {
