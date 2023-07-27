@@ -3317,9 +3317,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   background-color: #e7e7e7;
   background-size: cover;
   background-position: center;
-  height: 45vh;
+  min-height: 45vh;
   margin: -8rem -8rem 2rem -8rem;
-  padding: 0 8rem 0 8rem;
+  padding: 0 10rem 0 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3328,23 +3328,23 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 @media screen and (max-width: 1280px) {
   #main > .post header.feature-image {
-    height: 40vh;
+    min-height: 40vh;
     margin: -6rem -4rem 2rem -4rem;
-    padding: 0 4rem 0 4rem;
+    padding: 0 6rem 0 6rem;
   }
 }
 @media screen and (max-width: 736px) {
   #main > .post header.feature-image {
-    height: 35vh;
+    min-height: 35vh;
     margin: -4rem -4rem 2rem -4rem;
-    padding: 0 4rem 0 4rem;
+    padding: 0 6rem 0 6rem;
   }
 }
 @media screen and (max-width: 480px) {
   #main > .post header.feature-image {
-    height: 35vh;
+    min-height: 35vh;
     margin: -6rem -4rem 2rem -4rem;
-    padding: 0 4rem 0 4rem;
+    padding: 0 6rem 0 6rem;
   }
 }
 #main > .post header.feature-image h1, #main > .post header.feature-image p, #main > .post header.feature-image a {
