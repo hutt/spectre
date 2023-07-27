@@ -97,23 +97,19 @@
 					
 					min-height: 45vh;
 					margin: (-(_size(padding) * 4)) (-(_size(padding) * 4)) (_size(padding) * 1) (-(_size(padding) * 4));
-					padding: 0 (_size(padding) * 5) 0 (_size(padding) * 5);
 
 					@include breakpoint('<=large') {
 						min-height: 40vh;
 						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 1) (-(_size(padding) * 2));
-						padding: 0 (_size(padding) * 3) 0 (_size(padding) * 3);
 					}
 					@include breakpoint('<=small') {
 						min-height: 35vh;
 						margin: (-(_size(padding) * 2)) (-(_size(padding) * 2)) (_size(padding) * 1) (-(_size(padding) * 2));
-						padding: 0 (_size(padding) * 3) 0 (_size(padding) * 3);
 					}
 
 					@include breakpoint('<=xsmall') {
 						min-height: 35vh;
 						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 1) (-(_size(padding) * 2));
-						padding: 0 (_size(padding) * 3) 0 (_size(padding) * 3);
 					}
 
 					display: flex;
@@ -121,6 +117,10 @@
 					align-items: center;
 					justify-content: center;
 					text-align: center;
+
+					> h1, > p {
+						max-width: 700px;
+					}
 
 					h1, p, a {
 						color: _palette(bg);
