@@ -210,11 +210,6 @@ html {
     font-size: 12pt;
   }
 }
-@media screen and (max-width: 1280px) {
-  html {
-    font-size: 11.5pt;
-  }
-}
 @media screen and (max-width: 736px) {
   html {
     font-size: 11.5pt;
