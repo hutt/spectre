@@ -14,7 +14,7 @@
 <main id="main">
     <section class="post">
         {{#if feature_image}}
-            <header class="major feature-image" title="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" style="background-image: url('https://felixschulz.eu/assets/images/overlay.png'), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('{{img_url feature_image}}')">
+            <header class="major feature-image" title="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('{{img_url feature_image}}')">
                 <h1>{{title}}</h1>
                 {{#if feature_image_caption}}
                 <p>{{feature_image_caption}}</p>
