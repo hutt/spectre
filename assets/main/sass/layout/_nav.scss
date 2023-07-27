@@ -52,6 +52,10 @@
 						outline: none;
 						padding: 0 2rem;
 
+						@include breakpoint('<=large') {
+							padding: 0 1.5rem;
+						}
+
 						&:hover {
 							color: inherit !important;
 							background-color: transparentize(_palette(invert, fg), 0.9);
@@ -76,6 +80,12 @@
 				@include vendor('flex-grow', '0');
 				@include vendor('flex-shrink', '0');
 				margin-bottom: 0;
+
+				> li {
+					@include breakpoint('<=large') {
+						padding: 0 0.4rem 0 0;
+					}
+				}
 			}
 		}
 

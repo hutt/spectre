@@ -210,19 +210,24 @@ html {
     font-size: 13pt;
   }
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1280px) {
   html {
     font-size: 12pt;
   }
 }
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 980px) {
   html {
     font-size: 11.5pt;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 736px) {
   html {
     font-size: 11pt;
+  }
+}
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 10.5pt;
   }
 }
 
@@ -3190,6 +3195,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   outline: none;
   padding: 0 2rem;
 }
+@media screen and (max-width: 1280px) {
+  #nav ul.links li a {
+    padding: 0 1.5rem;
+  }
+}
 #nav ul.links li a:hover {
   color: inherit !important;
   background-color: rgba(255, 255, 255, 0.1);
@@ -3213,6 +3223,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -ms-flex-shrink: 0;
   flex-shrink: 0;
   margin-bottom: 0;
+}
+@media screen and (max-width: 1280px) {
+  #nav ul.icons > li {
+    padding: 0 0.4rem 0 0;
+  }
 }
 @media screen and (max-width: 980px) {
   #nav {
