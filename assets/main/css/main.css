@@ -3966,11 +3966,15 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   }
 }
 @media screen and (max-width: 480px) {
+  #copyright {
+    font-size: 0.7em;
+  }
   #copyright ul li {
-    border-left: 0;
-    margin: 1rem 0 0 0;
-    padding-left: 0;
-    display: block;
+    border-left: solid 1px;
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+    line-height: 0.5rem;
+    display: inline-block;
   }
   #copyright ul li:first-child {
     margin-top: 0;
