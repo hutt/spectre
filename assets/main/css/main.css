@@ -2404,6 +2404,7 @@ ul {
   list-style: disc;
   margin: 0 0 2rem 0;
   padding-left: 1rem;
+  line-height: 1.75;
 }
 ul li {
   padding-left: 0.5rem;
