@@ -3271,6 +3271,16 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-hyphens: auto;
   hyphens: auto;
 }
+#main > .post header.major > h2::before {
+  content: "\f005";
+  color: #fae102;
+  font-family: "Font Awesome 6 Free";
+  font-size: 0.6em;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0.3em;
+  height: 0.6em;
+}
 #main > .post.featured {
   text-align: center;
 }
