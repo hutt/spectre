@@ -7,18 +7,18 @@
 /* Type */
 
 	html {
-		font-size: 16pt;
+		font-size: 15pt;
 
 		@include breakpoint('<=xlarge') {
-			font-size: 12pt;
+			font-size: 13pt;
 		}
 
 		@include breakpoint('<=medium') {
-			font-size: 11.5pt;
+			font-size: 12pt;
 		}
 
 		@include breakpoint('<=xxsmall') {
-			font-size: 10pt;
+			font-size: 11pt;
 		}
 	}
 
