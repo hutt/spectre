@@ -4226,6 +4226,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   color: #333333;
 }
 
+@media screen and (max-width: 736px) {
+  .post-footer {
+    margin: 2rem auto;
+  }
+}
 .authors {
   display: flex;
   justify-content: center;

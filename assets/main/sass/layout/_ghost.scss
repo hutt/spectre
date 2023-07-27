@@ -121,6 +121,12 @@
     }
 }
 
+@include breakpoint('<=small') {
+    .post-footer {
+        margin: 2rem auto;
+    }
+}
+
 .authors {
     display: flex;
     justify-content: center;
