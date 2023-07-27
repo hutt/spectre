@@ -95,20 +95,23 @@
 					background-size: cover;
 					background-position: center 20%;
 
-					max-width: 700px;
+					width: 700px;
 					aspect-ratio: 3 / 2;
 
 					margin: (-(_size(padding) * 4)) (-(_size(padding) * 4)) (_size(padding) * 2) (-(_size(padding) * 4));
 
+					@include breakpoint('<=xlarge') {
+						width: calc(100vw - 2rem);
+					}
 					@include breakpoint('<=large') {
-						width: calc(100vw - 4rem);
+						width: calc(100vw - 2rem);
 						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 2) (-(_size(padding) * 2));
 					}
 					@include breakpoint('<=medium') {
-						width: calc(100vw - 2rem);
+						width: 100vw;
 					}
 					@include breakpoint('<=small') {
-						width: 100vw;
+						width: calc(100vw + 2rem);
 						margin: (-(_size(padding) * 2)) (-(_size(padding) * 2)) (_size(padding) * 2) (-(_size(padding) * 2));
 					}
 

@@ -3332,7 +3332,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   background-color: #e7e7e7;
   background-size: cover;
   background-position: center 20%;
-  max-width: 700px;
+  width: 700px;
   aspect-ratio: 3/2;
   margin: -8rem -8rem 4rem -8rem;
   display: flex;
@@ -3341,20 +3341,25 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   justify-content: center;
   text-align: center;
 }
+@media screen and (max-width: 1680px) {
+  #main > .post header.feature-image {
+    width: calc(100vw - 2rem);
+  }
+}
 @media screen and (max-width: 1280px) {
   #main > .post header.feature-image {
-    width: calc(100vw - 4rem);
+    width: calc(100vw - 2rem);
     margin: -6rem -4rem 4rem -4rem;
   }
 }
 @media screen and (max-width: 980px) {
   #main > .post header.feature-image {
-    width: calc(100vw - 2rem);
+    width: 100vw;
   }
 }
 @media screen and (max-width: 736px) {
   #main > .post header.feature-image {
-    width: 100vw;
+    width: calc(100vw + 2rem);
     margin: -4rem -4rem 4rem -4rem;
   }
 }
