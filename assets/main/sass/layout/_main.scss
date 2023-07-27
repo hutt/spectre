@@ -96,20 +96,20 @@
 					background-position: center;
 					
 					min-height: 45vh;
-					margin: (-(_size(padding) * 4)) (-(_size(padding) * 4)) (_size(padding) * 1) (-(_size(padding) * 4));
+					margin: (-(_size(padding) * 4)) (-(_size(padding) * 4)) (_size(padding) * 2) (-(_size(padding) * 4));
 
 					@include breakpoint('<=large') {
 						min-height: 40vh;
-						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 1) (-(_size(padding) * 2));
+						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 2) (-(_size(padding) * 2));
 					}
 					@include breakpoint('<=small') {
 						min-height: 35vh;
-						margin: (-(_size(padding) * 2)) (-(_size(padding) * 2)) (_size(padding) * 1) (-(_size(padding) * 2));
+						margin: (-(_size(padding) * 2)) (-(_size(padding) * 2)) (_size(padding) * 2) (-(_size(padding) * 2));
 					}
 
 					@include breakpoint('<=xsmall') {
 						min-height: 35vh;
-						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 1) (-(_size(padding) * 2));
+						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 2) (-(_size(padding) * 2));
 					}
 
 					display: flex;
@@ -119,6 +119,7 @@
 					text-align: center;
 
 					> h1, > p {
+						width: calc(100% - 2rem);
 						max-width: 700px;
 					}
 
