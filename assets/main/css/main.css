@@ -3439,7 +3439,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #footer a:hover {
   border-bottom-color: transparent;
-  color: #18bfef;
+  color: rgba(255, 255, 255, 0.5);
 }
 #footer strong, #footer b {
   color: #717981;
