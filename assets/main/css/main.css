@@ -275,7 +275,7 @@ h2 {
 
 h3 {
   font-size: 1.25rem;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 1.5rem 0;
 }
 
 h4 {
@@ -3221,7 +3221,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .post header.major > h1, #main > .post header.major h2 {
   font-size: 4rem;
   line-height: 1.1;
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
   -webkit-hyphens: auto;
   hyphens: auto;
 }
@@ -3398,7 +3398,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #home > article > .home > p {
   max-width: 700px;
   margin: 0 auto;
-  margin-block-end: 1em;
+  margin-bottom: 1em;
 }
 #home > article > .home > div.kg-header-card.kg-width-full:first-child {
   margin-top: -2rem;
@@ -4205,7 +4205,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 .kg-card {
-  margin: 2rem 0 2rem 0;
+  margin: 0 0 2rem 0;
 }
 .kg-embed-card {
   display: flex;
