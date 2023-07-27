@@ -99,16 +99,16 @@
 					margin: (-(_size(padding) * 4)) (-(_size(padding) * 4)) (_size(padding) * 2) (-(_size(padding) * 4));
 
 					@include breakpoint('<=large') {
-						min-height: 40vh;
+						height: 35%;
 						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 2) (-(_size(padding) * 2));
 					}
 					@include breakpoint('<=small') {
-						min-height: 35vh;
+						height: 38%;
 						margin: (-(_size(padding) * 2)) (-(_size(padding) * 2)) (_size(padding) * 2) (-(_size(padding) * 2));
 					}
 
 					@include breakpoint('<=xsmall') {
-						min-height: 35vh;
+						height: 40%;
 						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 2) (-(_size(padding) * 2));
 					}
 

@@ -3342,19 +3342,19 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 @media screen and (max-width: 1280px) {
   #main > .post header.feature-image {
-    min-height: 40vh;
+    height: 35%;
     margin: -6rem -4rem 4rem -4rem;
   }
 }
 @media screen and (max-width: 736px) {
   #main > .post header.feature-image {
-    min-height: 35vh;
+    height: 38%;
     margin: -4rem -4rem 4rem -4rem;
   }
 }
 @media screen and (max-width: 480px) {
   #main > .post header.feature-image {
-    min-height: 35vh;
+    height: 40%;
     margin: -6rem -4rem 4rem -4rem;
   }
 }
