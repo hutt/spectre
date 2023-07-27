@@ -101,7 +101,7 @@
 					margin: (-(_size(padding) * 4)) (-(_size(padding) * 4)) (_size(padding) * 2) (-(_size(padding) * 4));
 
 					@include breakpoint('<=xlarge') {
-						width: calc(100vw - 2rem);
+						width: calc(100vw - 4rem);
 					}
 					@include breakpoint('<=large') {
 						width: calc(100vw - 2rem);

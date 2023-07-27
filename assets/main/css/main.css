@@ -3343,7 +3343,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 @media screen and (max-width: 1680px) {
   #main > .post header.feature-image {
-    width: calc(100vw - 2rem);
+    width: calc(100vw - 4rem);
   }
 }
 @media screen and (max-width: 1280px) {
