@@ -2894,8 +2894,9 @@ body.is-preload #wrapper.fade-in:before {
 }
 #intro h1 {
   font-size: 5rem;
-  line-height: 1;
+  line-height: 0.8;
   letter-spacing: 0.01em;
+  margin-bottom: 1rem;
 }
 #intro p {
   font-size: 1.25rem;
@@ -2968,8 +2969,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   }
   #intro h1 {
     font-size: 4.5rem;
-    line-height: 1.1;
-    margin-bottom: 0.8rem;
+    line-height: 0.9;
+    margin-bottom: 0.3rem;
   }
   #intro p {
     margin-top: 0rem;

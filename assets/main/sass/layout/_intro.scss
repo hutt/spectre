@@ -26,8 +26,9 @@
 
 		h1 {
 			font-size: 5rem;
-			line-height: 1;
+			line-height: 0.8;
 			letter-spacing: 0.01em;
+			margin-bottom: 1rem;
 		}
 
 		p {
@@ -100,8 +101,8 @@
 
 			h1 {
 				font-size: 4.5rem;
-				line-height: 1.1;
-				margin-bottom: _size(element-margin) * 0.4;
+				line-height: 0.9;
+				margin-bottom: 0.3rem;
 			}
 
 			p {
