@@ -31,7 +31,9 @@
 			margin-bottom: 1rem;
 
 			word-wrap: break-word;
-			overflow-wrap: break-word;
+			hyphens: none;
+			-webkit-hyphens: none;
+			-ms-hyphens: none;
 		}
 
 		p {

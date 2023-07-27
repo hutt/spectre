@@ -2908,7 +2908,9 @@ body.is-preload #wrapper.fade-in:before {
   letter-spacing: 0.01em;
   margin-bottom: 1rem;
   word-wrap: break-word;
-  overflow-wrap: break-word;
+  hyphens: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
 }
 #intro p {
   font-size: 1.25rem;
