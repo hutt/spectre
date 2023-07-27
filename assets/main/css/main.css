@@ -3391,6 +3391,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #home > article .home p {
   max-width: 700px;
   margin: 0 auto;
+  margin-bottom: 1em;
 }
 #home > footer {
   text-align: center;
