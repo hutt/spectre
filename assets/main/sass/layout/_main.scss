@@ -95,7 +95,7 @@
 					background-size: cover;
 					background-position: center;
 
-					padding: 0 4rem 0 4rem;
+					padding: 0 (_size(padding) * 2) 0 (_size(padding) * 2);
 					
 					height: 45vh;
 					margin: (-(_size(padding) * 4)) (-(_size(padding) * 4)) (_size(padding) * 1) (-(_size(padding) * 4));
