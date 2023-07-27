@@ -3385,7 +3385,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   max-width: 700px;
   margin: 0 auto;
 }
-#home > article .home .kg-width-full .kg-header-card-header h2, #home > article .home .kg-width-full .kg-header-card-subheader h2 {
+#home > article .home .kg-width-full h2 {
   font-size: 5em;
 }
 #home > article .home p {
