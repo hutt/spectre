@@ -2223,7 +2223,7 @@ input[type=radio]:focus + label:before {
 }
 .image.fit {
   display: block;
-  margin: 1.8rem 0;
+  margin: 1.6rem 0;
   width: 100%;
 }
 .image.fit:first-child {
@@ -2492,7 +2492,7 @@ header > h1 + p {
   line-height: 2;
 }
 header > h2 + p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-top: -0.75rem;
 }
 header > h3 + p {
@@ -3262,11 +3262,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #main > .post header.major > .date {
   margin-top: -2rem;
+  margin-bottom: 1.5rem;
 }
 #main > .post header.major > h1, #main > .post header.major h2 {
   font-size: 4rem;
   line-height: 1.1;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
   -webkit-hyphens: auto;
   hyphens: auto;
 }
@@ -3349,6 +3350,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #main > .posts > article > header > h2 {
   margin-top: 1rem;
+}
+#main > .posts > article > p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 @media screen and (max-width: 980px) {
   #main > .posts {
