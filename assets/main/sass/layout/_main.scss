@@ -14,6 +14,10 @@
 		max-width: _size(wrapper);
 		z-index: 2;
 
+		@include breakpoint('<=medium') {
+			width: 100%;
+		}
+
 		> * {
 			@include padding((_size(padding) * 2), (_size(padding) * 2));
 			border-top: solid 2px _palette(border);
@@ -85,8 +89,28 @@
 					}
 				}
 
-				&.home {
+				&.feature-image {
+					position: relative;
+					background-color: #e7e7e7;
+					background-size: cover;
+					background-position: center;
+					min-height: 40vh;
+					padding: 0;
+					margin: -(_size(padding) * 4) -(_size(padding) * 4) 0 -(_size(padding) * 4);
 
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+
+					h1, p {
+						color: _palette(bg);
+					}
+
+					p {
+						font-style: unset;
+					}
 				}
 
 			}

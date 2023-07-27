@@ -3254,6 +3254,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   z-index: 2;
   /* Line Heights */
 }
+@media screen and (max-width: 980px) {
+  #main {
+    width: 100%;
+  }
+}
 #main > * {
   padding: 4rem 4rem 2rem 4rem;
   border-top: solid 2px #eeeeee;
@@ -3306,6 +3311,26 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   vertical-align: middle;
   line-height: 0.3em;
   height: 0.6em;
+}
+#main > .post header.feature-image {
+  position: relative;
+  background-color: #e7e7e7;
+  background-size: cover;
+  background-position: center;
+  min-height: 40vh;
+  padding: 0;
+  margin: -16rem -8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#main > .post header.feature-image h1, #main > .post header.feature-image p {
+  color: #ffffff;
+}
+#main > .post header.feature-image p {
+  font-style: unset;
 }
 #main > .post.featured {
   text-align: center;
