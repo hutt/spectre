@@ -3356,6 +3356,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   font-weight: 300;
   font-size: 1.2rem;
   line-height: 1.5;
+  hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
 }
 #main > .post.featured {
   text-align: center;
