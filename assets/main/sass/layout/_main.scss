@@ -94,13 +94,23 @@
 					background-color: #e7e7e7;
 					background-size: cover;
 					background-position: center;
-					min-height: 40vh;
+
+					padding: 0 4rem 0 4rem;
+					
+					height: 45vh;
 					margin: (-(_size(padding) * 4)) (-(_size(padding) * 4)) (_size(padding) * 1) (-(_size(padding) * 4));
 
 					@include breakpoint('<=large') {
-						margin: (-(_size(padding) * 3)) (-(_size(padding) * 3)) (_size(padding) * 1) (-(_size(padding) * 3));
+						height: 40vh;
+						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 1) (-(_size(padding) * 2));
 					}
 					@include breakpoint('<=small') {
+						height: 35vh;
+						margin: (-(_size(padding) * 2)) (-(_size(padding) * 2)) (_size(padding) * 1) (-(_size(padding) * 2));
+					}
+
+					@include breakpoint('<=xsmall') {
+						height: 35vh;
 						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 1) (-(_size(padding) * 2));
 					}
 
