@@ -95,8 +95,8 @@
 					background-size: cover;
 					background-position: center;
 					min-height: 40vh;
-					padding: 0;
-					margin: -(_size(padding) * 4) -(_size(padding) * 4) 0 -(_size(padding) * 4);
+					padding: 0 -(_size(padding) * 1) 0 -(_size(padding) * 1);
+					margin: (-(_size(padding) * 2)) (-(_size(padding) * 2)) (_size(padding) * 1) (-(_size(padding) * 2));
 
 					display: flex;
 					flex-direction: column;
@@ -104,12 +104,14 @@
 					justify-content: center;
 					text-align: center;
 
-					h1, p {
+					h1, p, a {
 						color: _palette(bg);
 					}
 
 					p {
-						font-style: unset;
+						font-style: normal;
+						font-family: _font(family-heading);
+						font-weight: 300;
 					}
 				}
 
