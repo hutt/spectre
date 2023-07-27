@@ -3447,7 +3447,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   max-width: 700px;
   margin: 0 auto;
   margin-block-end: 1em;
-  width: calc(100% + 8rem);
 }
 #home > article > .home > ul {
   line-height: 1.75;
