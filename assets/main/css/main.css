@@ -250,7 +250,7 @@ a:hover {
 }
 
 strong, b {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 em, i {
@@ -2426,7 +2426,7 @@ dl {
 }
 dl dt {
   display: block;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 1rem 0;
 }
 dl dd {
@@ -3146,7 +3146,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -ms-flex-shrink: 1;
   flex-shrink: 1;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.075em;
   list-style: none;
   margin-bottom: 0;

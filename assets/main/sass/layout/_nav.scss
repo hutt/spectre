@@ -31,7 +31,7 @@
 				@include vendor('flex-grow', '1');
 				@include vendor('flex-shrink', '1');
 				font-family: _font(family-heading);
-				font-weight: _font(weight-heading);
+				font-weight: _font(weight-bold);
 				letter-spacing: 0.075em;
 				list-style: none;
 				margin-bottom: 0;
