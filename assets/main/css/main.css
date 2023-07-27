@@ -3374,7 +3374,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #home > *:first-child {
   border-top: 0;
-  padding-top: 0;
 }
 #home > article > .home {
   max-width: 100%;
@@ -3398,7 +3397,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   margin-bottom: 1em;
 }
 #home > article > .home > div.kg-width-full:first-child {
-  margin-top: -2rem;
+  margin-top: -4rem;
 }
 #home > article > .home > div.kg-width-full:last-child {
   margin-bottom: -2rem;
