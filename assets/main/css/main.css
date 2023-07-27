@@ -3349,6 +3349,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #main > .post header.feature-image h1, #main > .post header.feature-image p, #main > .post header.feature-image a {
   color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+#main > .post header.feature-image a:hover {
+  color: #c41144;
 }
 #main > .post header.feature-image p {
   font-style: normal;

@@ -125,6 +125,11 @@
 
 					h1, p, a {
 						color: _palette(bg);
+						border-bottom-color: _palette(bg);
+					}
+
+					a:hover {
+						color: _palette(accent);
 					}
 
 					p {
