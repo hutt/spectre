@@ -2397,6 +2397,13 @@ ul.icons.alt li .icon:before {
   font-size: 1rem;
 }
 
+footer > ul.icons > li > .icon:before {
+  width: 2.7rem;
+  height: 2.7rem;
+  line-height: 2.7rem;
+  font-size: 1.8rem;
+}
+
 /* List */
 ol {
   list-style: decimal;
