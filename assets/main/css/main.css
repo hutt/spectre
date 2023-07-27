@@ -2975,7 +2975,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     min-height: 80vh;
   }
   #intro h1 {
-    font-size: 4.5rem;
+    font-size: 13vw;
     line-height: 0.9;
     margin-bottom: 0.3rem;
   }
