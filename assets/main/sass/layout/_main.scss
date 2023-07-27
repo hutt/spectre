@@ -95,8 +95,7 @@
 					background-size: cover;
 					background-position: center;
 					min-height: 40vh;
-					padding: 0 -(_size(padding) * 1) 0 -(_size(padding) * 1);
-					margin: (-(_size(padding) * 2)) (-(_size(padding) * 2)) (_size(padding) * 1) (-(_size(padding) * 2));
+					margin: (-(_size(padding) * 4)) (-(_size(padding) * 4)) (_size(padding) * 1) (-(_size(padding) * 4));
 
 					display: flex;
 					flex-direction: column;
