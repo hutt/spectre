@@ -2881,6 +2881,7 @@ body.is-preload #wrapper.fade-in:before {
 #intro h1 {
   font-size: 5rem;
   line-height: 1;
+  letter-spacing: 0.01em;
 }
 #intro p {
   font-size: 1.25rem;
