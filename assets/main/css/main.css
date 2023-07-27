@@ -3206,9 +3206,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .post .major {
   line-height: 1.75;
 }
-#main > .post .content > p {
-  line-height: 1.75;
-}
 #main > .posts {
   line-height: 1.5;
 }
