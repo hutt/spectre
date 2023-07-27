@@ -4042,7 +4042,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #header .logo.image img {
-  height: 6rem;
+  height: 5rem;
   transform: none !important;
 }
 
