@@ -13,7 +13,7 @@
 			font-size: 12pt;
 		}
 
-		@include breakpoint('<=large') {
+		@include breakpoint('<=medium') {
 			font-size: 11pt;
 		}
 
