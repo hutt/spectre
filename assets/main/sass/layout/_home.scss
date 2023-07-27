@@ -15,12 +15,13 @@
 		z-index: 2;
 
 		> * {
-			@include padding((_size(padding) * 2), (_size(padding) * 2));
+			@include padding((_size(padding) * 1), (_size(padding) * 1));
 			border-top: solid 2px _palette(border);
 			margin: 0;
 
 			&:first-child {
 				border-top: 0;
+				padding-top: 4em;
 			}
 		}
 
@@ -31,9 +32,9 @@
 
 				> .kg-width-full {
 					background-position-y: 8%;
-					margin-left: -4rem;
-					margin-right: -4rem;
-					width: calc(100% + 8rem);
+					margin-left: -2rem;
+					margin-right: -2rem;
+					width: calc(100% + 4rem);
 
 					> .kg-header-card-header, .kg-header-card-subheader {
 						max-width: 700px;
@@ -71,6 +72,8 @@
 					max-width: 700px;
 					margin: 0 auto;
 					margin-block-end: 1em;
+
+					width: calc(100% + 8rem);
 				}
 
 				> ul {

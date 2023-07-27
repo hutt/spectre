@@ -272,12 +272,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 p, h1, h2, h3, h4, h5, h6 {
   hyphens: auto;
-  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-chars: 6 3 4;
   -webkit-hyphens: auto;
   -webkit-hyphenate-limit-before: 3;
-  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-after: 4;
   -ms-hyphens: auto;
-  -ms-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-chars: 6 3 4;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 h1, h2 {
@@ -3398,21 +3400,22 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   /* Line Heights */
 }
 #home > * {
-  padding: 4rem 4rem 2rem 4rem;
+  padding: 2rem 2rem 0.1rem 2rem;
   border-top: solid 2px #eeeeee;
   margin: 0;
 }
 #home > *:first-child {
   border-top: 0;
+  padding-top: 4em;
 }
 #home > article > .home {
   max-width: 100%;
 }
 #home > article > .home > .kg-width-full {
   background-position-y: 8%;
-  margin-left: -4rem;
-  margin-right: -4rem;
-  width: calc(100% + 8rem);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  width: calc(100% + 4rem);
 }
 #home > article > .home > .kg-width-full > .kg-header-card-header, #home > article > .home > .kg-width-full .kg-header-card-subheader {
   max-width: 700px;
@@ -3444,6 +3447,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   max-width: 700px;
   margin: 0 auto;
   margin-block-end: 1em;
+  width: calc(100% + 8rem);
 }
 #home > article > .home > ul {
   line-height: 1.75;
