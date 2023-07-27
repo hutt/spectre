@@ -118,8 +118,8 @@
 					justify-content: center;
 					text-align: center;
 
-					> h1, > p {
-						width: calc(100% - 2rem);
+					h1, p {
+						width: calc(100% - 8rem);
 						max-width: 700px;
 					}
 
@@ -161,8 +161,8 @@
 						}
 
 						> h1, h2 {
-							font-size: 2.5rem;
-							line-height: 1.2;
+							font-size: 3rem;
+							line-height: 1.05;
 							margin: 0 0 (_size(element-margin) * 0.75) 0;
 							-webkit-hyphens: auto;
 							hyphens: auto;

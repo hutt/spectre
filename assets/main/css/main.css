@@ -3343,8 +3343,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     margin: -6rem -4rem 4rem -4rem;
   }
 }
-#main > .post header.feature-image > h1, #main > .post header.feature-image > p {
-  width: calc(100% - 2rem);
+#main > .post header.feature-image h1, #main > .post header.feature-image p {
+  width: calc(100% - 8rem);
   max-width: 700px;
 }
 #main > .post header.feature-image h1, #main > .post header.feature-image p, #main > .post header.feature-image a {
@@ -3377,8 +3377,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     margin-bottom: 2rem;
   }
   #main > .post header.major > h1, #main > .post header.major h2 {
-    font-size: 2.5rem;
-    line-height: 1.2;
+    font-size: 3rem;
+    line-height: 1.05;
     margin: 0 0 1.5rem 0;
     -webkit-hyphens: auto;
     hyphens: auto;
