@@ -2695,7 +2695,7 @@ table.alt tbody tr td {
   margin-top: 2rem !important;
 }
 
-.kg-header-card .kg-style-accent {
+.kg-header-card.kg-style-accent {
   background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%) !important;
 }
 
