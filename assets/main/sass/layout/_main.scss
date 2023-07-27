@@ -101,10 +101,11 @@
 					margin: (-(_size(padding) * 4)) (-(_size(padding) * 4)) (_size(padding) * 2) (-(_size(padding) * 4));
 
 					@include breakpoint('<=large') {
-						width: calc(100vw - calc(_size(padding) * 4));
+						width: calc(100vw - calc(_size(padding) * 3));
 						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 2) (-(_size(padding) * 2));
 					}
 					@include breakpoint('<=small') {
+						width: calc(100vw - calc(_size(padding) * 2));
 						margin: (-(_size(padding) * 2)) (-(_size(padding) * 2)) (_size(padding) * 2) (-(_size(padding) * 2));
 					}
 
