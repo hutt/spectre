@@ -194,6 +194,9 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
   -ms-transition: none !important;
   transition: none !important;
 }
+body.error-template {
+  height: 100vh;
+}
 
 img {
   display: block;
