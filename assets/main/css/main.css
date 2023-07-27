@@ -3397,7 +3397,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   margin: 0 auto;
   margin-bottom: 1em;
 }
-#home > article > .home:last-child .kg-width-full {
+#home > article > .home > div.kg-width-full:last-child {
   margin-bottom: -2em;
 }
 #home > footer {

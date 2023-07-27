@@ -52,10 +52,8 @@
 					margin-bottom: 1em;
 				}
 
-				&:last-child {
-					.kg-width-full {
-						margin-bottom: -2em;
-					}
+				> div.kg-width-full:last-child {
+					margin-bottom: -2em;
 				}
 			}
 		}
