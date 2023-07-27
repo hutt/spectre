@@ -3907,7 +3907,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   letter-spacing: 0.075em;
   line-height: 1.5;
   text-align: center;
-  margin: 8rem auto 8rem auto;
+  margin: 6rem auto 6rem auto;
   width: calc(100% - 4rem);
   max-width: 72rem;
   z-index: 2;
@@ -3965,11 +3965,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   border-left: 0;
   margin-left: 0;
   padding-left: 0;
-}
-@media screen and (max-width: 1280px) {
-  #copyright {
-    margin: 6rem auto;
-  }
 }
 @media screen and (max-width: 480px) {
   #copyright {
