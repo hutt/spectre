@@ -3376,26 +3376,29 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   border-top: 0;
   padding-top: 0;
 }
-#home > article .home {
+#home > article > .home {
   max-width: 100%;
 }
-#home > article .home .kg-width-full {
+#home > article > .home > .kg-width-full {
   background-position-y: 8%;
   margin-left: -4rem;
   margin-right: -4rem;
   width: calc(100% + 8rem);
 }
-#home > article .home .kg-width-full .kg-header-card-header, #home > article .home .kg-width-full .kg-header-card-subheader {
+#home > article > .home > .kg-width-full > .kg-header-card-header, #home > article > .home > .kg-width-full .kg-header-card-subheader {
   max-width: 700px;
   margin: 0 auto;
 }
-#home > article .home .kg-width-full h2 {
+#home > article > .home > .kg-width-full > h2 {
   font-size: 5em;
 }
-#home > article .home p {
+#home > article > .home > p {
   max-width: 700px;
   margin: 0 auto;
   margin-bottom: 1em;
+}
+#home > article > .home:last-child .kg-width-full {
+  margin-bottom: -2em;
 }
 #home > footer {
   text-align: center;

@@ -27,29 +27,35 @@
 
 		> article {
 
-			.home {
+			> .home {
 				max-width: 100%;
 
-				.kg-width-full {
+				> .kg-width-full {
 					background-position-y: 8%;
 					margin-left: -4rem;
 					margin-right: -4rem;
 					width: calc(100% + 8rem);
 
-					.kg-header-card-header, .kg-header-card-subheader {
+					> .kg-header-card-header, .kg-header-card-subheader {
 						max-width: 700px;
 						margin: 0 auto;
 					}
 
-					h2 {
+					> h2 {
 						font-size: 5em;
 					}
 				}
 
-				p {
+				> p {
 					max-width: 700px;
 					margin: 0 auto;
 					margin-bottom: 1em;
+				}
+
+				&:last-child {
+					.kg-width-full {
+						margin-bottom: -2em;
+					}
 				}
 			}
 		}
