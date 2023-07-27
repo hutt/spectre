@@ -3381,12 +3381,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   margin-right: -4rem;
   width: calc(100% + 8rem);
 }
-#home > article .home .kg-width-full.kg-size-large .kg-style-image > h2 {
-  font-size: 5em;
-}
 #home > article .home .kg-width-full .kg-header-card-header, #home > article .home .kg-width-full .kg-header-card-subheader {
   max-width: 700px;
   margin: 0 auto;
+}
+#home > article .home .kg-width-full .kg-header-card-header h2, #home > article .home .kg-width-full .kg-header-card-subheader h2 {
+  font-size: 5em;
 }
 #home > article .home p {
   max-width: 700px;
