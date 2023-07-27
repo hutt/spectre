@@ -3206,6 +3206,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .post .major {
   line-height: 1.75;
 }
+#main > .post .content > p {
+  line-height: 1.75;
+}
 #main > .posts {
   line-height: 1.5;
 }
@@ -3398,10 +3401,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   margin-bottom: 1em;
 }
 #home > article > .home > div.kg-header-card.kg-width-full:first-child {
-  margin-top: -2rem;
+  margin-top: -2em;
 }
 #home > article > .home > div.kg-header-card.kg-width-full:last-child {
-  margin-bottom: -2rem;
+  margin-bottom: -2em;
 }
 #home > footer {
   text-align: center;
