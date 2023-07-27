@@ -3907,7 +3907,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   letter-spacing: 0.075em;
   line-height: 1.5;
   text-align: center;
-  margin: 6rem auto 6rem auto;
+  margin: 6rem auto 4rem auto;
   width: calc(100% - 4rem);
   max-width: 72rem;
   z-index: 2;
