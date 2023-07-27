@@ -3397,6 +3397,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   margin: 0 auto;
   margin-bottom: 1em;
 }
+#home > article > .home > div.kg-width-full:first-child {
+  margin-top: -2rem;
+}
+#home > article > .home > div.kg-width-full:last-child {
+  margin-bottom: -2rem;
+}
 #home > footer {
   text-align: center;
 }
