@@ -2414,7 +2414,7 @@ ul.icons.alt li .icon:before {
   font-size: 1rem;
 }
 
-footer > ul.icons > li > .icon:before {
+ul.icons.icons-big > li > .icon:before {
   width: 2.7rem;
   height: 2.7rem;
   line-height: 2.7rem;
@@ -3343,18 +3343,18 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     margin: -6rem -4rem 4rem -4rem;
   }
 }
-#main > .post header.feature-image h1, #main > .post header.feature-image p {
+#main > .post header.feature-image > h1, #main > .post header.feature-image p {
   width: calc(100% - 8rem);
   max-width: 700px;
 }
-#main > .post header.feature-image h1, #main > .post header.feature-image p, #main > .post header.feature-image a {
+#main > .post header.feature-image > h1, #main > .post header.feature-image p, #main > .post header.feature-image a {
   color: #ffffff;
   border-bottom-color: #ffffff;
 }
-#main > .post header.feature-image a:hover {
+#main > .post header.feature-image > a:hover {
   color: #c41144;
 }
-#main > .post header.feature-image p {
+#main > .post header.feature-image > p {
   font-style: normal;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 300;

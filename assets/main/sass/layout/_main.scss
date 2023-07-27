@@ -118,21 +118,21 @@
 					justify-content: center;
 					text-align: center;
 
-					h1, p {
+					> h1, p {
 						width: calc(100% - 8rem);
 						max-width: 700px;
 					}
 
-					h1, p, a {
+					> h1, p, a {
 						color: _palette(bg);
 						border-bottom-color: _palette(bg);
 					}
 
-					a:hover {
+					> a:hover {
 						color: _palette(accent);
 					}
 
-					p {
+					> p {
 						font-style: normal;
 						font-family: _font(family-heading);
 						font-weight: 300;
