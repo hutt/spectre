@@ -191,7 +191,7 @@
 		letter-spacing: 0.075em;
 		line-height: 1.5;
 		text-align: center;
-		margin: (_size(padding) * 2) auto (_size(padding) * 4) auto;
+		margin: (_size(padding) * 4) auto (_size(padding) * 4) auto;
 		width: calc(100% - #{_size(padding) * 2});
 		max-width: _size(wrapper);
 		z-index: 2;
@@ -222,7 +222,7 @@
 		}
 
 		@include breakpoint('<=large') {
-			margin: (_size(padding) * 2) auto;
+			margin: (_size(padding) * 3) auto;
 		}
 
 		@include breakpoint('<=xsmall') {
