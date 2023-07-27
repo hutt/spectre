@@ -3902,8 +3902,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   color: #ffffff;
   cursor: default;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 0.8rem;
-  font-weight: 900;
+  font-size: 0.9rem;
+  font-weight: 700;
   letter-spacing: 0.075em;
   line-height: 1.5;
   text-align: center;
