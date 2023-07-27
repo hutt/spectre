@@ -241,7 +241,7 @@ em, i {
 
 p {
   text-align: justify;
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -275,7 +275,7 @@ h2 {
 
 h3 {
   font-size: 1.25rem;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
 h4 {
@@ -3206,6 +3206,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .post .major {
   line-height: 1.75;
 }
+#main > .post .content > p {
+  line-height: 1.75;
+}
 #main > .posts {
   line-height: 1.5;
 }
@@ -3395,10 +3398,13 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #home > article > .home > p {
   max-width: 700px;
   margin: 0 auto;
-  margin-bottom: 1em;
+  margin-block-end: 1em;
 }
-#home > article > .home > div.kg-width-full:last-child {
-  margin-bottom: -2em;
+#home > article > .home > div.kg-header-card.kg-width-full:first-child {
+  margin-top: -2rem;
+}
+#home > article > .home > div.kg-header-card.kg-width-full:last-child {
+  margin-bottom: -2rem;
 }
 #home > footer {
   text-align: center;
@@ -4199,7 +4205,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 .kg-card {
-  margin: 0 0 2rem 0;
+  margin: 2rem 0 2rem 0;
 }
 .kg-embed-card {
   display: flex;
