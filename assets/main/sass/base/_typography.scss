@@ -86,17 +86,21 @@
 
 	p, h1, h2, h3, h4, h5, h6 {
 		hyphens: auto;
-		hyphenate-limit-chars: 6 3 4;
+		hyphenate-limit-chars: 8 4 4;
 
 		-webkit-hyphens: auto;
-		-webkit-hyphenate-limit-before: 3;
+		-webkit-hyphenate-limit-before: 4;
 		-webkit-hyphenate-limit-after: 4;
 
 		-ms-hyphens: auto;
-		-ms-hyphenate-limit-chars: 6 3 4;
+		-ms-hyphenate-limit-chars: 8 4 4;
 
 		word-wrap: break-word;
-		overflow-wrap: anywhere;
+		overflow-wrap: break-word;
+	}
+
+	p {
+		overflow-wrap: break-word;
 	}
 
 	h1, h2 {
