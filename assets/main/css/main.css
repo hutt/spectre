@@ -3333,7 +3333,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   background-size: cover;
   background-position: center 20%;
   width: initial;
-  aspect-ratio: 3/2;
+  aspect-ratio: 16/9;
   margin: -8rem -8rem 4rem -8rem;
   display: flex;
   flex-direction: column;
