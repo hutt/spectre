@@ -361,7 +361,7 @@ a {
 }
 a:hover {
   border-bottom-color: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  color: #c41144;
 }
 
 strong, b {
@@ -2799,7 +2799,7 @@ body.is-preload #wrapper.fade-in:before {
 }
 #intro a:hover {
   border-bottom-color: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  color: #18bfef;
 }
 #intro strong, #intro b {
   color: #ffffff;
@@ -2981,7 +2981,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #header a:hover {
   border-bottom-color: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  color: #18bfef;
 }
 #header strong, #header b {
   color: #ffffff;
@@ -3086,7 +3086,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #nav a:hover {
   border-bottom-color: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  color: #18bfef;
 }
 #nav strong, #nav b {
   color: #ffffff;
@@ -3439,7 +3439,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #footer a:hover {
   border-bottom-color: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  color: #18bfef;
 }
 #footer strong, #footer b {
   color: #717981;
@@ -3796,7 +3796,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #copyright a:hover {
   border-bottom-color: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  color: #18bfef;
 }
 #copyright strong, #copyright b {
   color: #ffffff;
