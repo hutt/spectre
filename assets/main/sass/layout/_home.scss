@@ -43,6 +43,28 @@
 					> h2 {
 						font-size: 5em;
 					}
+
+					> h3 {
+						font-size: 1.4em;
+					}
+
+					@include breakpoint('<=medium') {
+						> h2 {
+							font-size: 4.5em;
+						}
+						> h3 {
+							font-size: 1.3em;	
+						}
+					}
+
+					@include breakpoint('<=small') {
+						> h2 {
+							font-size: 3.5em;
+						}
+						> h3 {
+							font-size: 1.2em;	
+						}
+					}
 				}
 
 				> p {
