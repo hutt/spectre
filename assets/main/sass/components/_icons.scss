@@ -51,9 +51,23 @@
 		}
 	}
 
+	ul.icons.icons-big {
+		@include breakpoint('<=small') {
+			margin-top: -1rem;
+			margin-bottom: -1rem;
+		}
+	}
+
 	ul.icons.icons-big > li > .icon:before {
 		width: 2.7rem;
 		height: 2.7rem;
 		line-height: 2.7rem;
 		font-size: 1.8rem;
+
+	    @include breakpoint('<=small') {
+			width: 1.8rem;
+			height: 1.8rem;
+			line-height: 1.8rem;
+			font-size: 1.4rem;
+	    }
 	}

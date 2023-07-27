@@ -14,7 +14,18 @@
 #header .logo.image img {
     //height: 75px;
     height: 5rem;
+    margin-bottom: 1rem;
     transform: none !important;
+
+    @include breakpoint('<=medium') {
+        height: 4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    @include breakpoint('<=small') {
+        height: 3.5rem;
+        margin-bottom: 2.25rem;
+    }
 }
 
 .content {

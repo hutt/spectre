@@ -2414,11 +2414,26 @@ ul.icons.alt li .icon:before {
   font-size: 1rem;
 }
 
+@media screen and (max-width: 736px) {
+  ul.icons.icons-big {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+  }
+}
+
 ul.icons.icons-big > li > .icon:before {
   width: 2.7rem;
   height: 2.7rem;
   line-height: 2.7rem;
   font-size: 1.8rem;
+}
+@media screen and (max-width: 736px) {
+  ul.icons.icons-big > li > .icon:before {
+    width: 1.8rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+  }
 }
 
 /* List */
@@ -4219,7 +4234,20 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 #header .logo.image img {
   height: 5rem;
+  margin-bottom: 1rem;
   transform: none !important;
+}
+@media screen and (max-width: 980px) {
+  #header .logo.image img {
+    height: 4rem;
+    margin-bottom: 2.5rem;
+  }
+}
+@media screen and (max-width: 736px) {
+  #header .logo.image img {
+    height: 3.5rem;
+    margin-bottom: 2.25rem;
+  }
 }
 
 .content {
