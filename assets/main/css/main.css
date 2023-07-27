@@ -3242,7 +3242,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .post header.major > h1, #main > .post header.major h2 {
   font-size: 4rem;
   line-height: 1.1;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
   -webkit-hyphens: auto;
   hyphens: auto;
 }
