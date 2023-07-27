@@ -3348,18 +3348,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 @media screen and (max-width: 1280px) {
   #main > .post header.feature-image {
-    width: calc(100vw - 2rem);
+    width: calc(100vw + 4rem);
     margin: -6rem -4rem 4rem -4rem;
-  }
-}
-@media screen and (max-width: 980px) {
-  #main > .post header.feature-image {
-    width: 100vw;
   }
 }
 @media screen and (max-width: 736px) {
   #main > .post header.feature-image {
-    width: calc(100vw + 2rem);
     margin: -4rem -4rem 4rem -4rem;
   }
 }
