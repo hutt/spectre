@@ -43,6 +43,8 @@ into the {body} of the default.hbs template --}}
                 <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
             </ul>
         </article>
+        {{else}}
+        <h2 class="noposts">{{t "No posts found."}}</h2>
         {{/foreach}}
 
     </section>

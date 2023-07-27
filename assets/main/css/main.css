@@ -3254,6 +3254,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .posts > p {
   line-height: 1.75;
 }
+#main > .posts > h2.noposts {
+  width: 100%;
+}
 #main > .post {
   padding: 8rem 8rem 6rem 8rem;
 }
