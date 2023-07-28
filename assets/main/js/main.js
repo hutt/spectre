@@ -284,6 +284,6 @@
 		$ghostportalroot.inViewport(function(bottom) {
 			$ghostportalroot.css('bottom', bottom);
 		});
-	}
+	});
 
 })(jQuery);
