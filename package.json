@@ -69,8 +69,7 @@
                     "Pfeil",
                     "Klassisches Logo"
                 ],
-                "default": "Pfeil",
-                "group": "post"
+                "default": "Pfeil"
             },
             "use_modern_die_linke_arrow_with_gradient_on_homepage": {
                 "type": "boolean",
