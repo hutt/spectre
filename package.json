@@ -74,7 +74,7 @@
             },
             "use_modern_die_linke_arrow_with_gradient_on_homepage": {
                 "type": "boolean",
-                "default": true,
+                "default": true
             },
             "twitter": {
                 "type": "text",
