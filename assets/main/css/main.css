@@ -4042,6 +4042,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 @media screen and (max-width: 480px) {
   #copyright {
     font-size: 0.8em;
+    margin: 5rem auto 3rem auto;
   }
   #copyright ul li {
     border-left: solid 1px;

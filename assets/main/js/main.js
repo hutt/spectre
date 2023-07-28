@@ -13,6 +13,7 @@
 		$nav = $('#nav'),
 		$main = $('#main'),
 		$home = $('#home'),
+		$copyright = $('#copyright'),
 		$navPanelToggle, $navPanel, $navPanelInner;
 
 	// Breakpoints.
@@ -274,5 +275,15 @@
 				$wrapperbg.addClass('hidden');
 			}
 		});
+
+	// Move Newsletter Box up when a movile device scrolls to the footer
+	// only used for mobile devices
+	breakpoints.on('<=small', function() {
+
+		var $ghostportalroot = $('#ghost-portal-root > iframe');
+		$ghostportalroot.inViewport(function(bottom) {
+			$ghostportalroot.css('bottom', bottom);
+		});
+	}
 
 })(jQuery);
