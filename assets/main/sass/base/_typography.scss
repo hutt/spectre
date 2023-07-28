@@ -96,7 +96,7 @@
 		-ms-hyphenate-limit-chars: 8 4 4;
 
 		word-wrap: break-word;
-		overflow-wrap: break-word;
+		overflow-wrap: anywhere;
 	}
 
 	p {

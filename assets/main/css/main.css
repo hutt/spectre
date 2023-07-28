@@ -292,7 +292,7 @@ p, h1, h2, h3, h4, h5, h6 {
   -ms-hyphens: auto;
   -ms-hyphenate-limit-chars: 8 4 4;
   word-wrap: break-word;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 p {
@@ -3570,7 +3570,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 @media screen and (max-width: 736px) {
   #home > article > .home > .kg-width-full > h2 {
-    font-size: 3.5em;
+    font-size: 3em;
   }
   #home > article > .home > .kg-width-full > h3 {
     font-size: 1.2em;
