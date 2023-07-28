@@ -69,11 +69,13 @@
                     "Pfeil",
                     "Klassisches Logo"
                 ],
-                "default": "Pfeil"
+                "default": "Pfeil",
+                "group": "homepage"
             },
             "use_modern_die_linke_arrow_with_gradient_on_homepage": {
                 "type": "boolean",
-                "default": true
+                "default": true,
+                "group": "homepage"
             },
             "twitter": {
                 "type": "text",
