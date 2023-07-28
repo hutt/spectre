@@ -1,3 +1,8 @@
+{{#if isSecondary}}
+    {{foreach navigation}}
+        <li class="footer-nav-{{slug}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+{{else}}
 <nav id="nav">
     <ul class="links">
         {{#foreach navigation}}
@@ -32,3 +37,4 @@
         <li><a href="#/search" class="icon fa-solid fa-magnifying-glass" title="{{t "Search"}}"><span class="label">{{t "Search"}}</span></a></li>
     </ul>
 </nav>
+{{/if}}
