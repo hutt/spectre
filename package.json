@@ -72,6 +72,10 @@
                 "default": "Pfeil",
                 "group": "post"
             },
+            "use_modern_die_linke_arrow_with_gradient_on_homepage": {
+                "type": "boolean",
+                "default": true,
+            },
             "twitter": {
                 "type": "text",
                 "default": "#"
