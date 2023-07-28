@@ -4243,8 +4243,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 @media screen and (max-width: 736px) {
   #header .logo.image img {
-    height: 3.5rem;
-    margin-bottom: 2.25rem;
+    height: 4rem;
+    margin-bottom: 2rem;
   }
 }
 
