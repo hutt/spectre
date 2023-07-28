@@ -1,5 +1,5 @@
 {{#if isSecondary}}
-    {{foreach navigation}}
+    {{#foreach navigation}}
         <li class="footer-nav-{{slug}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
     {{/foreach}}
 {{else}}
