@@ -281,8 +281,8 @@
 		breakpoints.on('<=small', function() {
 			console.log("breakpoints work!");
 			var $ghostportalroot = $('#ghost-portal-root > iframe');
-			var $copyrightMarginTop = -Math.abs($copyright.css('margin-top'));
-			var $copyrightMarginBottom = -Math.abs($copyright.css('margin-bottom'));
+			var $copyrightMarginTop = $copyright.css('margin-top');
+			var $copyrightMarginBottom = $copyright.css('margin-bottom');
 
 			$copyright.unscrollex();
 
