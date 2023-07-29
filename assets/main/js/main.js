@@ -283,7 +283,7 @@
 			$copyright.unscrollex();
 
 			$copyright.scrollex({
-				mode: 'middle',
+				mode: 'bottom',
 				//mode: 'bottom',
 				enter: function() {
 					$ghostportalroot.css('transition', 'bottom 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000)');
