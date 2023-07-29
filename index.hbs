@@ -6,7 +6,7 @@ into the {body} of the default.hbs template --}}
 <main id="main">
 
     {{!-- Featured Post --}}
-    {{#is "blog"}}
+    {{^is "paged"}}
     {{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
         {{#foreach featured_post}}
             <article class="post featured">
