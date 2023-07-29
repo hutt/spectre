@@ -240,3 +240,13 @@
 			}
 		}
 	}
+
+	/* Move Ghost Portal to top, when a mobile device reaches the footer */
+	#ghost-portal-root > iframe .move-up {
+		bottom: 0;
+		transition: bottom 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+
+		@include breakpoint('<=small') {
+			bottom: 12rem;
+		}
+	}
