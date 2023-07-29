@@ -278,15 +278,17 @@
 	// Move Newsletter Box up when a movile device scrolls to the footer
 	// only used for mobile devices
 		breakpoints.on('<=small', function() {
+			console.log("breakpoints work!");
 			var $copyright = $('#copyright');
 			var $ghostportalroot = $('#ghost-portal-root > iframe');
 			$copyright.unscrollex();
 
 			$copyright.scrollex({
+				console.log("scrollex works!");
 				mode: 'bottom',
 				enter: function() {
 					$ghostportalroot.css('transition', 'bottom 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000)');
-					$ghostportalroot.css('bottom', $copyright.outerHeight(true) + 28);
+					$ghostportalroot.css('bottom', $copyright.outerHeight(true));
 				},
 				leave: function() {
 					$ghostportalroot.css('bottom', '0');
