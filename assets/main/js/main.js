@@ -13,7 +13,6 @@
 		$nav = $('#nav'),
 		$main = $('#main'),
 		$home = $('#home'),
-		$copyright = $('#copyright'),
 		$navPanelToggle, $navPanel, $navPanelInner;
 
 	// Breakpoints.
@@ -279,14 +278,12 @@
 	// Move Newsletter Box up when a movile device scrolls to the footer
 	// only used for mobile devices
 		breakpoints.on('<=small', function() {
+			var $copyright = $('#copyright'),
 			var $ghostportalroot = $('#ghost-portal-root > iframe');
 			$copyright.unscrollex();
 
 			$copyright.scrollex({
-				mode: 'default',
-				//mode: 'bottom',
-				top: '5rem',
-				bottom: '3rem',
+				mode: 'bottom',
 				enter: function() {
 					$ghostportalroot.css('transition', 'bottom 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000)');
 					$ghostportalroot.css('bottom', $copyright.outerHeight(true) + 28);
