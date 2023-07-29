@@ -1,12 +1,12 @@
 # Spectre
 
-A spectre is haunting Europe. This is it's corresponding theme. Ghost theme for DIE LINKE blogs.
+A spectre is haunting Europe. This is its website's theme. Ghost theme for DIE LINKE blogs.
 
 &nbsp;
 
 ![image](/assets/mockups.png)
 
-|[Live Demo](https://felixschulz.eu/)|[Download](https://github.com/hutt/spectre/releases/)|
+|[Live Demo](https://spectre.hutt.io/)|[Download](https://github.com/hutt/spectre/releases/)|
 |---|---|
 
 

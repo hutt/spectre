@@ -1,7 +1,7 @@
 {
     "name": "spectre",
-    "description": "A spectre is haunting Europe. This is it's ghost theme. (Ghost theme for DIE LINKE).",
-    "demo": "https://felixschulz.eu",
+    "description": "A spectre is haunting Europe. This is its website's theme.",
+    "demo": "https://spectre.hutt.io/",
     "version": "1.0.1",
     "engines": {
         "ghost": ">=4.0.0",
