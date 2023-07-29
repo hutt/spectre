@@ -278,24 +278,25 @@
 
 	// Move Newsletter Box up when a movile device scrolls to the footer
 	// only used for mobile devices
-
 		breakpoints.on('<=small', function() {
 			var $ghostportalroot = $('#ghost-portal-root > iframe');
-			var copyrightHeight = $copyright.outerHeight(true);
+			var mtop = '-' + $copyright.css('margin-top');
+			var mbottom = '-' + $copyright.css('margin-bottom');
 
-			function inViewport($el) {
-			    var elH = $el.outerHeight(),
-			        H   = $(window).height(),
-			        r   = $el[0].getBoundingClientRect(), t=r.top, b=r.bottom;
-			    return Math.max(0, t>0? Math.min(elH, H-t) : Math.min(b, H));
-			}
-			
-			$(window).on("scroll resize", function(){
-				var vp = inViewport($copyright);
-				if(vp > 0) {
-					$ghostportalroot.css('bottom', copyrightHeight + 'px');
-				} else {
+			$copyright.unscrollex();
 
+			$copyright.scrollex({
+				mode: 'bottom',
+				top: mtop,
+				bottom: mbottom,
+				enter: function() {
+					console.log("enter");
+					var bottomPx = $copyright.outerHeight(true) + "px";
+					$ghostportalroot.css('bottom', bottomPx);
+				},
+				leave: function() {
+					console.log("leave");
+					$ghostportalroot.css('bottom', '0');
 				}
 			});
 		});
