@@ -43,6 +43,7 @@
 					padding-left: 0;
 
 					a {
+						border-bottom-color: transparent;
 						@include vendor('transition', (
 							'background-color #{_duration(transition)} ease-in-out',
 							'color #{_duration(transition)} ease-in-out'
