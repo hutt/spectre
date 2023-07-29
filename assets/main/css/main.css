@@ -2765,8 +2765,8 @@ table.alt tbody tr td {
   background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%) !important;
 }
 
-.kg-card > .kg-header-card-button a {
-  border-bottom: none;
+.kg-card > a .kg-header-card-button {
+  border-bottom: none !important;
 }
 
 /* Wrapper */
