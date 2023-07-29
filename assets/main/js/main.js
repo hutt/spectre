@@ -287,9 +287,9 @@
 			$copyright.unscrollex();
 
 			$copyright.scrollex({
-				mode: 'default',
-				top: $copyrightMarginTop,
-				bottom: $copyrightMarginBottom,
+				mode: 'bottom',
+				top: -Math.abs($copyrightMarginTop),
+				bottom: -Math.abs($copyrightMarginBottom),
 				enter: function() {
 					console.log("scrollex enter works!");
 					$ghostportalroot.css('transition', 'bottom 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000)');
