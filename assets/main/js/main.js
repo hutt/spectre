@@ -278,7 +278,7 @@
 	// Move Newsletter Box up when a movile device scrolls to the footer
 	// only used for mobile devices
 		breakpoints.on('<=small', function() {
-			var $copyright = $('#copyright'),
+			var $copyright = $('#copyright');
 			var $ghostportalroot = $('#ghost-portal-root > iframe');
 			$copyright.unscrollex();
 
