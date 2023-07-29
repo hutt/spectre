@@ -52,6 +52,10 @@
 		border-bottom: dotted 1px;
 		text-decoration: none;
 
+		&.kg-header-card-button {
+			border-bottom: none;
+		}
+
 		&:hover {
 			border-bottom-color: transparent;
 		}
