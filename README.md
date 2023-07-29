@@ -1,16 +1,16 @@
 # Spectre
 
+![Header Graphic](/assets/readme-header.png)
+
 A spectre is haunting Europe. This is its website's theme. Ghost theme for DIE LINKE blogs.
 
-&nbsp;
 
-![image](/assets/mockups.png)
+# Mockups
+![Theme Mockups](/assets/mockups.png)
 
 |[Live Demo](https://spectre.hutt.io/)|[Download](https://github.com/hutt/spectre/releases/)|
 |---|---|
 
-
-&nbsp;
 
 # First time using a Ghost theme?
 
