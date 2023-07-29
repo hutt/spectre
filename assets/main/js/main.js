@@ -283,11 +283,13 @@
 			$copyright.unscrollex();
 
 			$copyright.scrollex({
-				mode: 'bottom',
+				mode: 'default',
 				//mode: 'bottom',
+				top: '5rem',
+				bottom: '3rem',
 				enter: function() {
 					$ghostportalroot.css('transition', 'bottom 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000)');
-					$ghostportalroot.css('bottom', '12rem');
+					$ghostportalroot.css('bottom', $copyright.outerHeight(true) + 28);
 				},
 				leave: function() {
 					$ghostportalroot.css('bottom', '0');
