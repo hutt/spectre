@@ -20,9 +20,20 @@ You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in 
     <div id="wrapper">
 
         <header id="header">
-            <a href="{{@site.url}}" class="logo image"><img src="/assets/images/pfeil_weiss.png" alt="{{@site.title}}" /></a>
-            {{!--<a href="{{@site.url}}" class="logo">{{@site.title}}</a>--}}
-
+        {{#if @site.logo}}
+            <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+        {{else}}
+            {{#match @custom.die_linke_publication_logo "=" "Klassisches Logo"}}
+                <a href="{{@site.url}}" class="logo image"><img src="/assets/images/logo_die_linke_weiss_transparent.svg" alt="{{@site.title}}" /></a>
+            {{/match}}
+            {{#match @custom.die_linke_publication_logo "=" "Pfeil"}}
+                {{#if @custom.use_modern_die_linke_arrow_with_gradient_on_homepage}}
+                    <a href="{{@site.url}}" class="logo image"><img src="/assets/images/pfeil_gradient.svg" alt="{{@site.title}}" /></a>
+                {{else}}
+                    <a href="{{@site.url}}" class="logo image"><img src="/assets/images/pfeil_rot.svg" alt="{{@site.title}}" /></a>
+                {{/if}}
+            {{/match}}
+        {{/if}}
         </header>
 
         {{!-- Nav --}}
