@@ -4655,7 +4655,7 @@ figcaption {
 .gh-portal-triggerbtn-container > svg {
   color: #333333 !important;
 }
-.gh-portal-triggerbtn-container gh-portal-triggerbtn-label {
+.gh-portal-triggerbtn-container .gh-portal-triggerbtn-label {
   color: #333333 !important;
 }
 

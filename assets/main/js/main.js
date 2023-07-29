@@ -291,12 +291,11 @@
 				bottom: mbottom,
 				enter: function() {
 					console.log("enter");
-					var bottomPx = $copyright.outerHeight(true) + "px";
-					$ghostportalroot.css('bottom', bottomPx);
+					$ghostportalroot.css('opacity', '0%');
 				},
 				leave: function() {
 					console.log("leave");
-					$ghostportalroot.css('bottom', '0');
+					$ghostportalroot.css('opacity', '100%');
 				}
 			});
 		});
