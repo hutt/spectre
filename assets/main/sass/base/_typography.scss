@@ -240,7 +240,7 @@
 		}
 
 		blockquote {
-			border-left-color: _palette(accent);
+			border-left-color: mix(_palette(accent), #ffffff, 50%);
 			font-size: 1.2em;
 			line-height: 1.75;
 		}
