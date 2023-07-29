@@ -255,9 +255,9 @@ figcaption {
     width: calc(100% + 12rem);
 
     @include breakpoint('<=large') {
-        margin-left: -4rem;
-        margin-right: -4rem;
-        width: calc(100% + 8rem);
+        margin-left: -3rem;
+        margin-right: -3rem;
+        width: calc(100% + 6rem);
     }
     @include breakpoint('<=medium') {
         margin-left: -2rem;

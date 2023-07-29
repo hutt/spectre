@@ -13,5 +13,10 @@
 }
 
 .kg-header-card.kg-style-accent {
-    background-image: _palette(heading-hover-gradient) !important;
+    background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%) !important;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat, no-repeat, no-repeat;
+    background-size: auto, auto, 100% auto;
 }

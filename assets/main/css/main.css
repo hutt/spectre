@@ -2765,7 +2765,11 @@ table.alt tbody tr td {
 }
 
 .kg-header-card.kg-style-accent {
-  background-image: linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%) !important;
+  background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(to top right, rgb(227, 6, 19) 0%, rgb(196, 17, 68) 30%, rgb(167, 27, 113) 100%) !important;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Wrapper */
@@ -4459,9 +4463,9 @@ figcaption {
 }
 @media screen and (max-width: 1280px) {
   .kg-width-wide {
-    margin-left: -4rem;
-    margin-right: -4rem;
-    width: calc(100% + 8rem);
+    margin-left: -3rem;
+    margin-right: -3rem;
+    width: calc(100% + 6rem);
   }
 }
 @media screen and (max-width: 980px) {
