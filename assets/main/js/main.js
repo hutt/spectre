@@ -284,13 +284,14 @@
 			$copyright.unscrollex();
 
 			$copyright.scrollex({
-				console.log("scrollex works!");
 				mode: 'bottom',
 				enter: function() {
+					console.log("scrollex enter works!");
 					$ghostportalroot.css('transition', 'bottom 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000)');
 					$ghostportalroot.css('bottom', $copyright.outerHeight(true));
 				},
 				leave: function() {
+					console.log("scrollex leave works!");
 					$ghostportalroot.css('bottom', '0');
 					$ghostportalroot.removeClass('move-up');
 				}
