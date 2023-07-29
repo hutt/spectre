@@ -281,19 +281,23 @@
 			console.log("breakpoints work!");
 			var $copyright = $('#copyright');
 			var $ghostportalroot = $('#ghost-portal-root > iframe');
+			var $copyrightMarginTop = $copyright.css('margin-top');
+			var $copyrightMarginBottom = $copyright.css('margin-bottom');
+
 			$copyright.unscrollex();
 
 			$copyright.scrollex({
-				mode: 'bottom',
+				mode: 'default',
+				top: $copyrightMarginTop,
+				bottom: $copyrightMarginBottom,
 				enter: function() {
 					console.log("scrollex enter works!");
 					$ghostportalroot.css('transition', 'bottom 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000)');
-					$ghostportalroot.css('bottom', $copyright.outerHeight(true));
+					$ghostportalroot.css('bottom', $copyright.outerHeight(true) + "px");
 				},
 				leave: function() {
 					console.log("scrollex leave works!");
 					$ghostportalroot.css('bottom', '0');
-					$ghostportalroot.removeClass('move-up');
 				}
 			});
 		});
