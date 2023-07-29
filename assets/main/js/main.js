@@ -13,6 +13,7 @@
 		$nav = $('#nav'),
 		$main = $('#main'),
 		$home = $('#home'),
+		$copyright = $('#copyright'),
 		$navPanelToggle, $navPanel, $navPanelInner;
 
 	// Breakpoints.
@@ -279,7 +280,6 @@
 	// only used for mobile devices
 		breakpoints.on('<=small', function() {
 			console.log("breakpoints work!");
-			var $copyright = $('#copyright');
 			var $ghostportalroot = $('#ghost-portal-root > iframe');
 			var $copyrightMarginTop = -Math.abs($copyright.css('margin-top')) + "px";
 			var $copyrightMarginBottom = -Math.abs($copyright.css('margin-bottom')) + "px";
@@ -287,7 +287,7 @@
 			$copyright.unscrollex();
 
 			$copyright.scrollex({
-				mode: 'bottom',
+				mode: 'default',
 				top: $copyrightMarginTop,
 				bottom: $copyrightMarginBottom,
 				enter: function() {
