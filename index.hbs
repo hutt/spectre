@@ -4,6 +4,15 @@ into the {body} of the default.hbs template --}}
 
 {{!-- Main --}}
 <main id="main">
+    {{!--
+    {{#is "index"}}
+    <section class="post">
+        <header class="major">
+            <h1>{{title}}</h1>
+        </header>
+    </section>
+    {{/is}}
+    --}}
 
     {{!-- Featured Post --}}
     {{^is "paged"}}
@@ -11,7 +20,7 @@ into the {body} of the default.hbs template --}}
         {{#foreach featured_post}}
             <article class="post featured">
                 <header class="major">
-                    <span class="date">{{date format="D. MMM YYYY"}}</span>
+                    <span class="date">{{date format="D. MMMM YYYY"}}</span>
                     <h2><a href="{{url}}">{{title}}</a></h2>
                     <p>{{excerpt words="44"}}</p>
                 </header>
@@ -32,7 +41,7 @@ into the {body} of the default.hbs template --}}
         {{#foreach posts}}
         <article>
             <header>
-                <span class="date">{{date format="D. MMM YYYY"}}</span>
+                <span class="date">{{date format="D. MMMM YYYY"}}</span>
                 <h2><a href="{{url}}">{{title}}</a></h2>
             </header>
             {{#if feature_image}}
