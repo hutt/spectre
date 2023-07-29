@@ -15,3 +15,9 @@
 .kg-header-card.kg-style-accent {
     background-image: _palette(heading-hover-gradient) !important;
 }
+
+.kg-card > .kg-header-card-button {
+    a {
+        border-bottom: none;
+    }
+}
