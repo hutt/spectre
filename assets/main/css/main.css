@@ -424,7 +424,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 blockquote {
-  border-left-color: #eeeeee;
+  border-left-color: #c41144;
   font-size: 1.2em;
   line-height: 1.75;
 }
@@ -2891,7 +2891,7 @@ body.is-preload #wrapper.fade-in:before {
   -webkit-text-fill-color: transparent;
 }
 #intro blockquote {
-  border-left-color: #ffffff;
+  border-left-color: #c41144;
   font-size: 1.2em;
   line-height: 1.75;
 }
@@ -3081,7 +3081,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-text-fill-color: transparent;
 }
 #header blockquote {
-  border-left-color: #ffffff;
+  border-left-color: #c41144;
   font-size: 1.2em;
   line-height: 1.75;
 }
@@ -3188,7 +3188,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-text-fill-color: transparent;
 }
 #nav blockquote {
-  border-left-color: #ffffff;
+  border-left-color: #c41144;
   font-size: 1.2em;
   line-height: 1.75;
 }
@@ -3668,7 +3668,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-text-fill-color: transparent;
 }
 #footer blockquote {
-  border-left-color: #e2e2e2;
+  border-left-color: #c41144;
   font-size: 1.2em;
   line-height: 1.75;
 }
@@ -4027,7 +4027,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-text-fill-color: transparent;
 }
 #copyright blockquote {
-  border-left-color: #ffffff;
+  border-left-color: #c41144;
   font-size: 1.2em;
   line-height: 1.75;
 }
