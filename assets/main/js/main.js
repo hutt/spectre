@@ -290,12 +290,14 @@
 				top: mtop,
 				bottom: mbottom,
 				enter: function() {
-					console.log("enter");
-					$ghostportalroot.css('opacity', '0%');
+					//console.log("enter");
+					var bottomPx = $copyright.outerHeight(true) + "px";
+					$ghostportalroot.css('transition', 'bottom 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000)');
+					$ghostportalroot.css('bottom', bottomPx);
 				},
 				leave: function() {
-					console.log("leave");
-					$ghostportalroot.css('opacity', '100%');
+					//console.log("leave");
+					$ghostportalroot.css('bottom', '0px');
 				}
 			});
 		});
