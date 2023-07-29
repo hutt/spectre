@@ -4659,6 +4659,10 @@ figcaption {
   color: #333333 !important;
 }
 
+#ghost-portal-root > iframe {
+  display: none !important;
+}
+
 .gh-announcement-bar {
   padding: 6px 48px !important;
   font-size: 1rem !important;

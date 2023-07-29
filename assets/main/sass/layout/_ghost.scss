@@ -464,6 +464,10 @@ figcaption {
     }
 }
 
+#ghost-portal-root > iframe {
+    display: none !important;
+}
+
 // Announcement Bar
 // --------------------------------------------
 .gh-announcement-bar {
