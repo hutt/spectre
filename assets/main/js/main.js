@@ -281,15 +281,15 @@
 			console.log("breakpoints work!");
 			var $copyright = $('#copyright');
 			var $ghostportalroot = $('#ghost-portal-root > iframe');
-			var $copyrightMarginTop = $copyright.css('margin-top');
-			var $copyrightMarginBottom = $copyright.css('margin-bottom');
+			var $copyrightMarginTop = -Math.abs($copyright.css('margin-top')) + "px";
+			var $copyrightMarginBottom = -Math.abs($copyright.css('margin-bottom')) + "px";
 
 			$copyright.unscrollex();
 
 			$copyright.scrollex({
 				mode: 'bottom',
-				top: -Math.abs($copyrightMarginTop),
-				bottom: -Math.abs($copyrightMarginBottom),
+				top: $copyrightMarginTop,
+				bottom: $copyrightMarginBottom,
 				enter: function() {
 					console.log("scrollex enter works!");
 					$ghostportalroot.css('transition', 'bottom 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000)');
