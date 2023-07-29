@@ -4,7 +4,10 @@ A spectre is haunting Europe. This is it's corresponding theme. Ghost theme for 
 
 &nbsp;
 
-![image](https://user-images.githubusercontent.com/120485/49293031-7276b000-f4e1-11e8-8b71-43dc53c67f00.png)
+![image](/assets/mockups.png)
+
+|[Live Demo](https://felixschulz.eu/)|[Download](https://github.com/hutt/spectre/archive/refs/tags/v1.0.0.zip)|
+|---|---|
 
 
 &nbsp;
