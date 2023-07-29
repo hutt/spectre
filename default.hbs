@@ -27,6 +27,7 @@
                 {{!-- show cover image --}}
                 #wrapper>.bg {
                     background-image: url({{asset "images/overlay.png"}}), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url("{{img_url @site.cover_image}}");
+                    background-size: cover;
                 }
             </style>
         {{/if}}
