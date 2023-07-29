@@ -422,6 +422,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 blockquote {
   border-left-color: #eeeeee;
+  font-size: 1.2em;
+  line-height: 1.75;
 }
 
 code {
@@ -2883,6 +2885,8 @@ body.is-preload #wrapper.fade-in:before {
 }
 #intro blockquote {
   border-left-color: #ffffff;
+  font-size: 1.2em;
+  line-height: 1.75;
 }
 #intro code {
   background: rgba(255, 255, 255, 0.075);
@@ -3071,6 +3075,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #header blockquote {
   border-left-color: #ffffff;
+  font-size: 1.2em;
+  line-height: 1.75;
 }
 #header code {
   background: rgba(255, 255, 255, 0.075);
@@ -3176,6 +3182,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #nav blockquote {
   border-left-color: #ffffff;
+  font-size: 1.2em;
+  line-height: 1.75;
 }
 #nav code {
   background: rgba(255, 255, 255, 0.075);
@@ -3653,6 +3661,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #footer blockquote {
   border-left-color: #e2e2e2;
+  font-size: 1.2em;
+  line-height: 1.75;
 }
 #footer code {
   background: rgba(220, 220, 220, 0.5);
@@ -4010,6 +4020,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 #copyright blockquote {
   border-left-color: #ffffff;
+  font-size: 1.2em;
+  line-height: 1.75;
 }
 #copyright code {
   background: rgba(255, 255, 255, 0.075);
