@@ -2779,12 +2779,22 @@ table.alt tbody tr td {
   font-weight: 600;
 }
 .kg-bookmark-card > a.kg-bookmark-container > .kg-bookmark-content .kg-bookmark-description {
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 980px) {
+  .kg-bookmark-card > a.kg-bookmark-container > .kg-bookmark-content .kg-bookmark-description {
+    font-size: 1rem;
+  }
 }
 .kg-bookmark-card > a.kg-bookmark-container > .kg-bookmark-content .kg-bookmark-metadata {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-top: 0.5rem;
+}
+@media screen and (max-width: 980px) {
+  .kg-bookmark-card > a.kg-bookmark-container > .kg-bookmark-content .kg-bookmark-metadata {
+    font-size: 1.1rem;
+  }
 }
 
 /* Wrapper */

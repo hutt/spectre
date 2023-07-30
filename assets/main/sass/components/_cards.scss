@@ -26,16 +26,24 @@
         font-size: 1.2rem;
         font-weight: 600;
     }
-    
-    .kg-bookmark-description {
-        font-size: 1rem;
 
+    .kg-bookmark-description {
+        font-size: 0.9rem;
+
+        @include breakpoint('<=medium') {
+            font-size: 1rem;
+        }
     }
-    
+
     .kg-bookmark-metadata {
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 600;
 
         margin-top: 0.5rem;
+
+
+        @include breakpoint('<=medium') {
+            font-size: 1.1rem;
+        }
     }
 }
