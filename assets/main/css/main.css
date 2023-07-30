@@ -2794,6 +2794,7 @@ table.alt tbody tr td {
 @media screen and (max-width: 980px) {
   .kg-bookmark-card > a.kg-bookmark-container > .kg-bookmark-content .kg-bookmark-metadata {
     font-size: 1.1rem;
+    margin-top: 0rem;
   }
 }
 
