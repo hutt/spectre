@@ -3041,10 +3041,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   #intro h1 {
     font-size: 13vw;
     line-height: 0.9;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
   }
   #intro p {
     margin-top: 0rem;
+    line-height: 1.5;
   }
   #intro .actions {
     display: none;
