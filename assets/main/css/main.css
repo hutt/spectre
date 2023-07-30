@@ -2446,6 +2446,7 @@ ol {
   list-style: decimal;
   margin: 0 0 2rem 0;
   padding-left: 1.25rem;
+  line-height: 1.75;
 }
 ol li {
   padding-left: 0.25rem;
@@ -2455,6 +2456,7 @@ ul {
   list-style: disc;
   margin: 0 0 2rem 0;
   padding-left: 1rem;
+  line-height: 1.75;
 }
 ul li {
   padding-left: 0.5rem;
@@ -2772,14 +2774,14 @@ table.alt tbody tr td {
   background-size: auto, auto, cover;
 }
 
-.kg-bookmark-content .kg-bookmark-title {
+.kg-bookmark-card > a.kg-bookmark-container > .kg-bookmark-content .kg-bookmark-title {
   font-size: 1.2rem;
   font-weight: 600;
 }
-.kg-bookmark-content .kg-bookmark-description {
+.kg-bookmark-card > a.kg-bookmark-container > .kg-bookmark-content .kg-bookmark-description {
   font-size: 1rem;
 }
-.kg-bookmark-content .kg-bookmark-metadata {
+.kg-bookmark-card > a.kg-bookmark-container > .kg-bookmark-content .kg-bookmark-metadata {
   font-size: 1.1rem;
   font-weight: 600;
   margin-top: 0.5rem;
@@ -3321,12 +3323,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   line-height: 1.75;
 }
 #main > .post .content > p {
-  line-height: 1.75;
-}
-#main > .post .content > ul {
-  line-height: 1.75;
-}
-#main > .post .content > ol {
   line-height: 1.75;
 }
 #main > .posts > p {
