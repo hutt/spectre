@@ -87,7 +87,7 @@
 
 		@include breakpoint('<=large') {
 			@include padding(_size(padding) * 2, _size(padding) * 2);
-			min-height: 90vh;
+			min-height: 89vh;
 
 			p {
 				br {
