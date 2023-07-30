@@ -20,3 +20,20 @@
     background-repeat: repeat, no-repeat, no-repeat;
     background-size: auto, auto, cover;
 }
+
+.kg-bookmark-content {
+    .kg-bookmark-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .kg-bookmark-description {
+        font-size: 1rem;
+
+    }
+    .kg-bookmark-metadata {
+        font-size: 1.1rem;
+        font-weight: 600;
+
+        margin-top: 0.5rem;
+    }
+}

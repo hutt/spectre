@@ -2772,6 +2772,19 @@ table.alt tbody tr td {
   background-size: auto, auto, cover;
 }
 
+.kg-bookmark-content .kg-bookmark-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.kg-bookmark-content .kg-bookmark-description {
+  font-size: 1rem;
+}
+.kg-bookmark-content .kg-bookmark-metadata {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
 /* Wrapper */
 #wrapper {
   -moz-transition: opacity 0.5s ease;
@@ -3311,6 +3324,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   line-height: 1.75;
 }
 #main > .post .content > ul {
+  line-height: 1.75;
+}
+#main > .post .content > ol {
   line-height: 1.75;
 }
 #main > .posts > p {
