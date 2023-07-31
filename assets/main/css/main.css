@@ -3617,7 +3617,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     font-size: 1.2em;
   }
 }
-#home > article > .home > .kg-card.kg-callout-card, #home > article > .home > .kg-card .kg-toggle-card, #home > article > .home > .kg-card .kg-bookmark-card {
+#home > article > .home > .kg-card.kg-callout-card, #home > article > .home > .kg-card.kg-toggle-card, #home > article > .home > .kg-card.kg-bookmark-card, #home > article > .home > .kg-card.kg-file-card {
   max-width: 700px;
   margin: 2rem auto;
 }
