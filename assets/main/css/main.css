@@ -3638,7 +3638,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   line-height: 1.75;
 }
 #home > article > .home > div.kg-width-full {
-  max-width: 100vw;
+  max-width: 100vw !important;
 }
 #home > article > .home > div.kg-width-full:first-child {
   margin-top: -4rem;
