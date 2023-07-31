@@ -3585,10 +3585,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #home > article > .home {
   max-width: 100%;
 }
-#home > article > .home > .kg-card {
-  max-width: 700px;
-  margin: 0 auto;
-}
 #home > article > .home > .kg-card.kg-width-full {
   background-position-y: 8%;
   margin-left: -2rem;
@@ -3620,6 +3616,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   #home > article > .home > .kg-card.kg-width-full > h3 {
     font-size: 1.2em;
   }
+}
+#home > article > .home > .kg-card.kg-callout-card, #home > article > .home > .kg-card .kg-toggle-card, #home > article > .home > .kg-card .kg-bookmark-card {
+  max-width: 700px;
+  margin: 2rem auto;
 }
 #home > article > .home > p, #home > article > .home blockquote {
   max-width: 700px;

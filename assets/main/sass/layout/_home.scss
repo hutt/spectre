@@ -32,9 +32,6 @@
 
 				> .kg-card {
 
-					max-width: 700px;
-					margin: 0 auto;
-
 					> &.kg-width-full {
 						background-position-y: 8%;
 						margin-left: -2rem;
@@ -71,6 +68,11 @@
 								font-size: 1.2em;	
 							}
 						}
+					}
+
+					> &.kg-callout-card, .kg-toggle-card, .kg-bookmark-card {
+						max-width: 700px;
+						margin: 2rem auto;
 					}
 				}
 
