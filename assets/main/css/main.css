@@ -3626,7 +3626,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   margin: 0 auto;
   margin-block-end: 1em;
 }
-#home > article > .home > figure {
+#home > article > .home > figure, #home > article > .home hr {
   max-width: 700px;
   margin: 2rem auto;
 }
