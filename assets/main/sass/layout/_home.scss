@@ -90,14 +90,14 @@
 				> figure, hr {
 					max-width: 700px;
 					margin: 2rem auto;
+
+					&.kg-width-full {
+						max-width: 100vw;
+					}
 				}
 
 				> ul, ol {
 					line-height: 1.75;
-				}
-
-				> div.kg-width-full {
-					max-width: 100vw !important;
 				}
 
 				> div.kg-width-full:first-child {
