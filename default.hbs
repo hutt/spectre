@@ -23,13 +23,14 @@
             }
         </style>
         {{#if @site.cover_image}}
-            <style>
-                {{!-- show cover image --}}
-                #wrapper>.bg {
-                    background-image: url({{asset "images/overlay.png"}}), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url("{{img_url @site.cover_image}}");
-                    background-size: auto, auto, cover;
-                }
-            </style>
+        <style>
+            {{!-- show cover image --}}
+            #wrapper>.bg {
+                background-image: url({{asset "images/overlay.png"}}), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url("{{img_url @site.cover_image}}");
+                background-size: auto, auto, cover;
+                height: 100vh;
+            }
+        </style>
         {{/if}}
     {{/is}}
 
