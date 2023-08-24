@@ -168,7 +168,7 @@
 			}
 
 			@include breakpoint('<=small') {
-				@include padding((_size(padding) * 2), (_size(padding) * 1));
+				@include padding((_size(padding) * 3), (_size(padding) * 1));
 
 				header {
 					&.major {
