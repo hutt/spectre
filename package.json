@@ -79,27 +79,31 @@
             },
             "twitter": {
                 "type": "text",
-                "default": "#"
+                "default": ""
             },
             "mastodon": {
                 "type": "text",
-                "default": "#"
+                "default": ""
             },
             "instagram": {
                 "type": "text",
-                "default": "#"
+                "default": ""
             },
             "tiktok": {
                 "type": "text",
-                "default": "#"
+                "default": ""
             },
             "youtube": {
                 "type": "text",
-                "default": "#"
+                "default": ""
             },
             "facebook": {
                 "type": "text",
-                "default": "#"
+                "default": ""
+            },
+            "spotify": {
+                "type": "text",
+                "default": ""
             },
             "show_social_media_links_under_blogposts": {
                 "type": "boolean",
