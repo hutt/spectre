@@ -12,25 +12,35 @@
 {{!-- Everything inside the #post tags pulls data from the page --}}
 
 <main id="main">
-    <section class="post">
-        {{#if feature_image}}
-            <header class="major feature-image" title="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('{{img_url feature_image}}')">
-                <h1>{{title}}</h1>
-                {{#if feature_image_caption}}
-                <p>{{feature_image_caption}}</p>
-                {{/if}}
-            </header>
-        {{else}}
-            <header class="major">
-                <h1>{{title}}</h1>
-            </header>
-        {{/if}}
+    {{#match @page.show_title_and_feature_image}}
+        <section class="post">
+            {{#if feature_image}}
+                <header class="major feature-image" title="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('{{img_url feature_image}}')">
+                    <h1>{{title}}</h1>
+                    {{#if feature_image_caption}}
+                    <p>{{feature_image_caption}}</p>
+                    {{/if}}
+                </header>
+            {{else}}
+                <header class="major">
+                    <h1>{{title}}</h1>
+                </header>
+            {{/if}}
 
-        <div class="content">
-            {{content}}
-        </div>
+            <div class="content">
+                {{content}}
+            </div>
 
-    </section>
+        </section>
+    {{else}}
+        <section class="post no_title_and_feature_image">
+
+            <div class="content">
+                {{content}}
+            </div>
+
+        </section>
+    {{/match}}
 </main>
 
 {{/post}}

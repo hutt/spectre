@@ -63,6 +63,10 @@
 		> .post {
 			@include padding((_size(padding) * 4), (_size(padding) * 4));
 
+			&.no_title_and_feature_image {
+				padding-top: 0;
+			}
+
 			header {
 				&.major {
 					> .date {
@@ -107,7 +111,7 @@
 						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 2) (-(_size(padding) * 2));
 					}
 					@include breakpoint('<=medium') {
-						
+
 					}
 					@include breakpoint('<=small') {
 						margin: (-(_size(padding) * 3)) (-(_size(padding) * 2)) (_size(padding) * 2) (-(_size(padding) * 2));

@@ -3347,6 +3347,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .post {
   padding: 8rem 8rem 6rem 8rem;
 }
+#main > .post.no_title_and_feature_image {
+  padding-top: 0;
+}
 #main > .post header.major > .date {
   margin-top: -2rem;
   margin-bottom: 1.5rem;
