@@ -223,7 +223,7 @@
 
 		@include breakpoint('<=xsmall') {
 			font-size: 0.8em;
-			margin: (_size(padding) * 2.5) auto (_size(padding) * 1.5) auto;
+			margin: (_size(padding) * 2) auto (_size(padding) * 1.5) auto;
 			
 			ul {
 				li {

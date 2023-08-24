@@ -3389,7 +3389,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 @media screen and (max-width: 736px) {
   #main > .post header.feature-image {
-    margin: -4rem -4rem 4rem -4rem;
+    margin: -6rem -4rem 4rem -4rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -4102,7 +4102,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 @media screen and (max-width: 480px) {
   #copyright {
     font-size: 0.8em;
-    margin: 5rem auto 3rem auto;
+    margin: 4rem auto 3rem auto;
   }
   #copyright ul li {
     border-left: solid 1px;
