@@ -101,7 +101,7 @@
                 "type": "text",
                 "default": ""
             },
-            "spotify": {
+            "podcast": {
                 "type": "text",
                 "default": ""
             },
