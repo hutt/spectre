@@ -2421,7 +2421,7 @@ ul.icons.alt li .icon:before {
 
 @media screen and (max-width: 736px) {
   ul.icons.icons-big {
-    margin-top: -1rem;
+    margin-top: 0;
     margin-bottom: -1rem;
   }
 }
