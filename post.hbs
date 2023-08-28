@@ -48,7 +48,9 @@ into the {body} of the default.hbs template --}}
         {{/if}}
 
         <footer class="post-footer align-center">
-        {{^has tag="hash-pressemitteilung"}}
+        {{#has tag="hash-pressemitteilung"}}
+
+        {{else}}
             {{#if @custom.show_social_media_links_under_blogposts}}
             <ul class="icons icons-big">
                 {{#if @custom.twitter}}
