@@ -48,41 +48,39 @@ into the {body} of the default.hbs template --}}
         {{/if}}
 
         <footer class="post-footer align-center">
-        {{#has tag="hash-pressemitteilung"}}
-
-        {{else}}
-            {{#if @custom.show_social_media_links_under_blogposts}}
-            <ul class="icons icons-big">
-                {{#if @custom.twitter}}
-                <li><a href="{{@custom.twitter}}" class="icon fa-brands fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
-                {{/if}}
-
-                {{#if @custom.mastodon}}
-                <li><a href="{{@custom.mastodon}}" class="icon fa-brands fa-mastodon" title="Mastodon"><span class="label">Mastodon</span></a></li>
-                {{/if}}
-
-                {{#if @custom.instagram}}
-                <li><a href="{{@custom.instagram}}" class="icon fa-brands fa-instagram" title="Instagram"><span class="label">Instagram</span></a></li>
-                {{/if}}
-
-                {{#if @custom.tiktok}}
-                <li><a href="{{@custom.tiktok}}" class="icon fa-brands fa-tiktok" title="TikTok"><span class="label">TikTok</span></a></li>
-                {{/if}}
-
-                {{#if @custom.youtube}}
-                <li><a href="{{@custom.youtube}}" class="icon fa-brands fa-youtube" title="YouTube"><span class="label">YouTube</span></a></li>
-                {{/if}}
-
-                {{#if @custom.facebook}}
-                <li><a href="{{@custom.facebook}}" class="icon fa-brands fa-facebook" title="Facebook"><span class="label">Facebook</span></a></li>
-                {{/if}}
-
-                {{#if @custom.podcast}}
-                <li><a href="{{@custom.podcast}}" class="icon fa-solid fa-podcast" title="Podcast"><span class="label">Podcast</span></a></li>
-                {{/if}}
-            </ul>
+        {{#if @custom.show_social_media_links_under_blogposts}}
+        {{^has tag="hash-pressemitteilung"}}
+        <ul class="icons icons-big">
+            {{#if @custom.twitter}}
+            <li><a href="{{@custom.twitter}}" class="icon fa-brands fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
             {{/if}}
+
+            {{#if @custom.mastodon}}
+            <li><a href="{{@custom.mastodon}}" class="icon fa-brands fa-mastodon" title="Mastodon"><span class="label">Mastodon</span></a></li>
+            {{/if}}
+
+            {{#if @custom.instagram}}
+            <li><a href="{{@custom.instagram}}" class="icon fa-brands fa-instagram" title="Instagram"><span class="label">Instagram</span></a></li>
+            {{/if}}
+
+            {{#if @custom.tiktok}}
+            <li><a href="{{@custom.tiktok}}" class="icon fa-brands fa-tiktok" title="TikTok"><span class="label">TikTok</span></a></li>
+            {{/if}}
+
+            {{#if @custom.youtube}}
+            <li><a href="{{@custom.youtube}}" class="icon fa-brands fa-youtube" title="YouTube"><span class="label">YouTube</span></a></li>
+            {{/if}}
+
+            {{#if @custom.facebook}}
+            <li><a href="{{@custom.facebook}}" class="icon fa-brands fa-facebook" title="Facebook"><span class="label">Facebook</span></a></li>
+            {{/if}}
+
+            {{#if @custom.podcast}}
+            <li><a href="{{@custom.podcast}}" class="icon fa-solid fa-podcast" title="Podcast"><span class="label">Podcast</span></a></li>
+            {{/if}}
+        </ul>
         {{/has}}
+        {{/if}}
 
             <!--
             <div class="authors">
