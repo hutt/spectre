@@ -1,6 +1,9 @@
 <div id="copyright">
     <ul>
         <li>&copy; {{date "" format="YYYY"}} {{@site.title}}</li>
+        {{#if @site.members_enabled}}
+        <li><a href="#/portal/account" title="{{t 'Manage Newsletters'}}">{{t 'Manage Newsletters'}}</a></li>
+        {{/if}}
         {{#if @site.secondary_navigation}}
             {{navigation type="secondary"}}
         {{/if}}
