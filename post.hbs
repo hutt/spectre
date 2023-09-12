@@ -36,7 +36,7 @@ into the {body} of the default.hbs template --}}
         </div>
 
         {{#if tags}}
-        <p class="tags">{{tags separator=", " prefix="{{t "Tags"}}:" visibility="public"}}</p>
+        <p class="tags">{{t "Tags"}}: {{tags separator=", " prefix="" visibility="public"}}</p>
         {{/if}}
 
         <footer class="post-footer align-center">
