@@ -3338,6 +3338,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .post .content > ul, #main > .post .content ol {
   line-height: 1.75;
 }
+#main > .post .tags {
+  font-size: 0.9rem;
+}
 #main > .posts > p {
   line-height: 1.75;
 }

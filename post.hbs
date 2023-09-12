@@ -20,9 +20,6 @@ into the {body} of the default.hbs template --}}
         <header class="major">
             <span class="date">{{date format="D. MMMM YYYY"}}</span>
             <h1>{{title}}</h1>
-            {{#if custom_excerpt}}
-                <p class="content">{{custom_excerpt}}</p>
-            {{/if}}
         </header>
 
         {{#if feature_image}}
@@ -38,13 +35,8 @@ into the {body} of the default.hbs template --}}
             {{content}}
         </div>
 
-        {{!-- Email subscribe form at the bottom of the page --}}
-        {{#if @labs.subscribers}}
-        <section class="subscribe-form">
-            <h3 class="subscribe-form-title">{{t "Subscribe to"}} {{@site.title}}</h3>
-            <p>{{t "Get the latest posts delivered right to your inbox"}}</p>
-            {{subscribe_form placeholder="email@example.com"}}
-        </section>
+        {{#if tags}}
+        <p class="tags">{{tags separator=", " prefix="{{t "Tags"}}:" visibility="public"}}</p>
         {{/if}}
 
         <footer class="post-footer align-center">
