@@ -33,11 +33,11 @@ into the {body} of the default.hbs template --}}
 
         <div class="content">
             {{content}}
+        
+            {{#if tags}}
+            <p class="tags">{{t "Tags"}}: {{tags separator=", " prefix="" visibility="public"}}</p>
+            {{/if}}
         </div>
-
-        {{#if tags}}
-        <p class="tags">{{t "Tags"}}: {{tags separator=", " prefix="" visibility="public"}}</p>
-        {{/if}}
 
         <footer class="post-footer align-center">
         {{#if @custom.show_social_media_links_under_blogposts}}
