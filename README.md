@@ -6,6 +6,7 @@ A spectre is haunting Europe. This is its website's theme. 👻 [Ghost](https://
 
 
 # Mockups
+
 ![Theme Mockups](/assets/mockups.png)
 
 |[Live Demo](https://spectre.hutt.io/)|[Download](https://github.com/hutt/spectre/releases/)|
@@ -40,33 +41,41 @@ This is the content of the [routes.yaml file](routes.yaml):
 ```yaml
 routes:
   /: 
-    template: home
+    template: page
     data: page.start
   /en/:
-    template: home-en
+    template: page
     data: page.start-en
 
 collections:
   /blog/:
     permalink: /blog/{slug}/
-    template: index
-    filter: 'tag:-hash-en'
-  /blog/en/:
+    template: home
+    filter: 'tag:-hash-en+tag:-hash-pressemitteilung'
+  /en/blog/:
     permalink: /en/blog/{slug}/
+    template: home
+    filter: 'tag:hash-en+tag:-hash-pressemitteilung'
+  /presse/mitteilungen/:
+    permalink: /presse/mitteilungen/{slug}/
     template: index
-    filter: 'tag:hash-en'
+    filter: 'tag:hash-pressemitteilung'
 
 taxonomies:
   tag: /tag/{slug}/
+  author: /autor_in/{slug}/
 ```
 
 # Multi-language support
+
 As you can see in the routes file, this theme supports posts and pages in multiple languages. 
 
 ## Posting in another language
+
 If you usually blog in German, but you want to publish a post in English, simply tag the post with the internal tag `#en`. Posts with this internal tag won't be displayed in the posts archive on `yourdomain.tld/blog/`, but under `yourdomain.tld/en/blog/`.
 
 ## Pages in another language
+
 To publish a page in another language, simply note its slug and create an additional route in the `routes.yaml` file. The example above features an additional homepage in English. While the German home page's slug is `start`, the english page's slug is `start-en`. It will then be displayed under `yourdomain.tld/en/`. It's as easy as that.
 
 # Development

@@ -131,7 +131,7 @@
             "show_newsletter_signup_form": {
                 "type": "boolean",
                 "default": true,
-                "description": "Shows a newsletter signup form on the bottom of every page. Only works if the newsletter function is configured."
+                "description": "Shows a newsletter signup form on the bottom of every page (if activated)."
             },
             "signup_heading": {
                 "type": "text",
