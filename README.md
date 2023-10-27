@@ -69,5 +69,37 @@ If you usually blog in German, but you want to publish a post in English, simply
 ## Pages in another language
 To publish a page in another language, simply note its slug and create an additional route in the `routes.yaml` file. The example above features an additional homepage in English. While the German home page's slug is `start`, the english page's slug is `start-en`. It will then be displayed under `yourdomain.tld/en/`. It's as easy as that.
 
+# Development
+
+Source styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
+
+```bash
+# install dependencies
+yarn install
+
+# run development server
+yarn dev
+```
+
+Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
+
+The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
+
+```bash
+# create .zip file
+yarn zip
+```
+
+# PostCSS Features Used
+
+- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
+
+
+# SVG Icons
+
+Source uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
+
+You can add your own SVG icons in the same manner.
+
 # Copyright & License
-Copyright (c) 2013-2022 [HTML5 UP](https://htmlup.net) & [Ghost Foundation](https://ghost.org); 2023 [Jannis Hutt](https://hutt.io). This theme is based on [HTML5 UP](https://htmlup.net)'s & [Ghost Foundation](https://ghost.org)'s theme [Massively](https://github.com/TryGhost/Massively) and licensed under both the [MIT and Creative Commons Attribution 3.0](LICENSE).
+Copyright (c) 2013-2023 [Ghost Foundation](https://ghost.org); 2023 [Jannis Hutt](https://hutt.io). This theme is based on [Ghost Foundation](https://ghost.org)'s theme [Source](https://github.com/TryGhost/Source) and released under the [MIT license](LICENSE).

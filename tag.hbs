@@ -1,47 +1,22 @@
 {{!< default}}
-{{!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template --}}
+{{!-- The tag above means: insert everything in this file into the body of the default.hbs template --}}
 
-{{!-- Main --}}
-<main id="main">
+<main class="gh-main gh-outer">
 
-    {{!-- Tag info --}}
     {{#tag}}
-    <header class="tag-header">
-        <h1><a href="{{url}}">{{name}}</a></h1>
-        {{#if description}}
-            <p class="content">{{description}}</p>
-        {{else}}
-            <p>{{t "A collection of"}} {{plural ../pagination.total empty='posts' singular='% Post' plural='% Posts'}}</p>
-        {{/if}}
-        {{#if feature_image}}
-        <a href="{{url}}" class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-        {{/if}}
-    </header>
+        <section class="gh-archive{{#if feature_image}} has-image{{/if}}{{#if @custom.show_publication_info_sidebar}} has-sidebar{{/if}} gh-inner">
+            <div class="gh-archive-inner">
+                <header class="gh-archive-wrapper">
+                    <h1 class="gh-article-title is-title">{{name}}</h1>
+                    {{#if description}}
+                        <p class="gh-article-excerpt">{{description}}</p>
+                    {{/if}}
+                </header>
+                {{> "feature-image"}}
+            </div>
+        </section>
     {{/tag}}
 
-    {{!-- Posts --}}
-    <section class="posts">
+    {{> "components/post-list" feed="archive" postFeedStyle=@custom.post_feed_style showTitle=false showSidebar=@custom.show_publication_info_sidebar}}
 
-        {{#foreach posts}}
-        <article>
-            <header>
-                <span class="date">{{date format="D. MMMM YYYY"}}</span>
-                <h2><a href="{{url}}">{{title}}</a></h2>
-            </header>
-            {{#if feature_image}}
-            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-            {{/if}}
-            <p>{{excerpt words="33"}}</p>
-            <ul class="actions special">
-                <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
-            </ul>
-        </article>
-        {{/foreach}}
-
-    </section>
-
-    {{!-- Pagination --}}
-    {{pagination}}
-
-    </main>
+</main>

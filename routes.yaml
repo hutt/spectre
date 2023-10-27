@@ -1,20 +1,24 @@
 routes:
   /: 
-    template: home
+    template: page
     data: page.start
   /en/:
-    template: home-en
+    template: page
     data: page.start-en
 
 collections:
   /blog/:
     permalink: /blog/{slug}/
-    template: index
-    filter: 'tag:-hash-en'
-  /blog/en/:
+    template: home
+    filter: 'tag:-hash-en+tag:-hash-pressemitteilung'
+  /en/blog/:
     permalink: /en/blog/{slug}/
+    template: home
+    filter: 'tag:hash-en+tag:-hash-pressemitteilung'
+  /presse/mitteilungen/:
+    permalink: /presse/mitteilungen/{slug}/
     template: index
-    filter: 'tag:hash-en'
+    filter: 'tag:hash-pressemitteilung'
 
 taxonomies:
   tag: /tag/{slug}/
