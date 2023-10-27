@@ -22,3 +22,4 @@ collections:
 
 taxonomies:
   tag: /tag/{slug}/
+  author: /autor_in/{slug}/
