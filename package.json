@@ -111,23 +111,6 @@
                 ],
                 "default": "Background color"
             },
-            "title_font": {
-                "type": "select",
-                "options": [
-                    "Modern sans-serif",
-                    "Elegant serif",
-                    "Consistent mono"
-                ],
-                "default": "Modern sans-serif"
-            },
-            "body_font": {
-                "type": "select",
-                "options": [
-                    "Modern sans-serif",
-                    "Elegant serif"
-                ],
-                "default": "Modern sans-serif"
-            },
             "show_newsletter_signup_form": {
                 "type": "boolean",
                 "default": true,
