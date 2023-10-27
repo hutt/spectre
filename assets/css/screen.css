@@ -2245,11 +2245,17 @@ unless a heading is the very first element in the post content */
 .gh-content h2 {
     font-size: calc(1.6em * var(--factor, 1));
     letter-spacing: -0.02em;
+    font-weight: 800 !important;
 }
 
 .gh-content h3 {
     font-size: calc(1.3em * var(--factor, 1));
     letter-spacing: -0.017em;
+    font-weight: 300 !important;
+}
+
+.gh-content h2 + h3 {
+    margin-top: 0 !important;
 }
 
 .gh-content a {
