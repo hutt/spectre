@@ -13,22 +13,24 @@
                 {{navigation type="secondary"}}
             </nav>
             <div class="gh-footer-copyright">
-                {{t "Powered by"}} <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                <a href="https://github.com/hutt/spectre" target="_blank" rel="noopener"><i class="fa-solid fa-ghost"></i></a>
             </div>
         </div>
         
-        {{#if @site.members_enabled}}
-            {{#unless @member}}
-                <section class="gh-footer-signup">
-                    <h2 class="gh-footer-signup-header is-title">
-                        {{#if @custom.signup_heading}}{{@custom.signup_heading}}{{else}}{{@site.title}}{{/if}}
-                    </h2>
-                    <p class="gh-footer-signup-subhead is-body">
-                        {{#if @custom.signup_subheading}}{{@custom.signup_subheading}}{{else}}{{@site.description}}{{/if}}
-                    </p>
-                    {{> "email-subscription"}}
-                </section>
-            {{/unless}}
+        {{#if @custom.show_newsletter_signup_form}}
+            {{#if @site.members_enabled}}
+                {{#unless @member}}
+                    <section class="gh-footer-signup">
+                        <h2 class="gh-footer-signup-header is-title">
+                            {{#if @custom.signup_heading}}{{@custom.signup_heading}}{{else}}{{@site.title}}{{/if}}
+                        </h2>
+                        <p class="gh-footer-signup-subhead is-body">
+                            {{#if @custom.signup_subheading}}{{@custom.signup_subheading}}{{else}}{{@site.description}}{{/if}}
+                        </p>
+                        {{> "email-subscription"}}
+                    </section>
+                {{/unless}}
+            {{/if}}
         {{/if}}
 
     </div>

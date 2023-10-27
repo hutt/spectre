@@ -47,6 +47,13 @@ production stylesheet in assets/built/screen.css
 
 */
 
+
+/* 0. Imports
+/* ---------------------------------------------------------- */
+
+/* Font Awesome */
+@import url('./fa.css');
+
 /* 1. Variables
 /* ---------------------------------------------------------- */
 
@@ -83,7 +90,6 @@ production stylesheet in assets/built/screen.css
 
 /* 2. Fonts
 /* ---------------------------------------------------------- */
-
 
 /* work-sans-300 - latin_latin-ext */
 @font-face {
@@ -1846,6 +1852,32 @@ Search                         LOGO                    Login Subscribe
     }
 }
 
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+
+ ul.icons li {
+    display: inline-block;
+    padding: 0 3rem 0 0;
+}
+
+ul.icons li .icon i {
+    vertical-align: middle;
+}
+
+ul.icons li .icon i:last-child {
+    padding-right: 0;
+}
+
+ ul.icons li .icon i:before {
+    display: inline-block;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 4rem;
+}
+
 /* 12.2. Grid style */
 
 .gh-container.is-grid .gh-feed {
@@ -2844,7 +2876,7 @@ figcaption a {
 }
 
 .gh-footer-copyright a {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* 21.3. Footer signup */

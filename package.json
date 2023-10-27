@@ -128,6 +128,11 @@
                 ],
                 "default": "Modern sans-serif"
             },
+            "show_newsletter_signup_form": {
+                "type": "boolean",
+                "default": true,
+                "description": "Shows a newsletter signup form on the bottom of every page. Only works if the newsletter function is configured."
+            },
             "signup_heading": {
                 "type": "text",
                 "description": "Used in your footer across your theme, defaults to site title when empty"
