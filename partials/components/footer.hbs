@@ -9,11 +9,39 @@
                     {{@site.title}}
                 {{/if}}
             </span>
-            <nav class="gh-footer-menu">
-                {{navigation type="secondary"}}
+            <nav class="gh-footer-icons">
+                <ul class="social-icons">
+                    {{#if @custom.twitter}}
+                    <li><a href="{{@custom.twitter}}" class="icon" title="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                    {{/if}}
+
+                    {{#if @custom.mastodon}}
+                    <li><a href="{{@custom.mastodon}}" class="icon" title="Mastodon"><i class="fa-brands fa-mastodon"></i></a></li>
+                    {{/if}}
+
+                    {{#if @custom.instagram}}
+                    <li><a href="{{@custom.instagram}}" class="icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    {{/if}}
+
+                    {{#if @custom.tiktok}}
+                    <li><a href="{{@custom.tiktok}}" class="icon" title="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                    {{/if}}
+
+                    {{#if @custom.youtube}}
+                    <li><a href="{{@custom.youtube}}" class="icon" title="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    {{/if}}
+
+                    {{#if @custom.facebook}}
+                    <li><a href="{{@custom.facebook}}" class="icon" title="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    {{/if}}
+
+                    {{#if @custom.podcast}}
+                    <li><a href="{{@custom.podcast}}" class="icon" title="Podcast"><i class="fa-solid fa-podcast"></i></a></li>
+                    {{/if}}
+                </ul>
             </nav>
-            <div class="gh-footer-copyright">
-                <a href="https://github.com/hutt/spectre" target="_blank" rel="noopener"><i class="fa-solid fa-ghost"></i></a>
+            <div class="gh-footer-menu">
+                {{navigation type="secondary"}}
             </div>
         </div>
         

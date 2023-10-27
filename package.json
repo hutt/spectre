@@ -202,6 +202,34 @@
                 "type": "boolean",
                 "default": false,
                 "group": "homepage"
+            },
+            "twitter": {
+                "type": "text",
+                "default": ""
+            },
+            "mastodon": {
+                "type": "text",
+                "default": ""
+            },
+            "instagram": {
+                "type": "text",
+                "default": ""
+            },
+            "tiktok": {
+                "type": "text",
+                "default": ""
+            },
+            "youtube": {
+                "type": "text",
+                "default": ""
+            },
+            "facebook": {
+                "type": "text",
+                "default": ""
+            },
+            "podcast": {
+                "type": "text",
+                "default": ""
             }
         }
     },

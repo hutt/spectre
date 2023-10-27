@@ -2457,9 +2457,11 @@ blockquote.kg-blockquote-alt {
     font-family: var(--font-serif);
 }
 
-.kg-header-card-text p.kg-header-card-subheading {
+h2.kg-header-card-heading + p.kg-header-card-subheading {
     font-family: var(--font-sans-title);
     font-weight: 300;
+    font-size: clamp(1.4em,1.5vw,2.5rem) !important;
+    margin-top: 0.25em;
 }
 
 /* Bookmark */
@@ -2866,7 +2868,7 @@ figcaption a {
     max-height: 40px;
 }
 
-.gh-footer-menu .nav {
+.gh-footer-icons .social-icons {
     display: flex;
     justify-content: center;
     gap: 8px 28px;
@@ -2874,14 +2876,23 @@ figcaption a {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    font-size: 2.5rem;
 }
 
-.gh-footer-copyright {
+.gh-footer-menu {
     text-align: right;
     white-space: nowrap;
 }
 
-.gh-footer-copyright a {
+.gh-footer-menu .nav {
+    display: inline-flex;
+    gap: 8px 28px;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.gh-footer-menu a {
     text-decoration: none;
 }
 
