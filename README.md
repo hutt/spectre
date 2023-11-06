@@ -12,6 +12,7 @@ A spectre is haunting Europe. This is its website's theme. 👻 [Ghost](https://
 |[Live Demo](https://spectre.hutt.io/)|[Download](https://github.com/hutt/spectre/releases/)|
 |---|---|
 
+Screenshots of [inesschwerdtner.eu](https://inesschwerdtner.eu), where the new theme version is rolled out already.
 | Page | Desktop | Mobile |
 | ---- | ------- | ------ |
 | Homepage Dunkelrot | ![homepage-desktop 1](/assets/screenshots/homepage-desktop-2.png) | ![homepage-mobile 1](/assets/screenshots/homepage-mobile-2.jpeg) |
