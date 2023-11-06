@@ -186,7 +186,7 @@
                 "default": false,
                 "group": "homepage"
             },
-            "twitter": {
+            "x": {
                 "type": "text",
                 "default": ""
             },

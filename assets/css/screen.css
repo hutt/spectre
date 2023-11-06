@@ -505,8 +505,8 @@ button.gh-form-input {
         var(--full) [full-end];
 }
 
-p .kg-signup-card-disclaimer > span {
-    display: none;
+.kg-signup-card-disclaimer {
+    display: none !important;
 }
 
 .gh-canvas > * {
@@ -558,7 +558,7 @@ p .kg-signup-card-disclaimer > span {
 }
 
 .gh-navigation-logo img {
-    max-height: 80px;
+    max-height: 50px;
 }
 
 .gh-navigation-menu {
@@ -2877,7 +2877,7 @@ figcaption a {
 }
 
 .gh-footer-logo img {
-    max-height: 80px;
+    max-height: 50px;
 }
 
 .gh-footer-icons .social-icons {
