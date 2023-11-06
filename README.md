@@ -5,13 +5,19 @@
 A spectre is haunting Europe. This is its website's theme. 👻 [Ghost](https://github.com/TryGhost/Ghost) theme for websites and blogs affiliated with DIE LINKE.
 
 
-# Mockups
+# Mockup & Screenshots
 
 ![Theme Mockups](/assets/mockups.png)
 
 |[Live Demo](https://spectre.hutt.io/)|[Download](https://github.com/hutt/spectre/releases/)|
 |---|---|
 
+| Page | Desktop | Mobile |
+| ---- | ------- | ------ |
+| Homepage Dunkelrot | ![homepage-desktop 1](/assets/screenshots/homepage-desktop-2.png) | ![homepage-mobile 1](/assets/screenshots/homepage-mobile-2.png) |
+| Homepage Dunkelgrün | ![homepage-desktop 2](/assets/screenshots/homepage-desktop-1.png) | ![homepage-mobile 2](/assets/screenshots/homepage-mobile-1.png) |
+| Blog | ![blog-desktop](/assets/screenshots/blog-desktop.png) | ![blog-mobile](/assets/screenshots/blog-mobile.png) |
+| Blogpost | ![post-desktop](/assets/screenshots/post-desktop.png) | ![post-mobile](/assets/screenshots/post-mobile.png) |
 
 # First time using a Ghost theme?
 
@@ -21,23 +27,25 @@ We've documented our default theme pretty heavily so that it should be fairly ea
 
 **The main files are:**
 
-- `default.hbs` - The main template file
-- `home.hbs` - Used for the home page
-- `index.hbs` - Used for the blog page
-- `post.hbs` - Used for individual posts
+- `default.hbs` - The parent template file, which includes your global header/footer
+- `home.hbs` - The homepage
+- `index.hbs` - The main template to generate a list of posts
+- `post.hbs` - The template used to render individual posts
 - `page.hbs` - Used for individual pages
-- `tag.hbs` - Used for tag archives
+- `tag.hbs` - Used for tag archives, eg. "all posts tagged with `news`"
+- `author.hbs` - Used for author archives, eg. "all posts written by Jamie"
 
-One neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
+One neat trick is that you can also create custom one-off templates by adding the slug of a page to a template file. For example:
 
-- `page-about.hbs` - Custom template for the `/about/` page
+- `page-about.hbs` - Custom template for an `/about/` page
 - `tag-news.hbs` - Custom template for `/tag/news/` archive
+- `author-ines.hbs` - Custom template for `/author/ines/` archive
 
 # Routes
 
 This website offers a onepager homepage as well as a blog. You'll need to update your routes in order to make the homepage work.
 
-This is the content of the [routes.yaml file](routes.yaml):
+This is how your [routes.yaml file](routes.yaml) could look like:
 ```yaml
 routes:
   /: 
@@ -64,6 +72,7 @@ collections:
 taxonomies:
   tag: /tag/{slug}/
   author: /autor_in/{slug}/
+
 ```
 
 # Multi-language support
@@ -80,7 +89,7 @@ To publish a page in another language, simply note its slug and create an additi
 
 # Development
 
-Source styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
+Spectre styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
 
 ```bash
 # install dependencies
@@ -104,11 +113,17 @@ yarn zip
 - Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
 
 
-# SVG Icons
+# Icons
 
-Source uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
+## SVG Icons
+
+Sprectre uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
 
 You can add your own SVG icons in the same manner.
+
+## Font Awesome
+
+Spectre supports [Font Awesome](https://fontawesome.com) icons as well. Head over to their website to find the icons you need.
 
 # Copyright & License
 Copyright (c) 2013-2023 [Ghost Foundation](https://ghost.org); 2023 [Jannis Hutt](https://hutt.io). This theme is based on [Ghost Foundation](https://ghost.org)'s theme [Source](https://github.com/TryGhost/Source) and released under the [MIT license](LICENSE).
