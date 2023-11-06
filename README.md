@@ -2,7 +2,7 @@
 
 ![Header Graphic](/assets/readme-header.png)
 
-A spectre is haunting Europe. This is its website's theme. 👻 [Ghost](https://github.com/TryGhost/Ghost) theme for websites and blogs affiliated with DIE LINKE.
+A spectre is haunting Europe. This is its website's theme. 👻 [Ghost](https://github.com/TryGhost/Ghost) theme for websites and blogs affiliated with Die Linke.
 
 
 # Mockup & Screenshots
