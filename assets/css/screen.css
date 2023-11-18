@@ -562,10 +562,10 @@ button.gh-form-input {
 }
 
 .gh-navigation-logo img {
+    position: relative;
     max-height: 115px;
     z-index: 1;
     padding-top: min(4vh, 20px);
-    position: relative;
 }
 
 .gh-navigation-menu {
