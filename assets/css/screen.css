@@ -565,7 +565,7 @@ button.gh-form-input {
     max-height: 115px;
     z-index: 1;
     padding-top: min(4vh, 20px);
-    position: sticky;
+    position: relative;
 }
 
 .gh-navigation-menu {
