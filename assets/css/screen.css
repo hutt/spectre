@@ -2105,9 +2105,9 @@ ul.icons li .icon i:last-child {
     color: var(--ghost-accent-color);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 991px) {
     .gh-article-tag {
-        margin-top: 3vh;
+        margin-top: min(3vh, 40px);
     }
 }
 
