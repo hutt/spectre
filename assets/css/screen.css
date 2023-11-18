@@ -2105,6 +2105,12 @@ ul.icons li .icon i:last-child {
     color: var(--ghost-accent-color);
 }
 
+@media (min-width: 768px) {
+    .gh-article-tag {
+        margin-top: 3vh;
+    }
+}
+
 .gh-article-title {
     font-size: calc(clamp(3.4rem, 1.36vw + 2.85rem, 4.6rem) * var(--factor, 1));
     line-height: 1.1;
