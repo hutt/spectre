@@ -561,6 +561,10 @@ button.gh-form-input {
     white-space: nowrap;
 }
 
+.gh-navigation-logo:hover {
+    opacity: 1;
+}
+
 .gh-navigation-logo img {
     position: relative;
     max-height: 115px;
