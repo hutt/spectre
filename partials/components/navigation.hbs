@@ -4,7 +4,26 @@
         <div class="gh-navigation-brand">
             <a class="gh-navigation-logo is-title" href="{{@site.url}}">
                 {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}">
+                    <picture>
+                        <source 
+                            srcset="{{img_url @site.logo size="s" format="avif"}} 1x,
+                                    {{img_url @site.logo size="m" format="avif"}} 2x"
+                            type="image/avif"
+                        >
+                        <!-- Serve the WebP format if the browser supports it -->
+                        <source 
+                            srcset="{{img_url @site.logo size="s" format="webp"}} 1x,
+                                    {{img_url @site.logo size="m" format="webp"}} 2x"
+                            type="image/webp"
+                        >
+                        <!-- Serve original file format as a fallback -->
+                        <img
+                            srcset="{{img_url @site.logo size="s"}} 1x,
+                                    {{img_url @site.logo size="m"}} 2x"
+                            src="{{img_url @site.logo size="m"}}"
+                            alt="{{@site.title}}"
+                        >
+                    </picture>
                 {{else}}
                     {{@site.title}}
                 {{/if}}

@@ -22,7 +22,27 @@
                     {{#foreach authors}}
                         {{#if profile_image}}
                             <a href="{{url}}">
-                                <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+                                <picture>
+                                    <source 
+                                        srcset="{{img_url profile_image size="xs" format="avif"}} 1x,
+                                                {{img_url profile_image size="s" format="avif"}} 2x"
+                                        type="image/avif"
+                                    >
+                                    <!-- Serve the WebP format if the browser supports it -->
+                                    <source 
+                                        srcset="{{img_url profile_image size="xs" format="webp"}} 1x,
+                                                {{img_url profile_image size="s" format="webp"}} 2x"
+                                        type="image/webp"
+                                    >
+                                    <!-- Serve original file format as a fallback -->
+                                    <img 
+                                        class="author-profile-image"
+                                        srcset="{{img_url profile_image size="xs"}} 1x,
+                                                {{img_url profile_image size="s"}} 2x"
+                                        src="{{img_url profile_image size="xs"}}"
+                                        alt="{{name}}"
+                                    >
+                                </picture>
                             </a>
                         {{else}}
                             <a href="{{url}}">{{> "icons/avatar"}}</a>
