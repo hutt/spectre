@@ -6,21 +6,21 @@
                 {{#if @site.logo}}
                     <picture>
                         <source 
-                            srcset="{{img_url @site.logo size="s" format="avif"}} 1x,
-                                    {{img_url @site.logo size="m" format="avif"}} 2x"
+                            srcset="{{img_url @site.logo size="xs" format="avif"}} 1x,
+                                    {{img_url @site.logo size="s" format="avif"}} 2x"
                             type="image/avif"
                         >
                         <!-- Serve the WebP format if the browser supports it -->
                         <source 
-                            srcset="{{img_url @site.logo size="s" format="webp"}} 1x,
-                                    {{img_url @site.logo size="m" format="webp"}} 2x"
+                            srcset="{{img_url @site.logo size="xs" format="webp"}} 1x,
+                                    {{img_url @site.logo size="s" format="webp"}} 2x"
                             type="image/webp"
                         >
                         <!-- Serve original file format as a fallback -->
                         <img
-                            srcset="{{img_url @site.logo size="s"}} 1x,
-                                    {{img_url @site.logo size="m"}} 2x"
-                            src="{{img_url @site.logo size="m"}}"
+                            srcset="{{img_url @site.logo size="xs"}} 1x,
+                                    {{img_url @site.logo size="s"}} 2x"
+                            src="{{img_url @site.logo size="s"}}"
                             alt="{{@site.title}}"
                         >
                     </picture>
