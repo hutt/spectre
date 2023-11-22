@@ -8,11 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     {{!-- Preload main styles and scripts for better performance --}}
-    <link rel="preload" as="style" href="{{asset "built/screen.css"}}">
     <link rel="preload" as="script" href="{{asset "built/source.js"}}">
 
-    {{!-- Theme assets - use the {{asset}} helper to reference styles & scripts, this will take care of caching and cache-busting automatically --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}">
+    {{!-- load critical css --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "built/critical.css"}}">
+
+    {{!-- defer loading of uncritical css --}}
+    <link rel="preload" as="style" href="{{asset "built/screen.css"}}" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}">
+    </noscript>
 
     {{!-- Custom background color --}}
     <style>

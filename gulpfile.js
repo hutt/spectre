@@ -56,6 +56,19 @@ function css(done) {
     ], handleError(done));
 }
 
+function criticalCss(done) {
+    pump([
+        src('assets/css/critical.css', {sourcemaps: true}),
+        postcss([
+            easyimport,
+            autoprefixer(),
+            cssnano()
+        ]),
+        dest('assets/built/', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
+}
+
 function js(done) {
     pump([
         src([
@@ -88,9 +101,10 @@ function zipper(done) {
 }
 
 const cssWatcher = () => watch('assets/css/**', css);
+const criticalCssWatcher = () => watch('assets/css/**', criticalCss);
 const jsWatcher = () => watch('assets/js/**', js);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
-const watcher = parallel(cssWatcher, jsWatcher, hbsWatcher);
+const watcher = parallel(cssWatcher, criticalCssWatcher, jsWatcher, hbsWatcher);
 const build = series(css, js);
 
 exports.build = build;
