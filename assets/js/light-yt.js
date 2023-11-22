@@ -38,7 +38,14 @@ function initYouTubeVideos() {
 
     let div = document.createElement('div');
     div.setAttribute('data-id', videoId);
-    let placeholder = div.appendChild(document.createElement('img'))
+    let picture = div.appendChild(document.createElement('picture'));
+    let placeholder_webp = picture.appendChild(document.createElement('source'));
+    placeholder_webp.srcset = '//i.ytimg.com/vi_webp/ID/hqdefault.webp'.replace('ID', videoId);
+    placeholder_webp.type = 'image/webp';
+    let placeholder_jpg = picture.appendChild(document.createElement('source'));
+    placeholder_jpg.srcset = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace('ID', videoId);
+    placeholder_jpg.type = 'image/jpeg';
+    let placeholder = picture.appendChild(document.createElement('img'));
     placeholder.src = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace('ID', videoId);
     
     let videoTitle = document.createElement('div');
