@@ -2912,7 +2912,14 @@ figcaption a {
 }
 
 .gh-footer-logo img {
-    max-height: 50px;
+    max-height: 70px;
+}
+
+@media (min-width: 991px) {
+    .gh-footer-logo img {
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
 }
 
 .gh-footer-icons .social-icons {
