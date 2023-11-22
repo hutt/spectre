@@ -30,12 +30,16 @@ function initYouTubeVideos() {
     let thisPlayerId = 'playerid-' + n.toString();
 
     getYoutubeData(videoId)
-      .then(out => document.getElementById(thisPlayerId).innerHTML = out.title.substr(0, 40))
+      .then(out => {
+        document.getElementById(thisPlayerId).innerHTML = out.title.substr(0, 140);
+        placeholder.alt = "YouTube: " + out.title.substr(0, 140);
+      })
       .catch(err => { console.log(err) });
 
     let div = document.createElement('div');
     div.setAttribute('data-id', videoId);
-    div.appendChild(document.createElement('img')).src = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace('ID', videoId);
+    let placeholder = div.appendChild(document.createElement('img'))
+    placeholder.src = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace('ID', videoId);
     
     let videoTitle = document.createElement('div');
     videoTitle.setAttribute('class', 'videotitle');
