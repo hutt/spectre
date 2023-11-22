@@ -44,6 +44,7 @@ production stylesheet in assets/built/screen.css
   21.2. Footer bar
   21.3. Footer signup
 22. Lightbox
+23. Light YouTube Embeds
 
 */
 
@@ -3482,4 +3483,80 @@ figcaption a {
 
 .pswp--minimal--dark .pswp__top-bar {
     background: none;
+}
+
+
+/* 23. Light YouTube Embeds
+/* ---------------------------------------------------------- */
+/*
+ * Light YouTube Embeds by @labnol
+ * Credit: https://www.labnol.org/
+ * Video title oauth added by @kmhelander
+ */
+
+.youtube-player {
+    position: relative;
+    aspect-ratio: 16 / 9;  /* Modern browsers https://caniuse.com/mdn-css_properties_aspect-ratio */
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    margin: 5px;
+}
+
+.youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+}
+
+/* Poster image */
+.youtube-player img {  
+    object-fit: cover;
+    display: block;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: 0.4s all;
+    -moz-transition: 0.4s all;
+    transition: 0.4s all;
+}
+
+.youtube-player img:hover {
+    -webkit-filter: brightness(75%);
+}
+
+/* Play button on poster image */
+.youtube-player .play {
+    height: 75px;
+    width: 75px;
+    left: 50%;
+    margin-top: 30%;
+
+    position: relative;
+    z-index: 1;
+
+    background: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 417 417" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g transform="matrix(4.16667,0,0,4.16667,0,0)"><g transform="matrix(-2.77556e-17,1,-1,-2.77556e-17,100,-50)"><path d="M100,0L150,100L50,100L100,0Z" style="fill:white;"/></g></g></svg>') no-repeat;
+    cursor: pointer;
+    transform: translate(-50%, -50%);   /* Responsive... */
+}
+
+.youtube-player .videotitle {  
+    position: absolute;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    color: white;
+    text-shadow: 1px 1px black;
+    left: 10px;
+    top: 10px;
 }

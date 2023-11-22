@@ -88,6 +88,14 @@ If you usually blog in German, but you want to publish a post in English, simply
 
 To publish a page in another language, simply note its slug and create an additional route in the `routes.yaml` file. The example above features an additional homepage in English. While the German home page's slug is `start`, the english page's slug is `start-en`. It will then be displayed under `yourdomain.tld/en/`. It's as easy as that.
 
+# Privacy-friendly YouTube video embeds
+This Theme allows privacy-friendly and GDPR-compliant YouTube video embeds using [light-yt.js](https://www.labnol.org/internet/light-youtube-embeds/27941/) by [Amit Agarwal](https://github.com/labnol). 
+
+## How to embed a video
+1. Copy the YouTube video ID (if the video URL is `https://www.youtube.com/watch?v=dQw4w9WgXcQ`, the ID is `dQw4w9WgXcQ`)
+2. Inside the editor, insert an HTML block where you want to place the video
+3. Paste the following code into the HTML block and replace `VideoID` with the ID you copied: `<div class="youtube-player" data-id="VideoID"></div>` (=> `<div class="youtube-player" data-id="dQw4w9WgXcQ"></div>`)
+
 # Development
 
 Spectre styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
