@@ -3500,7 +3500,7 @@ figcaption a {
     width: 100%;
     overflow: hidden;
     background: #000;
-    margin: 5px;
+    margin: calc(12px*var(--content-spacing-factor, 1)) 0 0 0;
 }
 
 .youtube-player iframe {
