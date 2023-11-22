@@ -3563,4 +3563,5 @@ figcaption a {
     text-shadow: 0px 0px 5px rgba(0,0,0,0.75);
     left: 10px;
     top: 10px;
+    display: none;
 }

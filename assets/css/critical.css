@@ -980,5 +980,6 @@ h2.kg-header-card-heading+p.kg-header-card-subheading {
     color: #fff;
     text-shadow: 0 0 5px rgba(0,0,0,.75);
     left: 10px;
-    top: 10px
+    top: 10px;
+    display: none;
 }
