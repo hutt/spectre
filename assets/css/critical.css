@@ -202,6 +202,8 @@ a:hover {
 }
 
 .gh-navigation-logo img {
+    max-height: 115px;
+    
     position: relative;
     max-height: 115px;
     z-index: 1;
@@ -732,40 +734,6 @@ a:hover {
     font-weight: 800
 }
 
-@media (max-width:991px) {
-    .gh-footer {
-        margin-top: 12vw
-    }
-}
-
-.gh-footer a:not(.gh-button) {
-    color: inherit
-}
-
-.gh-footer.has-accent-color {
-    background-color: var(--ghost-accent-color)
-}
-
-.gh-footer.has-accent-color .gh-footer-bar {
-    border-top: 0
-}
-
-.gh-footer.has-accent-color .gh-button {
-    background-color: #fff;
-    color: #15171a
-}
-
-@media (min-width:991px) {
-    .gh-footer-logo img {
-        margin-top: -10px;
-        margin-bottom: -10px
-    }
-}
-
-.gh-footer-menu a {
-    text-decoration: none
-}
-
 .gh-article {
     --container-width: 1120px;
     word-break: break-word
@@ -838,72 +806,6 @@ h2.kg-header-card-heading+p.kg-header-card-subheading {
 
 .has-sans-body .is-body {
     font-family: var(--font-sans)
-}
-
-.gh-footer {
-    margin-top: 4vw;
-    font-size: 1.5rem;
-    color: var(--color-darker-gray)
-}
-
-@media (max-width:991px) {
-    .gh-footer {
-        margin-top: 12vw
-    }
-}
-
-.gh-footer-bar {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    column-gap: 32px;
-    margin-bottom: 100px;
-    padding-block: 28px;
-    font-weight: 550;
-    border-block: 1px solid var(--color-border)
-}
-
-.gh-footer-logo {
-    position: relative;
-    font-size: calc(2.4rem*var(--factor, 1));
-    font-weight: 725;
-    letter-spacing: -.015em;
-    white-space: nowrap
-}
-
-.gh-footer-logo img {
-    max-height: 70px
-}
-
-@media (min-width:991px) {
-    .gh-footer-logo img {
-        margin-top: -10px;
-        margin-bottom: -10px
-    }
-}
-
-.gh-footer-icons .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 8px 28px;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-size: 2.5rem
-}
-
-.gh-footer-menu {
-    text-align: right;
-    white-space: nowrap
-}
-
-.gh-footer-menu .nav {
-    display: inline-flex;
-    gap: 8px 28px;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding-inline-start: 0
 }
 
 .pswp,.youtube-player iframe,.youtube-player img {

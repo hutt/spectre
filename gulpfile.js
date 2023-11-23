@@ -18,8 +18,8 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const easyimport = require('postcss-easy-import');
 
-const REPO = 'TryGhost/Source';
-const REPO_READONLY = 'TryGhost/Source';
+const REPO = 'hutt/spectre';
+const REPO_READONLY = 'hutt/spectre';
 const CHANGELOG_PATH = path.join(process.cwd(), '.', 'changelog.md');
 
 function serve(done) {
@@ -105,7 +105,7 @@ const criticalCssWatcher = () => watch('assets/css/**', criticalCss);
 const jsWatcher = () => watch('assets/js/**', js);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
 const watcher = parallel(cssWatcher, criticalCssWatcher, jsWatcher, hbsWatcher);
-const build = series(css, js);
+const build = series(css, criticalCss, js);
 
 exports.build = build;
 exports.zip = series(build, zipper);
