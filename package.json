@@ -2,7 +2,7 @@
     "name": "spectre",
     "description": "A spectre is haunting Europe. This is its website's theme.",
     "demo": "https://spectre.hutt.io/",
-    "version": "2.2.6",
+    "version": "2.3.0",
     "engines": {
         "ghost": ">=5.0.0"
     },
@@ -94,14 +94,9 @@
                 "type": "select",
                 "options": [
                     "Logo in the middle",
-                    "Logo on the left",
-                    "Stacked"
+                    "Logo on the left"
                 ],
-                "default": "Logo in the middle"
-            },
-            "site_background_color": {
-                "type": "color",
-                "default": "#ffffff"
+                "default": "Logo on the left"
             },
             "header_and_footer_color": {
                 "type": "select",
@@ -134,7 +129,7 @@
                     "Off"
                 ],
                 "description": "Landing is recommended for all sites, Highlight & Magazine for those with more content",
-                "default": "Landing",
+                "default": "Highlight",
                 "group": "homepage"
             },
             "header_text": {
@@ -163,27 +158,6 @@
                     "Grid"
                 ],
                 "default": "List",
-                "group": "homepage"
-            },
-            "show_images_in_feed": {
-                "type": "boolean",
-                "default": true,
-                "group": "homepage",
-                "visibility": "post_feed_style:List"
-            },
-            "show_author": {
-                "type": "boolean",
-                "default": true,
-                "group": "homepage"
-            },
-            "show_publish_date": {
-                "type": "boolean",
-                "default": true,
-                "group": "homepage"
-            },
-            "show_publication_info_sidebar": {
-                "type": "boolean",
-                "default": false,
                 "group": "homepage"
             },
             "x": {

@@ -1,4 +1,4 @@
-<article class="gh-card {{post_class}}{{#unless @custom.show_images_in_feed}} no-image{{/unless}}">
+<article class="gh-card {{post_class}}">
     <a class="gh-card-link" href="{{url}}">
         {{#if feature_image}}
             <figure class="gh-card-image">
@@ -25,12 +25,9 @@
                 <p class="gh-card-excerpt is-body">{{excerpt}}</p>
             {{/if}}
             <footer class="gh-card-meta"><!--
-             -->{{#if @custom.show_author}}
-                    <span class="gh-card-author">{{t "By"}} {{#foreach authors}}{{#if @first}}{{name}}{{else}}, {{name}}{{/if}}{{/foreach}}</span>
-                {{/if}}
-                {{#if @custom.show_publish_date}}
-                    <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-                {{/if}}<!--
+             -->
+                <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                <!--
          --></footer>
         </div>
     </a>
