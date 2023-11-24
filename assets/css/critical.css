@@ -768,7 +768,7 @@ a:hover {
 
 .gh-content h1,.gh-content h2 {
     letter-spacing: -.02em;
-    font-weight: 800!important
+    font-weight: 800 !important
 }
 
 .gh-content h1 {

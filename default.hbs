@@ -6,12 +6,27 @@
     <title>{{meta_title}}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{!-- load critical css --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "built/critical.css"}}">
     
     {{!-- Preload main styles and scripts for better performance --}}
     <link rel="preload" as="script" href="{{asset "built/source.js"}}">
 
-    {{!-- load critical css --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "built/critical.css"}}">
+    {{!-- Preload most important fonts --}}
+    <link rel="preload" as="font" type="font/ttf" href="{{asset "fonts/inter-v13-cyrillic_greek_latin_latin-ext-500.ttf"}}" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="{{asset "fonts/inter-v13-cyrillic_greek_latin_latin-ext-500.woff2"}}" crossorigin>
+
+    <link rel="preload" as="font" type="font/ttf" href="{{asset "fonts/work-sans-v19-latin_latin-ext-800.ttf"}}" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="{{asset "fonts/work-sans-v19-latin_latin-ext-800.woff2"}}" crossorigin>
+
+    <link rel="preload" as="font" type="font/ttf" href="{{asset "fonts/work-sans-v19-latin_latin-ext-300.ttf"}}" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="{{asset "fonts/work-sans-v19-latin_latin-ext-300.woff2"}}" crossorigin>
+
+    {{!-- Preload @site.logo (deactivated as long preload doesen't support <picture> sources in different formats --}}
+    {{#if @site.logo}}
+    {{!-- <link rel="preload" as="image" href="{{img_url @site.logo size="s"}}" imagesrcset="{{img_url @site.logo size="xs"}} 1x, {{img_url @site.logo size="s"}} 2x"> --}}
+    {{/if}}
 
     {{!-- defer loading of uncritical css --}}
     <link rel="preload" as="style" href="{{asset "built/screen.css"}}" onload="this.onload=null;this.rel='stylesheet'">
