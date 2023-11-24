@@ -204,7 +204,7 @@ a:hover {
 
 .gh-navigation-logo img {
     max-height: 115px;
-    
+    height: 115px;
     position: relative;
     max-height: 115px;
     z-index: 1;
@@ -738,6 +738,15 @@ a:hover {
 .gh-article {
     --container-width: 1120px;
     word-break: break-word
+}
+
+.gh-article-image {
+    grid-column: wide;
+    margin-top: 40px;
+}
+
+.gh-article-image img {
+    width: 100%;
 }
 
 .gh-content {
