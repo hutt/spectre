@@ -47,6 +47,8 @@ function initYouTubeVideos() {
     placeholder_jpg.type = 'image/jpeg';
     let placeholder = picture.appendChild(document.createElement('img'));
     placeholder.src = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace('ID', videoId);
+    placeholder.width = '640';
+    placeholder.height = '360';
     
     let videoTitle = document.createElement('div');
     videoTitle.setAttribute('class', 'videotitle');
