@@ -2041,6 +2041,12 @@ ul.icons li .icon i:last-child {
     word-break: break-word;
 }
 
+@media (max-width: 991px) {
+     .gh-article.post {
+         padding-top: min(4vh, 40px);
+     }
+}
+
 .gh-article-header {
     margin: clamp(40px, 3.64vw + 25.45px, 72px) 0 40px;
 }
