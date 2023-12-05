@@ -2043,7 +2043,7 @@ ul.icons li .icon i:last-child {
 
 @media (max-width: 991px) {
      .gh-article.post {
-         padding-top: min(4vh, 40px);
+         top: min(4vh, 40px);
      }
 }
 
