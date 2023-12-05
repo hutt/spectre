@@ -21,15 +21,6 @@ const easyimport = require('postcss-easy-import');
 // penthouse laden
 const penthouse = require('penthouse');
 
-// online test pages to extract critical css from
-const samples = {
-    post: 'https://inesschwerdtner.eu/blog/die-ost-tour-geht-weiter/',
-    page: 'https://inesschwerdtner.eu/themen/',
-    homepage: 'https://inesschwerdtner.eu',
-    index: 'https://inesschwerdtner.eu/blog/',
-    category: 'https://inesschwerdtner.eu/tag/ost-tour/'
-}
-
 const REPO = 'hutt/spectre';
 const REPO_READONLY = 'hutt/spectre';
 const CHANGELOG_PATH = path.join(process.cwd(), '.', 'changelog.md');
@@ -80,7 +71,12 @@ function generateCriticalCSS(done, category, url) {
         blockJSRequests: false,
     })
     .then(criticalCss => {
-        fs.writeFileSync(`partials/css/${category}.critical.css.hbs`, `<style>\n${criticalCss}\n</style>`);
+        // remove all @font-face and @import rules
+        //const regex = /@font-face\s*\{[^}]*\}|@import\s+url\([^)]+\)[^;]*;/g;
+        // replace all links
+        const regex = /url\((?:'|"|)(\.\.\/)([^)'"]+)(?:'|"|)\)/g;
+        const cleanedCss = criticalCss.replace(regex, (match, p1, p2) => `url('/assets/${p2}')`);
+        fs.writeFileSync(`partials/css/${category}.critical.css.hbs`, `<style>\n${cleanedCss}\n</style>`);
     })
     .catch(err => {
         console.error(err);
@@ -93,11 +89,10 @@ function generateCriticalCSS(done, category, url) {
 
 function critical(done) {
     const categories = [
-        { name: 'start', url: 'https://inesschwerdtner.eu' },
         { name: 'post', url: 'https://inesschwerdtner.eu/blog/die-ost-tour-geht-weiter/' },
-        { name: 'page', url: 'https://inesschwerdtner.eu/ueber-mich/' },
-        { name: 'index', url: 'https://inesschwerdtner.eu/blog/' },
-        { name: 'tag', url: 'https://inesschwerdtner.eu/tag/ost-tour/' }
+        { name: 'page', url: 'https://spectre.hutt.io/style-guide/' },
+        { name: 'tag', url: 'https://inesschwerdtner.eu/tag/ost-tour/' },
+        { name: 'index', url: 'https://inesschwerdtner.eu/blog/' }
     ];
 
     categories.forEach(category => {
