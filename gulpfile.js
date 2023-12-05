@@ -89,10 +89,10 @@ function generateCriticalCSS(done, category, url) {
 
 function critical(done) {
     const categories = [
-        { name: 'post', url: 'https://inesschwerdtner.eu/blog/die-ost-tour-geht-weiter/' },
+        { name: 'post', url: 'https://spectre.hutt.io/blog/sample-post/' },
         { name: 'page', url: 'https://spectre.hutt.io/style-guide/' },
-        { name: 'tag', url: 'https://inesschwerdtner.eu/tag/ost-tour/' },
-        { name: 'index', url: 'https://inesschwerdtner.eu/blog/' }
+        { name: 'tag', url: 'https://spectre.hutt.io/tag/getting-started/' },
+        { name: 'index', url: 'https://spectre.hutt.io/blog/' }
     ];
 
     categories.forEach(category => {

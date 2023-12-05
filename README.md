@@ -121,6 +121,8 @@ yarn zip
 
 - Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
 
+# Blazing fast
+Critical CSS served inline. Execute `yarn critical` to re-generate.
 
 # Icons
 
