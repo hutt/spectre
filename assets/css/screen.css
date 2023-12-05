@@ -1265,7 +1265,7 @@ Search                         LOGO                    Login Subscribe
     margin-bottom: 12px;
 }
 
-.gh-header .is-highlight .gh-header-left .gh-card .gh-card-title {
+.gh-header.is-highlight .gh-header-left .gh-card .gh-card-title {
     font-size: clamp(2.8rem, 1.36vw + 2.25rem, 4rem);
     font-weight: 900;
     line-height: 1.1;
