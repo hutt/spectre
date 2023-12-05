@@ -1265,9 +1265,9 @@ Search                         LOGO                    Login Subscribe
     margin-bottom: 12px;
 }
 
-.gh-header.is-highlight .gh-header-left .gh-card .gh-card-title {
+.gh-header .is-highlight .gh-header-left .gh-card .gh-card-title {
     font-size: clamp(2.8rem, 1.36vw + 2.25rem, 4rem);
-    font-weight: 700;
+    font-weight: 900;
     line-height: 1.1;
     letter-spacing: -0.022em;
 }
@@ -2054,12 +2054,6 @@ ul.icons li .icon i:last-child {
     color: var(--ghost-accent-color);
 }
 
-@media (max-width: 991px) {
-    .gh-article-tag {
-        margin-top: min(3vh, 40px);
-    }
-}
-
 .gh-article-title {
     font-size: calc(clamp(3.4rem, 1.36vw + 2.85rem, 4.6rem) * var(--factor, 1));
     line-height: 1.1;
@@ -2124,7 +2118,7 @@ ul.icons li .icon i:last-child {
 
 .gh-article-author-name {
     font-size: 1.6rem;
-    font-weight: 650;
+    font-weight: 700;
     letter-spacing: -0.013em;
 }
 

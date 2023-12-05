@@ -2,7 +2,7 @@
     "name": "spectre",
     "description": "A spectre is haunting Europe. This is its website's theme.",
     "demo": "https://spectre.hutt.io/",
-    "version": "2.3.4",
+    "version": "2.4.0",
     "engines": {
         "ghost": ">=5.0.0"
     },
@@ -10,6 +10,7 @@
     "scripts": {
         "dev": "gulp",
         "zip": "gulp zip",
+        "critical": "gulp critical",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "gulp build",
@@ -59,6 +60,7 @@
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
         "inquirer": "8.2.4",
+        "penthouse": "^2.3.3",
         "postcss": "8.2.13",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0"

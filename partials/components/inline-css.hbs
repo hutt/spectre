@@ -1,0 +1,30 @@
+{{!-- This partial includes critical inline css --}}
+{{#is "post"}}
+   {{!-- e.g. blog start page --}}
+   <!-- this is a post -->
+   {{> "css/post.critical.css"}}
+{{/is}}
+
+{{#is "page"}}
+   {{#has tag="hash-start"}}
+      {{!-- start page --}}
+      <!-- this is the start page -->
+      {{> "css/start.critical.css"}}
+   {{else}}
+      {{!-- any page --}}
+      {{> "css/page.critical.css"}}
+      <!-- this is any page -->
+   {{/has}}
+{{/is}}
+
+{{#is "index"}}
+   {{!-- e.g. blog start page --}}
+   <!-- this is the blog index -->
+   {{> "css/index.critical.css"}}
+{{/is}}
+
+{{#is "tag"}}
+   {{!-- e.g. blog start page --}}
+   <!-- this is a tag page -->
+   {{> "css/tag.critical.css"}}
+{{/is}}

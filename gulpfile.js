@@ -1,4 +1,4 @@
-const {series, watch, src, dest, parallel} = require('gulp');
+const {series, watch, src, dest, parallel, task} = require('gulp');
 const pump = require('pump');
 const path = require('path');
 const releaseUtils = require('@tryghost/release-utils');
@@ -17,6 +17,18 @@ const fs = require('fs');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const easyimport = require('postcss-easy-import');
+
+// penthouse laden
+const penthouse = require('penthouse');
+
+// online test pages to extract critical css from
+const samples = {
+    post: 'https://inesschwerdtner.eu/blog/die-ost-tour-geht-weiter/',
+    page: 'https://inesschwerdtner.eu/themen/',
+    homepage: 'https://inesschwerdtner.eu',
+    index: 'https://inesschwerdtner.eu/blog/',
+    category: 'https://inesschwerdtner.eu/tag/ost-tour/'
+}
 
 const REPO = 'hutt/spectre';
 const REPO_READONLY = 'hutt/spectre';
@@ -56,17 +68,41 @@ function css(done) {
     ], handleError(done));
 }
 
-function criticalCss(done) {
-    pump([
-        src('assets/css/critical.css', {sourcemaps: true}),
-        postcss([
-            easyimport,
-            autoprefixer(),
-            cssnano()
-        ]),
-        dest('assets/built/', {sourcemaps: '.'}),
-        livereload()
-    ], handleError(done));
+function generateCriticalCSS(done, category, url) {
+    penthouse({
+        url: url,
+        css: 'assets/built/screen.css',
+        width: 390,
+        height: 1280,
+        keepLargerMediaQueries: true,
+        forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[.\w\s]*/g'],
+        renderWaitTime: 500,
+        blockJSRequests: false,
+    })
+    .then(criticalCss => {
+        fs.writeFileSync(`partials/css/${category}.critical.css.hbs`, `<style>\n${criticalCss}\n</style>`);
+    })
+    .catch(err => {
+        console.error(err);
+        done(err);
+    })
+    .finally(() => {
+        done();
+    });
+}
+
+function critical(done) {
+    const categories = [
+        { name: 'start', url: 'https://inesschwerdtner.eu' },
+        { name: 'post', url: 'https://inesschwerdtner.eu/blog/die-ost-tour-geht-weiter/' },
+        { name: 'page', url: 'https://inesschwerdtner.eu/ueber-mich/' },
+        { name: 'index', url: 'https://inesschwerdtner.eu/blog/' },
+        { name: 'tag', url: 'https://inesschwerdtner.eu/tag/ost-tour/' }
+    ];
+
+    categories.forEach(category => {
+        generateCriticalCSS(done, category.name, category.url);
+    });
 }
 
 function js(done) {
@@ -101,14 +137,15 @@ function zipper(done) {
 }
 
 const cssWatcher = () => watch('assets/css/**', css);
-const criticalCssWatcher = () => watch('assets/css/**', criticalCss);
+const criticalCssWatcher = () => watch('assets/css/screen.css', critical);
 const jsWatcher = () => watch('assets/js/**', js);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
-const watcher = parallel(cssWatcher, criticalCssWatcher, jsWatcher, hbsWatcher);
-const build = series(css, criticalCss, js);
+const watcher = parallel(cssWatcher, jsWatcher, hbsWatcher, criticalCssWatcher);
+const build = series(css, js, critical);
 
 exports.build = build;
 exports.zip = series(build, zipper);
+exports.critical = critical;
 exports.default = series(build, serve, watcher);
 
 exports.release = async () => {
