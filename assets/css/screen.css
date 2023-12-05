@@ -1262,7 +1262,7 @@ Search                         LOGO                    Login Subscribe
 
 .gh-header.is-highlight .gh-header-left .gh-card .gh-card-tag {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 0.25em;
 }
 
 .gh-header.is-highlight .gh-header-left .gh-card .gh-card-title {
@@ -2052,7 +2052,7 @@ ul.icons li .icon i:last-child {
 }
 
 .gh-article-tag {
-    margin-bottom: 12px;
+    margin-bottom: 0.25em;
     font-size: 1.3rem;
     font-weight: 500;
     letter-spacing: 0.01em;
