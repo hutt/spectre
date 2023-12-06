@@ -8,7 +8,7 @@
     <title>{{@site.title}}</title>
     <link>{{@site.url}}</link>
 </image>
-<lastBuildDate>{{date format="ddd, DD MMM YYYY HH:mm:ss ZZ"}}</lastBuildDate>
+<lastBuildDate>{{date locale="en-us" format="ddd, DD MMM YYYY HH:mm:ss ZZ"}}</lastBuildDate>
 <atom:link href="{{@site.url}}" rel="self" type="application/rss+xml"/>
 <ttl>60</ttl>
 
@@ -21,7 +21,7 @@
         <guid isPermaLink="false">{{id}}</guid>
         <category><![CDATA[ {{primary_tag.name}} ]]></category>
         <dc:creator><![CDATA[ {{primary_author.name}} ]]></dc:creator>
-        <pubDate>{{date format="ddd, DD MMM YYYY HH:mm:ss ZZ"}}</pubDate>
+        <pubDate>{{date locale="en-us" format="ddd, DD MMM YYYY HH:mm:ss ZZ"}}</pubDate>
         <media:content url="{{feature_image}}" medium="image"/>
         <content:encoded><![CDATA[ {{content}} ]]></content:encoded>
     </item>

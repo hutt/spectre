@@ -2,11 +2,11 @@ routes:
   /: 
     template: page
     data: page.start
+  /rss/:
+    template: rss
+    content_type: text/xml
   /sitemap/:
     template: sitemap
-    content_type: text/xml
-  /blog/rss/:
-    template: rss
     content_type: text/xml
 
 collections:
