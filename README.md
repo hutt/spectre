@@ -55,6 +55,9 @@ routes:
   /en/:
     template: page
     data: page.start-en
+  /sitemap/:
+    template: sitemap
+    content_type: text/html
 
 collections:
   /blog/:
