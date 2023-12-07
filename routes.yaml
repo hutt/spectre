@@ -15,7 +15,7 @@ collections:
     template: home
     filter: 'tag:-hash-pressemitteilung'
   /presse/mitteilungen/:
-    permalink: /presse/mitteilungen/{slug}/
+    permalink: /presse/mitteilungen/{year}/{slug}/
     template: index
     filter: 'tag:hash-pressemitteilung'
 
