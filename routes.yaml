@@ -2,7 +2,7 @@ routes:
   /: 
     template: page
     data: page.start
-  /rss/:
+  /blog/rss/:
     template: rss
     content_type: text/xml
   /sitemap/:
