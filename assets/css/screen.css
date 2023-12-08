@@ -537,6 +537,11 @@ button.gh-form-input {
     list-style: none;
 }
 
+.gh-navigation .nav .nav-current a {
+    color: var(--ghost-accent-color);
+    /*filter: brightness(75%);*/
+}
+
 .gh-navigation .gh-more-toggle {
     position: relative;
     margin: 0 -6px;
