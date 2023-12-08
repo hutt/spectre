@@ -14,7 +14,6 @@
                         sizes="(min-width: 1400px) 1400px, 92vw" 
                         type="image/avif"
                     >
-                    <!-- Serve the WebP format if the browser supports it -->
                     <source 
                         srcset="{{img_url @site.cover_image size="s" format="webp"}} 300w,
                                 {{img_url @site.cover_image size="m" format="webp"}} 600w,
@@ -23,7 +22,6 @@
                         sizes="(min-width: 1400px) 1400px, 92vw" 
                         type="image/webp"
                     >
-                    <!-- Serve original file format as a fallback -->
                     <img
                         class="gh-header-image" 
                         srcset="{{img_url @site.cover_image size="s"}} 300w,
