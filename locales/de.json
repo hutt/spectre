@@ -13,6 +13,6 @@
   "Read more posts" : "Weitere Artikel lesen",
   "A minute read" : "A minute read",
   "% minutes read" : "% minutes read",
-  "Article printed at {date}. Please see {url} for the latest version." : "Artikel wurde am {date} gedruckt. Die aktuelle Version ist unter {url} verfügbar.",
-  "Page printed at {date}. Please see {url} for the latest version." : "Seite wurde am {date} gedruckt. Die aktuelle Version ist unter {url} verfügbar."
+  "Article printed at {date}. Please see {url} for the latest version." : "Artikel wurde am {date} gedruckt. Die aktuelle Version gibt es unter {url}.",
+  "Page printed at {date}. Please see {url} for the latest version." : "Seite wurde am {date} gedruckt. Die aktuelle Version gibt es unter {url}."
 }
