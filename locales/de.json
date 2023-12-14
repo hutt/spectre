@@ -11,8 +11,8 @@
   "Menu" : "Menü",
   "Read more" : "Mehr",
   "Read more posts" : "Weitere Artikel lesen",
-  "A minute read" : "A minute read",
-  "% minutes read" : "% minutes read",
+  "A minute read" : "Eine Minute Lesezeit",
+  "% minutes read" : "% Minuten Lesezeit",
   "Article printed at {date}. Please see {url} for the latest version." : "Artikel wurde am {date} gedruckt. Die aktuelle Version gibt es unter {url}.",
   "Page printed at {date}. Please see {url} for the latest version." : "Seite wurde am {date} gedruckt. Die aktuelle Version gibt es unter {url}."
 }
