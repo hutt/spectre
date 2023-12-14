@@ -11,6 +11,8 @@
   "Menu" : "Menu",
   "Read more" : "Read more",
   "Read more posts" : "Read more posts",
-  "A minute read": "A minute read",
-  "% minutes read": "% minutes read"
+  "A minute read" : "A minute read",
+  "% minutes read" : "% minutes read",
+  "Article printed at {date}. Please see {url} for the latest version." : "Article printed at {date}. Please see {url} for the latest version.",
+  "Page printed at {date}. Please see {url} for the latest version." : "Page printed at {date}. Please see {url} for the latest version."
 }

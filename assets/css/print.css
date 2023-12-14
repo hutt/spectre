@@ -1,0 +1,104 @@
+@media print {
+	@page {
+		margin-top: 1cm;
+		margin-bottom: 1cm;
+	}
+
+	@page:left {
+		@bottom-left {
+			content: counter(page) " / " counter(pages);
+		}
+	}
+
+	@page:right {
+		@bottom-right {
+			content: counter(page) " / " counter(pages);
+		}
+	}
+
+	* {
+		background-image: none !important;
+		opacity: 1 !important;
+	}
+
+	html, body {
+		size: A4 !important;
+	}
+
+	html {
+	    font-size: 62.5%;
+	}
+
+	body {
+		font-size: 1rem;
+	}
+
+	.gh-navigation-inner {
+		margin: 0;
+	}
+
+	.gh-navigation-menu, .gh-navigation-actions, .gh-navigation-brand > button, .gh-viewport > section, .gh-viewport > footer, .ghost-portal-root {
+		display: none !important;
+	}
+
+	.gh-viewport {
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+
+	article {
+		column-width: 40vw;
+		column-gap: 0;
+	}
+
+	.gh-article-header {
+
+	}
+
+	.gh-content {
+		text-align: justify;
+		text-align-last: none;
+		hyphens: auto;
+	    hyphenate-limit-chars: auto 4 4;
+	    -webkit-hyphenate-limit-before: 4;
+	    -webkit-hyphenate-limit-after: 4;
+	}
+
+	.gh-content h1, .gh-content h2, .gh-content h3, .gh-content h4, .gh-content h5 {
+		text-align: left;
+		page-break-inside: avoid;
+		page-break-before: always;
+		page-break-after: avoid;
+	}
+
+	.gh-content figure img {
+		page-break-inside: avoid;
+	}
+
+	.gh-content a {
+		color: var(--color-primary-text);
+		white-space: pre-wrap;
+	}
+
+	.gh-content a::after {
+		content: " [Link: " attr(href) "]";
+		text-decoration: none !important;
+	}
+
+	.gh-content blockquote:not([class]) {
+		border-left: 4px solid var(--color-primary-text);
+		padding-left: 1.5rem;
+	}
+
+	.print {
+		display: block;
+	}
+
+	.print-notice {
+		font-weight: 700;
+		border: thin dashed var(--color-primary-text);
+		padding: 0.5em;
+		white-space: pre-wrap;
+	}
+}

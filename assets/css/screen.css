@@ -2040,6 +2040,10 @@ ul.icons li .icon i:last-child {
 
 /* 14.1. Article */
 
+.print {
+    display: none;
+}
+
 .gh-article {
     --container-width: 1120px;
 

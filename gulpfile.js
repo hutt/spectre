@@ -59,6 +59,19 @@ function css(done) {
     ], handleError(done));
 }
 
+function printCss(done) {
+    pump([
+        src('assets/css/print.css', {sourcemaps: true}),
+        postcss([
+            easyimport,
+            autoprefixer(),
+            cssnano()
+        ]),
+        dest('assets/built/', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
+}
+
 function generateCriticalCSS(done, category, url) {
     penthouse({
         url: url,
@@ -131,12 +144,13 @@ function zipper(done) {
     ], handleError(done));
 }
 
-const cssWatcher = () => watch('assets/css/**', css);
+const cssWatcher = () => watch('assets/css/screen.css', css);
+const printCssWatcher = () => watch('assets/css/print.css', printCss);
 //const criticalCssWatcher = () => watch('assets/css/screen.css', critical);
 const jsWatcher = () => watch('assets/js/**', js);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
-const watcher = parallel(cssWatcher, jsWatcher, hbsWatcher);
-const build = series(css, js, critical);
+const watcher = parallel(cssWatcher, printCssWatcher, jsWatcher, hbsWatcher);
+const build = series(css, printCss, js, critical);
 
 exports.build = build;
 exports.zip = series(build, zipper);
