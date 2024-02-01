@@ -78,7 +78,7 @@ function dropdown() {
         makeDropdown();
     });
 
-    window.addEventListener('load', function () {
+    window.addEventListener('loadstart', function () {
         if (!logo) {
             makeDropdown();
         }

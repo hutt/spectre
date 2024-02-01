@@ -79,7 +79,7 @@ function generateCriticalCSS(done, category, url) {
         width: 390,
         height: 1280,
         keepLargerMediaQueries: true,
-        forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[\.\-\w\s]*/g', '/\#gh\-navigation/g', '/\.gh\-burger/g', '/\.gh\-icon\-button/g', '/\.gh\-main/g', '/\.gh\-inner/g', '/h1/g'],
+        forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[\.\-\w\s]*/g', '/\#gh\-navigation/g', '/\.gh\-main/g', '/\.gh\-inner/g', '/\.has\-sans\-title \:is\(\.is\-title\,\.gh\-content \:is\(h1\,h2\,h3\,h4\,h5\)\)/g'],
         renderWaitTime: 500,
         blockJSRequests: false,
     })
@@ -102,9 +102,9 @@ function generateCriticalCSS(done, category, url) {
 
 function critical(done) {
     const categories = [
-        { name: 'post', url: 'https://spectre.hutt.io/blog/sample-post/' },
-        { name: 'page', url: 'https://spectre.hutt.io/style-guide/' },
-        { name: 'tag', url: 'https://spectre.hutt.io/tag/getting-started/' },
+        { name: 'post', url: 'https://spectre.hutt.io/blog/blogposts-auch-bei-google-news-indexieren-lassen/' },
+        { name: 'page', url: 'https://spectre.hutt.io/beispielseite/' },
+        { name: 'tag', url: 'https://spectre.hutt.io/tag/changelog/' },
         { name: 'index', url: 'https://spectre.hutt.io/blog/' }
     ];
 
