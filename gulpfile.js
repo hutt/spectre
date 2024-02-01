@@ -79,7 +79,7 @@ function generateCriticalCSS(done, category, url) {
         width: 390,
         height: 1280,
         keepLargerMediaQueries: true,
-        forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[.\w\s]*/g'],
+        forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[\.\-\w\s]*/g', '/\#gh\-navigation/g', '/\.gh\-burger/g', '/\.gh\-icon\-button/g', '/\.gh\-main/g', '/\.gh\-inner/g', '/h1/g'],
         renderWaitTime: 500,
         blockJSRequests: false,
     })
