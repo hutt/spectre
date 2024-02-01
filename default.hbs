@@ -24,6 +24,12 @@
         <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}">
     </noscript>
 
+    {{!-- defer loading of font awesome css --}}
+    <link rel="preload" as="style" href="{{asset "built/fa.css"}}" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="{{asset "built/fa.css"}}">
+    </noscript>
+
     {{!-- print css --}}
     <link rel="stylesheet" type="text/css" media="print" href="{{asset "built/print.css"}}">
 

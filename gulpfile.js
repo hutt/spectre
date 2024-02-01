@@ -59,6 +59,19 @@ function css(done) {
     ], handleError(done));
 }
 
+function faCss(done) {
+    pump([
+        src('assets/css/fa.css', {sourcemaps: true}),
+        postcss([
+            easyimport,
+            autoprefixer(),
+            cssnano()
+        ]),
+        dest('assets/built/', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
+}
+
 function printCss(done) {
     pump([
         src('assets/css/print.css', {sourcemaps: true}),
@@ -79,7 +92,8 @@ function generateCriticalCSS(done, category, url) {
         width: 390,
         height: 1280,
         keepLargerMediaQueries: true,
-        forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[\.\-\w\s]*/g', '/\#gh\-navigation/g', '/\.gh\-main/g', '/\.gh\-inner/g', '/\.has\-sans\-title \:is\(\.is\-title\,\.gh\-content \:is\(h1\,h2\,h3\,h4\,h5\)\)/g'],
+        //forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[\.\-\w\s]*/g', '/\#gh\-navigation/g', '/\.gh\-main/g', '/\.gh\-inner/g', '/\.has\-sans\-title \:is\(\.is\-title,\.gh\-content[\.\-\>\*\+\[\]\w\s]*/g', '/\.gh\-content\>\:is\(hr\,blockquote\,iframe\)/g'],
+        forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[\.\-\w\s]*/g', '/\#gh\-navigation/g', '\.gh\-content[\.\-\>\*\+\[\]\w\s]*/g'],
         renderWaitTime: 500,
         blockJSRequests: false,
     })
@@ -103,7 +117,7 @@ function generateCriticalCSS(done, category, url) {
 function critical(done) {
     const categories = [
         { name: 'post', url: 'https://spectre.hutt.io/blog/blogposts-auch-bei-google-news-indexieren-lassen/' },
-        { name: 'page', url: 'https://spectre.hutt.io/beispielseite/' },
+        { name: 'page', url: 'http://hegel.hutt:8080/' },
         { name: 'tag', url: 'https://spectre.hutt.io/tag/changelog/' },
         { name: 'index', url: 'https://spectre.hutt.io/blog/' }
     ];
@@ -145,12 +159,13 @@ function zipper(done) {
 }
 
 const cssWatcher = () => watch('assets/css/screen.css', css);
+const faCssWatcher = () => watch('assets/css/fa.css', faCss);
 const printCssWatcher = () => watch('assets/css/print.css', printCss);
 //const criticalCssWatcher = () => watch('assets/css/screen.css', critical);
 const jsWatcher = () => watch('assets/js/**', js);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
-const watcher = parallel(cssWatcher, printCssWatcher, jsWatcher, hbsWatcher);
-const build = series(css, printCss, js, critical);
+const watcher = parallel(cssWatcher, faCssWatcher, printCssWatcher, jsWatcher, hbsWatcher);
+const build = series(css, faCss, printCss, js, critical);
 
 exports.build = build;
 exports.zip = series(build, zipper);
