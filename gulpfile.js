@@ -116,10 +116,10 @@ function generateCriticalCSS(done, category, url) {
 
 function critical(done) {
     const categories = [
-        { name: 'post', url: 'https://spectre.hutt.io/blog/blogposts-auch-bei-google-news-indexieren-lassen/' },
+        { name: 'post', url: 'http://hegel.hutt:8080/blog/die-ost-tour-geht-weiter/' },
         { name: 'page', url: 'http://hegel.hutt:8080/' },
-        { name: 'tag', url: 'https://spectre.hutt.io/tag/changelog/' },
-        { name: 'index', url: 'https://spectre.hutt.io/blog/' }
+        { name: 'tag', url: 'http://hegel.hutt:8080/tag/partei/' },
+        { name: 'index', url: 'http://hegel.hutt:8080/blog/' }
     ];
 
     categories.forEach(category => {
