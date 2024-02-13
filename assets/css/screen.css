@@ -452,7 +452,7 @@ button.gh-form-input {
 }
 
 .kg-signup-card-disclaimer {
-    display: none !important;
+    /*display: none !important;*/
 }
 
 .gh-canvas > * {
