@@ -2412,9 +2412,10 @@ blockquote:not([class]) {
 }
 
 blockquote.kg-blockquote-alt {
+    font-family: var(--font-sans-title);
+    font-weight: 800;
     font-style: normal;
-    font-weight: 400;
-    color: var(--color-secondary-text);
+    color: var(--color-primary-text);
 }
 
 /* Button */
