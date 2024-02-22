@@ -2415,7 +2415,7 @@ blockquote.kg-blockquote-alt {
     font-family: var(--font-sans-title);
     font-weight: 800;
     font-style: normal;
-    color: var(--color-primary-text);
+    color: var(--color-dark-gray);
 }
 
 /* Button */
