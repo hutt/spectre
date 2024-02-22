@@ -93,7 +93,7 @@ function generateCriticalCSS(done, category, url) {
         height: 1280,
         keepLargerMediaQueries: true,
         //forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[\.\-\w\s]*/g', '/\#gh\-navigation/g', '/\.gh\-main/g', '/\.gh\-inner/g', '/\.has\-sans\-title \:is\(\.is\-title,\.gh\-content[\.\-\>\*\+\[\]\w\s]*/g', '/\.gh\-content\>\:is\(hr\,blockquote\,iframe\)/g'],
-        forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[\.\-\w\s]*/g', '/\#gh\-navigation/g', '\.gh\-content[\.\-\>\*\+\[\]\w\s]*/g'],
+        forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[\.\-\w\s]*/g', '/\#gh\-navigation/g', '/\.gh\-content[\.\-\>\*\+\[\]\w\s]*/g', '\.kg\-blockquote\-alt/g'],
         renderWaitTime: 500,
         blockJSRequests: false,
     })
@@ -116,10 +116,10 @@ function generateCriticalCSS(done, category, url) {
 
 function critical(done) {
     const categories = [
-        { name: 'post', url: 'http://hegel.hutt:8080/blog/die-ost-tour-geht-weiter/' },
-        { name: 'page', url: 'http://hegel.hutt:8080/' },
-        { name: 'tag', url: 'http://hegel.hutt:8080/tag/partei/' },
-        { name: 'index', url: 'http://hegel.hutt:8080/blog/' }
+        { name: 'post', url: 'https://inesschwerdtner.eu/blog/metaller-schreiten-stets-voran-streikbrecher-bleiben-untertan-streikjubilaeum-in-espenhain/' },
+        { name: 'page', url: 'https://inesschwerdtner.eu/themen/' },
+        { name: 'tag', url: 'https://inesschwerdtner.eu/tag/gewerkschaft/' },
+        { name: 'index', url: 'https://inesschwerdtner.eu/blog/' }
     ];
 
     categories.forEach(category => {
