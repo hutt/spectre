@@ -4,6 +4,11 @@
 
 A spectre is haunting Europe. This is its website's theme. 👻 [Ghost](https://github.com/TryGhost/Ghost) theme for websites and blogs affiliated with Die Linke.
 
+# Demo
+- [spectre.hutt.io](spectre.hutt.io)
+- [inesschwerdtner.eu](https://inesschwerdtner.eu)
+- [felixschulz.eu](https://felixschulz.eu)
+
 
 # Mockup & Screenshots
 
