@@ -116,10 +116,10 @@ function generateCriticalCSS(done, category, url) {
 
 function critical(done) {
     const categories = [
-        { name: 'post', url: 'https://inesschwerdtner.eu/blog/metaller-schreiten-stets-voran-streikbrecher-bleiben-untertan-streikjubilaeum-in-espenhain/' },
-        { name: 'page', url: 'https://inesschwerdtner.eu/themen/' },
-        { name: 'tag', url: 'https://inesschwerdtner.eu/tag/gewerkschaft/' },
-        { name: 'index', url: 'https://inesschwerdtner.eu/blog/' }
+        { name: 'post', url: 'http://hegel.hutt/blog/die-ost-tour-geht-weiter/' },
+        { name: 'page', url: 'http://hegel.hutt/themen/' },
+        { name: 'tag', url: 'http://hegel.hutt/tag/gewerkschaft/' },
+        { name: 'index', url: 'http://hegel.hutt/blog/' }
     ];
 
     categories.forEach(category => {
