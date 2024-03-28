@@ -1,0 +1,56 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file into the body of the default.hbs template --}}
+
+{{#post}}
+
+<main class="gh-main">
+    <article class="gh-article {{post_class}}">
+
+        {{#match @page.show_title_and_feature_image}}
+            <header class="gh-article-header gh-canvas">
+                <h1 class="gh-article-title is-title">{{title}}</h1>
+                {{#if custom_excerpt}}
+                    <p class="gh-article-excerpt is-body">{{custom_excerpt}}</p>
+                {{/if}}
+                {{> "feature-image"}}
+            </header>
+        {{/match}}
+
+        <section class="gh-content gh-canvas is-body">
+            {{content}}
+        </section>
+
+        <section class="gh-container gh-container-termine gh-canvas is-list">
+                
+                <h2 class="gh-container-termine-title">{{t "Current Events"}}</h2>
+
+                <main class="gh-main">
+                    <div class="gh-feed">
+                        {{!-- Load 5 latest events --}}
+                        {{#get "posts" include="tags" filter="tag:hash-termin" limit=5 as |recent|}}
+                            {{#foreach recent}}
+                                {{> "post-card" lazyLoad=true headingStyle="termine"}}
+                            {{else}}
+                                <p>{{t "No events found."}}</p><br>
+                            {{/foreach}}
+                        {{/get}}
+                    </div>
+                </main>
+
+                {{#get "posts" include="tags" filter="tag:hash-termin" limit=1 as |recent|}}
+                    {{#match recent.length '>' 0}}
+                        <div class="gh-more-termine">
+                            <a href="{{@site.url}}/termine/archiv">{{t "See all"}} {{> "icons/arrow"}}</a>
+                        </div>
+                    {{/match}}
+                {{/get}}
+
+        </section>
+
+        <p class="print print-notice">{{t "Page printed at {date}. Please see {url} for the latest version." date=(date "") url=(url absolute="true")}}</p>
+
+    </article>
+
+</main>
+
+{{/post}}

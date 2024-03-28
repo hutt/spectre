@@ -2,7 +2,7 @@
     "name": "spectre",
     "description": "A spectre is haunting Europe. This is its website's theme.",
     "demo": "https://spectre.hutt.io/",
-    "version": "2.5.8",
+    "version": "2.6.0",
     "engines": {
         "ghost": ">=5.0.0"
     },
@@ -49,21 +49,22 @@
         }
     ],
     "devDependencies": {
-        "@tryghost/release-utils": "0.8.1",
         "autoprefixer": "10.4.7",
         "beeper": "2.1.0",
         "cssnano": "5.1.12",
+        "gscan": "4.39.4",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
-        "gulp-postcss": "9.0.1",
+        "gulp-postcss": "10.0.0",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
         "inquirer": "8.2.4",
         "penthouse": "^2.3.3",
-        "postcss": "8.2.13",
+        "postcss": "8.2.15",
         "postcss-easy-import": "4.0.0",
-        "pump": "3.0.0"
+        "pump": "3.0.0",
+        "text-to-svg": "^3.1.5"
     },
     "browserslist": [
         "defaults"
@@ -92,11 +93,11 @@
         },
         "card_assets": {
             "exclude": [
-            "audio",
-            "nft",
-            "product",
-            "video"
-          ]
+                "audio",
+                "nft",
+                "product",
+                "video"
+            ]
         },
         "custom": {
             "navigation_layout": {

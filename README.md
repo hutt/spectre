@@ -132,17 +132,11 @@ yarn zip
 # Blazing fast
 Critical CSS served inline. Execute `yarn critical` to re-generate.
 
-# Icons
-
-## SVG Icons
+# SVG Icons
 
 Sprectre uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
 
 You can add your own SVG icons in the same manner.
-
-## Font Awesome
-
-Spectre supports [Font Awesome](https://fontawesome.com) icons as well. Head over to their website to find the icons you need.
 
 # Copyright & License
 Copyright (c) 2013-2023 [Ghost Foundation](https://ghost.org); 2023 [Jannis Hutt](https://hutt.io). This theme is based on [Ghost Foundation](https://ghost.org)'s theme [Source](https://github.com/TryGhost/Source) and released under the [MIT license](LICENSE).

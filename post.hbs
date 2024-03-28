@@ -17,6 +17,7 @@
                 <p class="gh-article-excerpt is-body">{{custom_excerpt}}</p>
             {{/if}}
 
+{{^has tag="#termin"}}
             <div class="gh-article-meta">
                 <div class="gh-article-author-image">
                     {{#foreach authors}}
@@ -61,6 +62,7 @@
                     </div>
                 </div>
             </div>
+{{/has}}
 
             {{> "feature-image"}}
 
