@@ -52,18 +52,26 @@ production stylesheet in assets/built/screen.css
 /* ---------------------------------------------------------- */
 
 :root {
-    --color-white: #fff;
+    --color-white: #ffffff;
     --color-lighter-gray: rgb(0 0 0 / 0.05);
     --color-light-gray: #e6e6e6;
-    --color-mid-gray: #ccc;
-    --color-dark-gray: #444;
+    --color-mid-gray: #cccccc;
+    --color-dark-gray: #444444;
     --color-darker-gray: #15171a;
-    --color-black: #000;
+    --color-black: #000000;
     --color-primary-text: var(--color-darker-gray);
     --color-secondary-text: rgb(0 0 0 / 0.5);
     --color-border: rgb(0 0 0 / 0.08);
     --color-dark-border: rgb(0 0 0 / 0.5);
-    --background-color: #fff;
+    --color-dielinke-rot: #ff0000;
+    --color-dielinke-dunkelrot: #6f003c;
+    --color-dielinke-dunkelgruen: #004b5b;
+    --color-dielinke-tuerkis: #00b19c;
+    --color-dielinke-violett: #8100a1;
+    --color-dielinke-rosa: #d675d8;
+    --color-dielinke-blau: #2e4fc4;
+    --color-dielinke-hellblau: #d4d4ff;
+    --background-color: #ffffff;
     --font-sans-title: "Work Sans", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     --font-sans: "Inter", "Helvetica Neue", "Elza", "Gotham", "Lato", "Segoe UI", "Roboto", sans-serif;
     --container-width: 1320px;
@@ -616,7 +624,7 @@ button.gh-form-input {
     opacity: 1;
 }
 
-.gh-navigation-logo img {
+.gh-navigation-logo img, .gh-navigation-logo svg {
     position: relative;
     max-height: 115px;
     height: auto;
@@ -3023,10 +3031,13 @@ figcaption a {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-size: 2.5rem;
 }
 
 .gh-footer-icons .social-icons a:hover > svg {
+    fill: var(--ghost-accent-color);
+}
+
+.gh-footer-icons .social-icons a:active > svg {
     fill: var(--ghost-accent-color);
 }
 
