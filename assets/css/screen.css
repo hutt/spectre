@@ -2581,7 +2581,7 @@ blockquote:not([class]) {
 blockquote.kg-blockquote-alt {
     font-family: var(--font-sans-title);
     font-weight: 800;
-    font-style: normal;
+    font-style: italic;
     color: var(--color-dark-gray);
 }
 
