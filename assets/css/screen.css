@@ -2422,7 +2422,7 @@ unless a heading is the very first element in the post content */
 }
 
 .gh-content h1 + h2, .gh-content h2 + h3, .gh-content h3 + h4, .gh-content h4 + h5 {
-    margin-top: 0 !important;
+    margin-top: 0.5em !important;
 }
 
 .gh-content a {
