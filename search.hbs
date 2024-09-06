@@ -1,0 +1,8 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file into the body of the default.hbs template --}}
+
+{{> "components/header" headerStyle="Search"}}
+
+{{> "components/cta"}}
+
+{{> "components/post-list" feed="archive" postFeedStyle="list" showTitle=true}}
