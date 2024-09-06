@@ -1,8 +1,57 @@
 {{!< default}}
 {{!-- The tag above means: insert everything in this file into the body of the default.hbs template --}}
 
-{{> "components/header" headerStyle="Search"}}
+<section class="gh-header is-classic{{#if @custom.background_image}}{{#if @site.cover_image}} has-image{{/if}}{{/if}} gh-outer">
+        
+    {{!-- Background image --}}
+    {{#if @custom.background_image}}
+            {{#if @site.cover_image}}
+                <picture>
+                    <source 
+                        srcset="{{img_url @site.cover_image size="s" format="avif"}} 300w,
+                                {{img_url @site.cover_image size="m" format="avif"}} 600w,
+                                {{img_url @site.cover_image size="l" format="avif"}} 1000w,
+                                {{img_url @site.cover_image size="xl" format="avif"}} 2000w"
+                        sizes="(min-width: 1400px) 1400px, 92vw" 
+                        type="image/avif"
+                    >
+                    <source 
+                        srcset="{{img_url @site.cover_image size="s" format="webp"}} 300w,
+                                {{img_url @site.cover_image size="m" format="webp"}} 600w,
+                                {{img_url @site.cover_image size="l" format="webp"}} 1000w,
+                                {{img_url @site.cover_image size="xl" format="webp"}} 2000w"
+                        sizes="(min-width: 1400px) 1400px, 92vw" 
+                        type="image/webp"
+                    >
+                    <img
+                        class="gh-header-image" 
+                        srcset="{{img_url @site.cover_image size="s"}} 300w,
+                                {{img_url @site.cover_image size="m"}} 600w,
+                                {{img_url @site.cover_image size="l"}} 1000w,
+                                {{img_url @site.cover_image size="xl"}} 2000w"
+                        sizes="(min-width: 1400px) 1400px, 92vw"
+                        src="{{img_url @site.cover_image size="xl"}}"
+                        alt="{{@site.title}}"
+                    >
+                </picture>
+            {{/if}}
+    {{/if}}
+
+    {{#tag}}
+        <div class="gh-header-inner gh-inner">
+            <h1 class="gh-header-title is-title">{{name}}</h1>
+            {{#if description}}
+                <p class="gh-article-excerpt">{{description}}</p>
+            {{/if}}
+            <form class="gh-form">
+                {{> "icons/search"}}
+                <button class="gh-form-input" data-ghost-search>{{t "Search posts, tags and authors"}}</button>
+            </form>
+        </div>
+    {{/tag}}
+
+</section>
 
 {{> "components/cta"}}
 
-{{> "components/post-list" feed="index" postFeedStyle="list" showTitle=true}}
+{{> "components/post-list" feed="index" postFeedStyle="List" showTitle=true}}
