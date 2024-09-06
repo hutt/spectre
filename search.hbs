@@ -37,18 +37,16 @@
             {{/if}}
     {{/if}}
 
-    {{#tag}}
-        <div class="gh-header-inner gh-inner">
-            <h1 class="gh-header-title is-title">{{name}}</h1>
-            {{#if description}}
-                <p class="gh-article-excerpt">{{description}}</p>
-            {{/if}}
-            <form class="gh-form">
-                {{> "icons/search"}}
-                <button class="gh-form-input" data-ghost-search>{{t "Search posts, tags and authors"}}</button>
-            </form>
-        </div>
-    {{/tag}}
+    <div class="gh-header-inner gh-inner">
+        <h1 class="gh-header-title is-title">{{title}}</h1>
+        {{#if description}}
+            <p class="gh-article-excerpt">{{content}}</p>
+        {{/if}}
+        <form class="gh-form">
+            {{> "icons/search"}}
+            <button class="gh-form-input" data-ghost-search>{{t "Search posts, tags and authors"}}</button>
+        </form>
+    </div>
 
 </section>
 
