@@ -2,7 +2,7 @@
   "Powered by" : "Powered by",
   "See all" : "See all",
   "Latest" : "Latest",
-"Current Events" : "Current Events",
+  "Current Events" : "Current Events",
   "No events found." : "No events found.",
   "Newsletter" : "Newsletter",
   "Manage Subscription" : "Manage Subscription",
@@ -17,6 +17,7 @@
   "Read more posts" : "Read more posts",
   "A minute read" : "A minute read",
   "% minutes read" : "% minutes read",
+  "Search posts, tags and authors" : "Search posts, tags and authors",
   "Article printed at {date}. Please see {url} for the latest version." : "Article printed at {date}. Please see {url} for the latest version.",
   "Page printed at {date}. Please see {url} for the latest version." : "Page printed at {date}. Please see {url} for the latest version."
 }

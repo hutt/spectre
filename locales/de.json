@@ -2,7 +2,7 @@
   "Powered by" : "Unterstützt durch",
   "See all" : "Alle ansehen",
   "Latest" : "Neuste",
-"Current Events" : "Aktuelle Termine",
+  "Current Events" : "Aktuelle Termine",
   "No events found." : "Keine Termine gefunden.",
   "Newsletter" : "Newsletter",
   "Manage Subscription" : "Newsletter-Abo verwalten",
@@ -17,6 +17,7 @@
   "Read more posts" : "Weitere Artikel lesen",
   "A minute read" : "Eine Minute Lesezeit",
   "% minutes read" : "% Minuten Lesezeit",
+  "Search posts, tags and authors" : "Nach Posts, Schlagworten oder Autor_innen suchen",
   "Article printed at {date}. Please see {url} for the latest version." : "Artikel wurde am {date} gedruckt. Die aktuelle Version gibt es unter {url}.",
   "Page printed at {date}. Please see {url} for the latest version." : "Seite wurde am {date} gedruckt. Die aktuelle Version gibt es unter {url}."
 }
