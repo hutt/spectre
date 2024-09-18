@@ -1750,8 +1750,14 @@ Search                         LOGO                    Login Subscribe
     margin-top: 64px;
 }
 
-.gh-container-termine {
+.gh-container-listposts {
     margin-top: -6vw;
+    margin-bottom: calc(68px*var(--content-spacing-factor, 1));
+}
+
+.gh-container-pressemitteilungen {
+    margin-top: -6vw;
+    margin-bottom: calc(68px*var(--content-spacing-factor, 1));
 }
 
 .gh-container-inner {
@@ -1802,7 +1808,7 @@ Search                         LOGO                    Login Subscribe
     height: 18px;
 }
 
-.gh-more-termine {
+.gh-more-listposts {
     grid-column: 3/span 12;
     margin-top: calc(var(--grid-gap) / 2);
     margin-bottom: 6vw;
@@ -1811,17 +1817,17 @@ Search                         LOGO                    Login Subscribe
     letter-spacing: -0.014em;
 }
 
-.home-template .gh-more-termine {
+.home-template .gh-more-listposts {
     display: block;
 }
 
-.gh-more-termine a {
+.gh-more-listposts a {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-.gh-more-termine svg {
+.gh-more-listposts svg {
     margin-top: -1px;
     width: 18px;
     height: 18px;
@@ -1850,7 +1856,7 @@ Search                         LOGO                    Login Subscribe
 
 /* 11.2. Without sidebar */
 
-.gh-container:not(.has-sidebar, .gh-container-termine) :is(.gh-container-title, .gh-main, .gh-more) {
+.gh-container:not(.has-sidebar, .gh-container-listposts) :is(.gh-container-title, .gh-main, .gh-more) {
     grid-column: 3 / span 12;
 }
 
@@ -1887,7 +1893,7 @@ Search                         LOGO                    Login Subscribe
     border-bottom: 1px solid var(--color-border);
 }
 
-.gh-container-termine-title {
+.gh-container-listposts-title {
     grid-column: main;
     margin-top: calc(56px*var(--content-spacing-factor, 1));
     margin-bottom: 10px;

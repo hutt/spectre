@@ -22,25 +22,25 @@
 
         <section class="gh-container gh-container-listposts gh-canvas is-list">
                 
-                <h2 class="gh-container-listposts-title">{{t "Current Events"}}</h2>
+                <h2 class="gh-container-listposts-title">{{t "Latest Press Releases"}}</h2>
 
                 <main class="gh-main">
                     <div class="gh-feed">
-                        {{!-- Load 5 latest events --}}
-                        {{#get "posts" include="tags" filter="tag:hash-termin" limit=5 as |recent|}}
+                        {{!-- Load 5 latest press releases --}}
+                        {{#get "posts" include="tags" filter="tag:hash-pressemitteilung" limit=5 as |recent|}}
                             {{#foreach recent}}
-                                {{> "post-card" lazyLoad=true headingStyle="termine"}}
+                                {{> "post-card" lazyLoad=true headingStyle="pressemitteilungen"}}
                             {{else}}
-                                <p>{{t "No events found."}}</p><br>
+                                <p>{{t "No press releases found."}}</p><br>
                             {{/foreach}}
                         {{/get}}
                     </div>
                 </main>
 
-                {{#get "posts" include="tags" filter="tag:hash-termin" limit=1 as |recent|}}
+                {{#get "posts" include="tags" filter="tag:hash-pressemitteilung" limit=5 as |recent|}}
                     {{#match recent.length '>' 0}}
                         <div class="gh-more-listposts">
-                            <a href="{{@site.url}}/termine/archiv">{{t "See all"}} {{> "icons/arrow"}}</a>
+                            <a href="{{@site.url}}/presse/mitteilungen/">{{t "See all"}} {{> "icons/arrow"}}</a>
                         </div>
                     {{/match}}
                 {{/get}}

@@ -75,7 +75,7 @@ collections:
     filter: 'tag:hash-en+tag:-hash-pressemitteilung'
   /presse/mitteilungen/:
     permalink: /presse/mitteilungen/{year}/{slug}/
-    template: index
+    template: search-pressemitteilungen
     filter: 'tag:hash-pressemitteilung'
 
 taxonomies:
