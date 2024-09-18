@@ -3,23 +3,16 @@
 
 <section class="gh-header is-classic{{#if @custom.background_image}}{{#if @site.cover_image}} has-image{{/if}}{{/if}} gh-outer">
 
-    {{#tag}}
-
         {{!-- Background image --}}
         {{> "components/search-background-image"}}
 
         <div class="gh-header-inner gh-inner">
-            <h1 class="gh-header-title is-title">{{name}}</h1>
-            {{#if description}}
-                <p class="gh-article-excerpt">{{description}}</p>
-            {{/if}}
+            <h1 class="gh-header-title is-title">{{t "Event Archive"}}</h1>
             <form class="gh-form">
                 {{> "icons/search"}}
                 <button class="gh-form-input" data-ghost-search>{{t "Search posts, tags and authors"}}</button>
             </form>
         </div>
-
-    {{/tag}}
 
 </section>
 

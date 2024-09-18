@@ -2850,6 +2850,15 @@ figcaption a {
     display: block;
 }
 
+
+/* 18.1. Do not display recent posts, if article.tag-hash-termin 
+         or article.tag-hash-pressemitteilung
+/* ---------------------------------------------------------- */
+
+main:has(article.tag-hash-termin) + .gh-recommended-posts, main:has(article.tag-hash-pressemitteilung) + .gh-recommended-posts {
+    display: none;
+}
+
 /* 19. Archive
 /* ---------------------------------------------------------- */
 

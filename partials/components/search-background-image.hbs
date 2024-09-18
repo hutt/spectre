@@ -1,0 +1,32 @@
+{{#if @custom.background_image}}
+        {{#if @site.cover_image}}
+            <picture>
+                <source 
+                    srcset="{{img_url @site.cover_image size="s" format="avif"}} 300w,
+                            {{img_url @site.cover_image size="m" format="avif"}} 600w,
+                            {{img_url @site.cover_image size="l" format="avif"}} 1000w,
+                            {{img_url @site.cover_image size="xl" format="avif"}} 2000w"
+                    sizes="(min-width: 1400px) 1400px, 92vw" 
+                    type="image/avif"
+                >
+                <source 
+                    srcset="{{img_url @site.cover_image size="s" format="webp"}} 300w,
+                            {{img_url @site.cover_image size="m" format="webp"}} 600w,
+                            {{img_url @site.cover_image size="l" format="webp"}} 1000w,
+                            {{img_url @site.cover_image size="xl" format="webp"}} 2000w"
+                    sizes="(min-width: 1400px) 1400px, 92vw" 
+                    type="image/webp"
+                >
+                <img
+                    class="gh-header-image" 
+                    srcset="{{img_url @site.cover_image size="s"}} 300w,
+                            {{img_url @site.cover_image size="m"}} 600w,
+                            {{img_url @site.cover_image size="l"}} 1000w,
+                            {{img_url @site.cover_image size="xl"}} 2000w"
+                    sizes="(min-width: 1400px) 1400px, 92vw"
+                    src="{{img_url @site.cover_image size="xl"}}"
+                    alt="{{@site.title}}"
+                >
+            </picture>
+        {{/if}}
+{{/if}}

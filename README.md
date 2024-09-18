@@ -57,9 +57,6 @@ routes:
   /: 
     template: page
     data: page.start
-  /en/:
-    template: page
-    data: page.start-en
   /sitemap/:
     template: sitemap
     content_type: text/html
@@ -68,15 +65,15 @@ collections:
   /blog/:
     permalink: /blog/{slug}/
     template: home
-    filter: 'tag:-hash-en+tag:-hash-pressemitteilung'
-  /en/blog/:
-    permalink: /en/blog/{slug}/
-    template: home
-    filter: 'tag:hash-en+tag:-hash-pressemitteilung'
+    filter: 'tag:-hash-pressemitteilung+tag:-hash-termin'
   /presse/mitteilungen/:
     permalink: /presse/mitteilungen/{year}/{slug}/
     template: search-pressemitteilungen
     filter: 'tag:hash-pressemitteilung'
+  /termine/archiv/:
+    permalink: /termine/{year}/{slug}/
+    template: search-termine
+    filter: 'tag:hash-termin'
 
 taxonomies:
   tag: /tag/{slug}/
@@ -84,17 +81,44 @@ taxonomies:
 
 ```
 
-# Multi-language support
+# Events and Press Releases
+As you can see in the `routes.yaml` example code, this theme supports custom pages for events and press releases. This way, those kinds of posts don't clutter the blog index view.
 
-As you can see in the routes file, this theme supports posts and pages in multiple languages. 
+## Events
+### Add the event collection to your routes.yaml file
+Add the following lines to the collection object inside `routes.yaml`:
 
-## Posting in another language
+```yaml
+collections:
+  /termine/archiv/:
+    permalink: /termine/{year}/{slug}/
+    template: search-termine
+    filter: 'tag:hash-termin'
+```
 
-If you usually blog in German, but you want to publish a post in English, simply tag the post with the internal tag `#en`. Posts with this internal tag won't be displayed in the posts archive on `yourdomain.tld/blog/`, but under `yourdomain.tld/en/blog/`.
+### Create an event page
+Simply create a page using the editor, name it (e.g. "Events") and fill it with additional information. Now, select the page template named `Termine` in the page options sidebar. From now on, the page displays the 5 latest events on its bottom.
 
-## Pages in another language
+### Create a new event
+To add an event, simply create a new post and fill in the event information. It's recommended to put the event date in the title. Now tag your event post with the internal tag `#termin`. This ensures the event isn't displayed in the main blog index and only on the event page (as well as the event archive page).
 
-To publish a page in another language, simply note its slug and create an additional route in the `routes.yaml` file. The example above features an additional homepage in English. While the German home page's slug is `start`, the english page's slug is `start-en`. It will then be displayed under `yourdomain.tld/en/`. It's as easy as that.
+## Press Releases
+### Add the press releases collection to your routes.yaml file
+Add the following lines to the collection object inside `routes.yaml`:
+
+```yaml
+collections:
+  /presse/mitteilungen/:
+    permalink: /presse/mitteilungen/{year}/{slug}/
+    template: search-pressemitteilungen
+    filter: 'tag:hash-pressemitteilung'
+```
+
+### Create a press page
+Simply create a page using the editor, name it (e.g. "Presse") and fill it with additional information. Now, select the page template named `Presse` in the page options sidebar. From now on, the page displays the 5 latest press releases on its bottom.
+
+### Create a new press release
+To add a press release, simply create a new post. Now tag your event post with the internal tag `#pressemitteilung`. This ensures the event isn't displayed in the main blog index and only on the press releases page (as well as the press releases archive page).
 
 # Privacy-friendly YouTube video embeds
 This Theme allows privacy-friendly and GDPR-compliant YouTube video embeds using [light-yt.js](https://www.labnol.org/internet/light-youtube-embeds/27941/) by [Amit Agarwal](https://github.com/labnol). 

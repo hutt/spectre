@@ -10,14 +10,18 @@ routes:
     content_type: text/xml
 
 collections:
-  /blog/:
-    permalink: /blog/{slug}/
-    template: home
-    filter: 'tag:-hash-pressemitteilung'
   /presse/mitteilungen/:
     permalink: /presse/mitteilungen/{year}/{slug}/
     template: search-pressemitteilungen
     filter: 'tag:hash-pressemitteilung'
+  /termine/archiv/:
+    permalink: /termine/{year}/{slug}/
+    template: search-termine
+    filter: 'tag:hash-termin'
+  /blog/:
+    permalink: /blog/{slug}/
+    template: home
+    filter: 'tag:-hash-pressemitteilung+tag:-hash-termin'
 
 taxonomies:
   tag: /tag/{slug}/
