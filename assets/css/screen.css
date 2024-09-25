@@ -2261,6 +2261,29 @@ ul.icons li .icon i:last-child {
     margin-left: 6px;
 }
 
+/* 14.1.1. Do not display .gh-article-meta, if article.tag-hash-termin
+/* ---------------------------------------------------------- */
+
+article.tag-hash-termin .gh-article-meta {
+    display: none;
+}
+
+/* 14.1.2. Do not display .gh-article-author-image, .gh-article-author-name, 
+           .gh-article-meta-length, if article.tag-hash-pressemitteilung
+/* ---------------------------------------------------------- */
+
+article.tag-hash-pressemitteilung .gh-article-author-image, article.tag-hash-pressemitteilung .gh-article-author-name, article.tag-hash-pressemitteilung .gh-article-meta-length {
+    display: none;
+}
+
+/* 14.1.3. Remove margin-left of .gh-article-meta, if article.tag-hash-
+           pressemitteilung
+/* ---------------------------------------------------------- */
+
+article.tag-hash-pressemitteilung .gh-article-meta {
+    margin-left: 0;
+}
+
 .gh-article-author-image {
     display: flex;
     margin-right: 8px;
