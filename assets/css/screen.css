@@ -2596,6 +2596,13 @@ unless a heading is the very first element in the post content */
     border-radius: 0.25em;
 }
 
+.kg-callout-card.kg-card .kg-callout-text {
+    hyphens: auto;
+    hyphenate-limit-chars: auto 4 4;
+    -webkit-hyphenate-limit-before: 4;
+    -webkit-hyphenate-limit-after: 4;
+}
+
 .kg-callout-card-accent a {
     text-decoration: underline;
 }
