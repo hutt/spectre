@@ -21,7 +21,6 @@ collections:
   /blog/:
     permalink: /blog/{slug}/
     template: home
-    filter: 'tag:-hash-pressemitteilung+tag:-hash-termin'
 
 taxonomies:
   tag: /tag/{slug}/

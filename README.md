@@ -1,14 +1,16 @@
 # Spectre
 
+[![de](https://img.shields.io/badge/lang-de-blue.svg)](README.de.md)
+
 ![Header Graphic](/assets/readme-header.png)
 
 A spectre is haunting Europe. This is its website's theme. 👻 [Ghost](https://github.com/TryGhost/Ghost) theme for websites and blogs affiliated with Die Linke.
 
 # Demo
+
 - [spectre.hutt.io](spectre.hutt.io)
 - [Ines Schwerdtner](https://inesschwerdtner.de)
 - [BAG Betrieb und Gewerkschaft](https://betriebundgewerkschaft.de)
-
 
 # Mockup & Screenshots
 
@@ -17,7 +19,8 @@ A spectre is haunting Europe. This is its website's theme. 👻 [Ghost](https://
 |[Live Demo](https://spectre.hutt.io/)|[Download](https://github.com/hutt/spectre/releases/)|
 |---|---|
 
-Screenshots of [inesschwerdtner.eu](https://inesschwerdtner.eu), where the new theme version is rolled out already.
+Screenshots of [inesschwerdtner.de](https://inesschwerdtner.de), where the new theme version is rolled out already:
+
 | Page | Desktop | Mobile |
 | ---- | ------- | ------ |
 | Homepage Dunkelrot | ![homepage-desktop 1](/assets/screenshots/homepage-desktop-2.png) | ![homepage-mobile 1](/assets/screenshots/homepage-mobile-2.jpeg) |
@@ -28,8 +31,6 @@ Screenshots of [inesschwerdtner.eu](https://inesschwerdtner.eu), where the new t
 # First time using a Ghost theme?
 
 Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
-
-We've documented our default theme pretty heavily so that it should be fairly easy to work out what's going on just by reading the code and the comments. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://themes.ghost.org) which explains every possible Handlebars helper and template.
 
 **The main files are:**
 
@@ -52,6 +53,7 @@ One neat trick is that you can also create custom one-off templates by adding th
 This website offers a onepager homepage as well as a blog. You'll need to update your routes in order to make the homepage work.
 
 This is how your [routes.yaml file](routes.yaml) could look like:
+
 ```yaml
 routes:
   /: 
@@ -62,10 +64,6 @@ routes:
     content_type: text/html
 
 collections:
-  /blog/:
-    permalink: /blog/{slug}/
-    template: home
-    filter: 'tag:-hash-pressemitteilung+tag:-hash-termin'
   /presse/mitteilungen/:
     permalink: /presse/mitteilungen/{year}/{slug}/
     template: search-pressemitteilungen
@@ -74,6 +72,9 @@ collections:
     permalink: /termine/{year}/{slug}/
     template: search-termine
     filter: 'tag:hash-termin'
+  /blog/:
+    permalink: /blog/{slug}/
+    template: home
 
 taxonomies:
   tag: /tag/{slug}/
@@ -81,11 +82,20 @@ taxonomies:
 
 ```
 
+Caution: **Collections must be specified in the correct order.** Posts that have already been assigned to the previously mentioned collection with a filter (e.g. all with the tag `#termin` or `hash-termin` (as you would write it in the routes file)) cannot be part of the subsequent collections (e.g. `/blog/`). Therefore, a filter that excludes press releases and events no longer needs to be specified for `/blog/`.
+
+Example: If the collection `/blog/` in the example above were defined above the collection `/termine/archiv/` (with the filter `#termin` or `hash-termin`), the appointments collection would be completely empty because the posts specified with the filter have already been assigned to another collection.
+
+More information about collections can be found [in the official documentation](https://ghost.org/tutorials/content-collections/).
+
 # Events and Press Releases
+
 As you can see in the `routes.yaml` example code, this theme supports custom pages for events and press releases. This way, those kinds of posts don't clutter the blog index view.
 
 ## Events
+
 ### Add the event collection to your routes.yaml file
+
 Add the following lines to the collection object inside `routes.yaml`:
 
 ```yaml
@@ -97,13 +107,17 @@ collections:
 ```
 
 ### Create an event page
+
 Simply create a page using the editor, name it (e.g. "Events") and fill it with additional information. Now, select the page template named `Termine` in the page options sidebar. From now on, the page displays the 5 latest events on its bottom.
 
 ### Create a new event
+
 To add an event, simply create a new post and fill in the event information. It's recommended to put the event date in the title. Now tag your event post with the internal tag `#termin`. This ensures the event isn't displayed in the main blog index and only on the event page (as well as the event archive page).
 
 ## Press Releases
+
 ### Add the press releases collection to your routes.yaml file
+
 Add the following lines to the collection object inside `routes.yaml`:
 
 ```yaml
@@ -115,20 +129,27 @@ collections:
 ```
 
 ### Create a press page
+
 Simply create a page using the editor, name it (e.g. "Presse") and fill it with additional information. Now, select the page template named `Presse` in the page options sidebar. From now on, the page displays the 5 latest press releases on its bottom.
 
 ### Create a new press release
+
 To add a press release, simply create a new post. Now tag your event post with the internal tag `#pressemitteilung`. This ensures the event isn't displayed in the main blog index and only on the press releases page (as well as the press releases archive page).
 
 # Privacy-friendly YouTube video embeds
+
 This Theme allows privacy-friendly and GDPR-compliant YouTube video embeds using [light-yt.js](https://www.labnol.org/internet/light-youtube-embeds/27941/) by [Amit Agarwal](https://github.com/labnol). 
 
 ## How to embed a video
+
 1. Copy the YouTube video ID (if the video URL is `https://www.youtube.com/watch?v=dQw4w9WgXcQ`, the ID is `dQw4w9WgXcQ`)
 2. Inside the editor, insert an HTML block where you want to place the video
 3. Paste the following code into the HTML block and replace `VideoID` with the ID you copied: `<div class="youtube-player" data-id="VideoID"></div>` (=> `<div class="youtube-player" data-id="dQw4w9WgXcQ"></div>`)
 
+It is recommended to save the finished HTML block with the embedded video [as a snippet](https://ghost.org/help/snippets/) so that you do not have to look up the required code the next time.
+
 # Sitemap for Google News
+
 This theme can generate [sitemaps compatible with Google News](https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap). Just set a route using the sitemap template like it's shown in the example routes file:
 
 ```yaml
@@ -139,6 +160,10 @@ routes:
 ```
 
 After that, you can [use Google Search Console to submit your sitemap](https://support.google.com/webmasters/answer/7451001). In this case, the sitemap URL would be `https://your-site.com/sitemap/`.
+
+# Automatic Logo Generation
+
+For speed optimization, it is recommended to upload your own logo in SVG format. However, if this is not the case, Spectre generates a logo based on the site's title.
 
 # Development
 
@@ -163,16 +188,23 @@ yarn zip
 
 # PostCSS Features Used
 
-- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
+- [Autoprefixer](https://github.com/postcss/autoprefixer) - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
 
 # Blazing fast
-Critical CSS served inline. Execute `yarn critical` to re-generate.
+Spectre employs various techniques to optimize loading times. These include preloading important resources, combining multiple CSS and JS files into single, compressed files, critical inline CSS, and embedding important icons as SVGs (instead of e.g. icon fonts).
 
-# SVG Icons
+## Critical Inline CSS
 
-Sprectre uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
+This theme uses [penthouse](https://github.com/pocketjoso/penthouse) to generate inline CSS for the post, page, tag, and index pages. This reduces the time to [First Contentful Paint](https://web.dev/articles/fcp) dramatically. The respective inline CSS files are included via Handlebars partials (see [default.hbs](default.hbs#L11) and [partials/components/inline-css.hbs](partials/components/inline-css.hbs)).
 
-You can add your own SVG icons in the same manner.
+Inline styles can be manually regenerated using `yarn critical`.
+
+## SVG Icons
+
+Spectre uses inline SVG icons, which are included via Handlebars partials. All icons are located in `/partials/icons`. To use an icon, simply include the name of the corresponding file, e.g., to include the SVG icon in `/partials/icons/rss.hbs`, use `{{> "icons/rss"}}`.
+
+Additional SVG icons can be added in the same manner.
 
 # Copyright & License
-Copyright (c) 2013-2023 [Ghost Foundation](https://ghost.org); 2023 [Jannis Hutt](https://hutt.io). This theme is based on [Ghost Foundation](https://ghost.org)'s theme [Source](https://github.com/TryGhost/Source) and released under the [MIT license](LICENSE).
+
+Copyright (c) 2013–2023 [Ghost Foundation](https://ghost.org); 2023–2024 [Jannis Hutt](https://hutt.io). This theme is based on [Ghost Foundation](https://ghost.org)'s theme [Source](https://github.com/TryGhost/Source) and released under the [MIT license](LICENSE).
