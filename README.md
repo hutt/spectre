@@ -128,6 +128,18 @@ This Theme allows privacy-friendly and GDPR-compliant YouTube video embeds using
 2. Inside the editor, insert an HTML block where you want to place the video
 3. Paste the following code into the HTML block and replace `VideoID` with the ID you copied: `<div class="youtube-player" data-id="VideoID"></div>` (=> `<div class="youtube-player" data-id="dQw4w9WgXcQ"></div>`)
 
+# Sitemap for Google News
+This theme can generate [sitemaps compatible with Google News](https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap). Just set a route using the sitemap template like it's shown in the example routes file:
+
+```yaml
+routes:
+  /sitemap/:
+    template: sitemap
+    content_type: text/html
+```
+
+After that, you can [use Google Search Console to submit your sitemap](https://support.google.com/webmasters/answer/7451001). In this case, the sitemap URL would be `https://your-site.com/sitemap/`.
+
 # Development
 
 Spectre styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
