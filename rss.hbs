@@ -22,7 +22,9 @@
         <category><![CDATA[ {{primary_tag.name}} ]]></category>
         <dc:creator><![CDATA[ {{primary_author.name}} ]]></dc:creator>
         <pubDate>{{date locale="en-us" format="ddd, DD MMM YYYY HH:mm:ss ZZ"}}</pubDate>
+        {{#if feature_image}}
         <media:content url="{{feature_image}}" medium="image"/>
+        {{/if}}
         <content:encoded><![CDATA[ {{content}} ]]></content:encoded>
     </item>
     {{/foreach}}
