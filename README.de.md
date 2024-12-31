@@ -19,15 +19,6 @@ Ein Gespenst geht um in Europa. Dies ist sein Theme. 👻 [Ghost](https://github
 |[Live Demo](https://spectre.hutt.io/)|[Download](https://github.com/hutt/spectre/releases/)|
 |---|---|
 
-Screenshots von der Website der Vorsitzenden [Ines Schwerdtner](https://inesschwerdtner.de), die das Theme verwendet:
-
-| Page | Desktop | Mobile |
-| ---- | ------- | ------ |
-| Homepage Dunkelrot | ![homepage-desktop 1](/assets/screenshots/homepage-desktop-2.png) | ![homepage-mobile 1](/assets/screenshots/homepage-mobile-2.jpeg) |
-| Homepage Dunkelgrün | ![homepage-desktop 2](/assets/screenshots/homepage-desktop-1.png) | ![homepage-mobile 2](/assets/screenshots/homepage-mobile-1.jpeg) |
-| Blog | ![blog-desktop](/assets/screenshots/blog-desktop.png) | ![blog-mobile](/assets/screenshots/blog-mobile.jpeg) |
-| Blogpost | ![post-desktop](/assets/screenshots/post-desktop.png) | ![post-mobile](/assets/screenshots/post-mobile.jpeg) |
-
 # Erstmalige Verwendung eines Ghost-Themes?
 
 Ghost verwendet eine einfache Vorlagensprache namens [Handlebars](http://handlebarsjs.com/) für seine Themes.

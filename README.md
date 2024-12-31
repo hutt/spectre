@@ -19,15 +19,6 @@ A spectre is haunting Europe. This is its website's theme. 👻 [Ghost](https://
 |[Live Demo](https://spectre.hutt.io/)|[Download](https://github.com/hutt/spectre/releases/)|
 |---|---|
 
-Screenshots of [inesschwerdtner.de](https://inesschwerdtner.de), where the new theme version is rolled out already:
-
-| Page | Desktop | Mobile |
-| ---- | ------- | ------ |
-| Homepage Dunkelrot | ![homepage-desktop 1](/assets/screenshots/homepage-desktop-2.png) | ![homepage-mobile 1](/assets/screenshots/homepage-mobile-2.jpeg) |
-| Homepage Dunkelgrün | ![homepage-desktop 2](/assets/screenshots/homepage-desktop-1.png) | ![homepage-mobile 2](/assets/screenshots/homepage-mobile-1.jpeg) |
-| Blog | ![blog-desktop](/assets/screenshots/blog-desktop.png) | ![blog-mobile](/assets/screenshots/blog-mobile.jpeg) |
-| Blogpost | ![post-desktop](/assets/screenshots/post-desktop.png) | ![post-mobile](/assets/screenshots/post-mobile.jpeg) |
-
 # First time using a Ghost theme?
 
 Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
