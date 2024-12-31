@@ -56,9 +56,7 @@ function css(done) {
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
-}
 
-function printCss(done) {
     pump([
         src('assets/css/print.css', {sourcemaps: true}),
         postcss([
@@ -117,9 +115,18 @@ function js(done) {
     pump([
         src([
             'assets/js/lib/*.js',
-            'assets/js/*.js'
+            'assets/js/*.js',
+            '!assets/js/dielinke-logo-generator.js' // exclude dielinke-logo-generator.js
         ], {sourcemaps: true}),
         concat('source.js'),
+        uglify(),
+        dest('assets/built/', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
+
+    // handle dielinke-logo-generator.js seperately
+    pump([
+        src('assets/js/dielinke-logo-generator.js', {sourcemaps: true}),
         uglify(),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
@@ -142,13 +149,12 @@ function zipper(done) {
     ], handleError(done));
 }
 
-const cssWatcher = () => watch('assets/css/screen.css', css);
-const printCssWatcher = () => watch('assets/css/print.css', printCss);
+const cssWatcher = () => watch(['assets/css/screen.css', 'assets/css/print.css'], css);
 //const criticalCssWatcher = () => watch('assets/css/screen.css', critical);
 const jsWatcher = () => watch('assets/js/**', js);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
-const watcher = parallel(cssWatcher, printCssWatcher, jsWatcher, hbsWatcher);
-const build = series(css, printCss, js, critical);
+const watcher = parallel(cssWatcher, jsWatcher, hbsWatcher);
+const build = series(css, js, critical);
 
 exports.build = build;
 exports.zip = series(build, zipper);

@@ -52,20 +52,17 @@
 
 {{!-- generate custom logo --}}
 {{^if @site.logo}}
+    {{!-- Include JS for the logo generator --}}
+    <script src="{{asset "built/dielinke-logo-generator.js"}}"></script>
     <script>
-        // test!
-        // lines
-        let lines = Array();
-        lines[0] = "{{@site.title}}";
-
-        // color
+        let websiteTitle = "{{@site.title}}";
         let color = new Object();
         color.background = "#6F003C";
         color.text = "#FFFFFF";
         color.logoText = "#FFFFFF";
 
         // call generateLogo with await
-        generateLogo(lines, color);
+        generateLogo(websiteTitle, color);
     </script>
 {{/if}}
 

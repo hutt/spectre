@@ -1,8 +1,5 @@
-// Load TextToSVG module
-//import TextToSVG from "assets/built/source.js";
-
-async function generateLogo (logoText, color) {
-    // Array logoText: Contains strings (one per line)
+async function generateLogo(websiteName, color) {
+    // Array logoText: Contains string
     // Object color: Color pairs for the logo
     /// color.background
     /// - "#6F003C" (dark red)
@@ -16,6 +13,7 @@ async function generateLogo (logoText, color) {
     /// color.logoText
     /// - "#FFFFFF" (white)
 
+    // Constants
     const BACKDROP_MIN_HEIGHT = 65;
     const BACKDROP_Y = 41;
     const TEXT_START_Y = BACKDROP_Y + 48;
@@ -23,16 +21,109 @@ async function generateLogo (logoText, color) {
     const MAX_FONT_SIZE = 17;
     const MAX_WIDTH = 106;
     const MAX_LENGTH_PER_LINE = 20;
+    const MAX_LINES = 3;
 
-    // Check number of lines of text
-    if (logoText.length > 3) {
-        throw new Error('Die Anzahl der Textzeilen darf nicht mehr als 3 sein.');
+    // Decode escaped HTML Characters in title
+    function decodeHTMLEntities(text) {
+        const entityMap = {
+            '&shy;': '­', // Soft hyphen
+            '&ndash;': '–', // En dash
+            '&mdash;': '—', // Em dash
+            '&comma;': ',', // Comma
+            '&amp;': '&', // Ampersand
+            '&#40;': '(', // Left parenthesis
+            '&#41;': ')', // Right parenthesis
+            '&ldquo;': '„', // German opening double quotation mark
+            '&rdquo;': '"', // German closing double quotation mark
+            '&lsquo;': '‚', // German opening single quotation mark
+            '&rsquo;': "'", // German closing single quotation mark
+            '&quot;': '"', // Straight double quotation mark
+            '&#39;': "'", // Straight single quotation mark
+            '&laquo;': '«', // Left-pointing double angle quotation mark
+            '&raquo;': '»' // Right-pointing double angle quotation mark
+        };
+
+        return text.replace(/&shy;|&ndash;|&mdash;|&comma;|&amp;|&#40;|&#41;|&ldquo;|&rdquo;|&lsquo;|&rsquo;|&quot;|&#39;|&laquo;|&raquo;/g, (match) => entityMap[match] || match);
     }
 
-    // Check character count per line
-    const linesExceedingMaxLength = logoText.filter(line => line.length > MAX_LENGTH_PER_LINE);
-    if (linesExceedingMaxLength.length > 0) {
-        throw new Error(`Die folgenden Textzeilen überschreiten die maximale Zeichenzahl von ${MAX_LENGTH_PER_LINE}: ${linesExceedingMaxLength.join(', ')}`);
+    // Function to split text into lines
+    function splitIntoLines(text) {
+        const words = text.split(' ');
+        const lines = [];
+        let currentLine = '';
+
+        function hyphenateGermanWord(word) {
+            const prefixes = ['ab', 'an', 'auf', 'aus', 'ein', 'mit', 'nach', 'über', 'um', 'un', 'vor', 'zu'];
+            const suffixes = ['heit', 'keit', 'ung', 'schaft'];
+
+            for (const prefix of prefixes) {
+                if (word.startsWith(prefix) && word.length > prefix.length + 3) {
+                    return [prefix, ...hyphenateGermanWord(word.slice(prefix.length))];
+                }
+            }
+
+            for (const suffix of suffixes) {
+                if (word.endsWith(suffix) && word.length > suffix.length + 3) {
+                    return [...hyphenateGermanWord(word.slice(0, -suffix.length)), suffix];
+                }
+            }
+
+            if (word.length <= MAX_LENGTH_PER_LINE) {
+                return [word];
+            }
+
+            const vowels = 'aeiouäöüAEIOUÄÖÜ';
+            let lastVowelIndex = -1;
+            for (let i = 1; i < word.length - 1; i++) {
+                if (vowels.includes(word[i])) {
+                    lastVowelIndex = i;
+                }
+                if (i >= MAX_LENGTH_PER_LINE - 1) {
+                    if (lastVowelIndex > 0) {
+                        return [word.slice(0, lastVowelIndex + 1), ...hyphenateGermanWord(word.slice(lastVowelIndex + 1))];
+                    }
+                    return [word.slice(0, MAX_LENGTH_PER_LINE - 1), ...hyphenateGermanWord(word.slice(MAX_LENGTH_PER_LINE - 1))];
+                }
+            }
+            return [word];
+        }
+
+        for (const word of words) {
+            if ((currentLine + (currentLine ? ' ' : '') + word).length <= MAX_LENGTH_PER_LINE) {
+                currentLine += (currentLine ? ' ' : '') + word;
+            } else {
+                if (currentLine) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    // Word is longer than MAX_LENGTH_PER_LINE
+                    let remainingWord = word;
+                    while (remainingWord.length > MAX_LENGTH_PER_LINE) {
+                        lines.push(remainingWord.slice(0, MAX_LENGTH_PER_LINE - 1) + '-');
+                        remainingWord = remainingWord.slice(MAX_LENGTH_PER_LINE - 1);
+                    }
+                    currentLine = remainingWord;
+                }
+            }
+        }
+
+        if (currentLine) {
+            lines.push(currentLine);
+        }
+
+        return lines;
+    }
+
+
+    // decode some escaped HTML characters
+    websiteName = decodeHTMLEntities(websiteName);
+
+    // Split website name into lines
+    const logoText = splitIntoLines(websiteName);
+
+    // Check number of lines
+    if (logoText.length > MAX_LINES) {
+        throw new Error(`Der Websitename ist zu lang. Maximal ${MAX_LINES} Zeilen mit je ${MAX_LENGTH_PER_LINE} Zeichen sind erlaubt.`);
     }
 
     let textToSvg = null;
@@ -40,20 +131,16 @@ async function generateLogo (logoText, color) {
 
     // Load font
     textToSvg = await TextToSVG.load("/assets/fonts/inter-cyrillic_greek_latin_latin-ext-500.ttf");
-    //textToSvg = await TextToSVG.loadSync("./inter-cyrillic_greek_latin_latin-ext-500.ttf");
-    
+
     // Calculate font size and adjust text
     let fontSize = MAX_FONT_SIZE;
-
     const pathParams = {
         fontSize,
         letterSpacing: -0.01,
-    }
+    };
 
-    // Filter out empty lines
-    const nonEmptyLines = logoText.filter(line => line.trim() !== '');
+    const longestLine = logoText.reduce((a, b) => textToSvg.getWidth(a, pathParams) > textToSvg.getWidth(b, pathParams) ? a : b, '');
 
-    const longestLine = nonEmptyLines.reduce((a, b) => textToSvg.getWidth(a, pathParams) > textToSvg.getWidth(b, pathParams) ? a : b, '');
     while (textToSvg.getWidth(longestLine, pathParams) > MAX_WIDTH) {
         fontSize -= 0.01;
         pathParams.fontSize = fontSize;
@@ -64,9 +151,9 @@ async function generateLogo (logoText, color) {
     }
 
     // Generate SVG for each line of text
-    const fontTopAdjustment = (12 * (fontSize / MAX_FONT_SIZE))
+    const fontTopAdjustment = (12 * (fontSize / MAX_FONT_SIZE));
     const fontHeight = textToSvg.getHeight(fontSize);
-    const realLines = nonEmptyLines.map((line, index) => {
+    const realLines = logoText.map((line, index) => {
         const y = (index * (fontHeight - 1)) + TEXT_START_Y + fontTopAdjustment;
         return {
             text: line,
@@ -79,26 +166,21 @@ async function generateLogo (logoText, color) {
             }),
             fontSize,
             y
-        }
+        };
     });
 
     // Calculate box height
     boxHeight = realLines.length ? realLines[realLines.length - 1].y - BACKDROP_Y + 12 : BACKDROP_MIN_HEIGHT;
 
-
     // Construct SVG string
     let svg = `<svg viewBox="0 0 ${188} ${40 + boxHeight}" width="188" height="${40 + boxHeight}" aria-labelledby="logoTitle" role="img" xmlns="http://www.w3.org/2000/svg">`;
-
-    // Add title
     svg += `<title id="logoTitle">Logo der Partei Die Linke.</title>`;
-
-    // Append backdrop if background color is not transparent
     svg += `<g>`;
+
     if (color.background !== 'transparent') {
         svg += `<rect id="backdrop" x="41" y="${BACKDROP_Y}" height="${boxHeight}" width="149" fill="${color.background}"></rect>`;
     }
-    
-    // Append paths for each line of text
+
     realLines.forEach(line => {
         svg += `<path d="${line.path}" fill="${color.text}"/>`;
     });
@@ -145,30 +227,9 @@ async function generateLogo (logoText, color) {
 
     // Remove whitespaces, tabs & newlines
     svg = svg.replace(/\s+/g, " ");
-
     // Remove whitespaces between html tags
     svg = svg.replace(/> </g, "><");
 
     let placeholderLogo = document.querySelector("#gh-navigation > div > div.gh-navigation-brand > a");
     placeholderLogo.innerHTML = svg;
 }
-
-//exports.generateLogo = generateLogo;
-
-/*
-// test!
-
-// lines
-let lines = Array();
-lines[0] = "BAG";
-lines[1] = "Die Linke testet";
-
-// color
-let color = new Object();
-color.background = "#6F003C";
-color.text = "#FFFFFF";
-color.logoText = "#FFFFFF";
-
-// call generateLogo with await
-generateLogo(lines, color);
-*/
