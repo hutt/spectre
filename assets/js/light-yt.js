@@ -56,9 +56,18 @@ function initYouTubeVideos() {
     videoTitle.appendChild(document.createTextNode(''));
     div.appendChild(videoTitle);
 
-    let playButton=document.createElement('div');
+    let playButton = document.createElement('div');
     playButton.setAttribute("class", "play");
     div.appendChild(playButton); 
+
+    let privacyNote = document.createElement('div');
+    if (typeof privacyNoteText === 'undefined') {
+      privacyNoteText = "Click to Load YouTube Video";
+    }
+
+    privacyNote.setAttribute("class", "privacy-note");
+    privacyNote.appendChild(document.createTextNode(privacyNoteText));
+    div.appendChild(privacyNote);
     
     div.onclick = function() { labnolIframe(this); };
     playerElements[n].appendChild(div);
