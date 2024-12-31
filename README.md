@@ -14,7 +14,7 @@ A spectre is haunting Europe. This is its website's theme. 👻 [Ghost](https://
 
 # Mockup & Screenshots
 
-![Theme Mockups](/assets/mockups.png)
+![Theme Mockup](/assets/mockup-inesschwerdtner.de.png)
 
 |[Live Demo](https://spectre.hutt.io/)|[Download](https://github.com/hutt/spectre/releases/)|
 |---|---|
