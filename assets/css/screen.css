@@ -3098,11 +3098,13 @@ main:has(article.tag-hash-termin) + .gh-recommended-posts, main:has(article.tag-
 }
 
 .gh-footer-menu .nav {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
     gap: 8px 28px;
     flex-wrap: wrap;
     list-style-type: none;
-    padding-inline-start: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .gh-footer-menu a {
