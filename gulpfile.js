@@ -116,6 +116,8 @@ function js(done) {
         src([
             'assets/js/lib/*.js',
             'assets/js/*.js',
+            '!assets/js/lib/opentype.js', // exclude opentype.js
+            '!assets/js/lib/text-to-svg.js', // exclude text-to-svg.js
             '!assets/js/dielinke-logo-generator.js' // exclude dielinke-logo-generator.js
         ], {sourcemaps: true}),
         concat('source.js'),
@@ -126,7 +128,12 @@ function js(done) {
 
     // handle dielinke-logo-generator.js seperately
     pump([
-        src('assets/js/dielinke-logo-generator.js', {sourcemaps: true}),
+        src([
+            'assets/js/lib/opentype.js',
+            'assets/js/lib/text-to-svg.js',
+            'assets/js/dielinke-logo-generator.js'
+        ], {sourcemaps: true}),
+        concat('dielinke-logo-generator.js'),
         uglify(),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()

@@ -1,5 +1,3 @@
-//import opentype from "assets/built/source.js";
-
 function parseAnchorOption(anchor) {
     let horizontal = anchor.match(/left|center|right/gi) || [];
     horizontal = horizontal.length === 0 ? "left" : horizontal[0];
