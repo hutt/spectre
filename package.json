@@ -2,7 +2,7 @@
     "name": "spectre",
     "description": "A spectre is haunting Europe. This is its website's theme.",
     "demo": "https://spectre.hutt.io/",
-    "version": "2.7.2",
+    "version": "2.7.3",
     "engines": {
         "ghost": ">=5.0.0"
     },
