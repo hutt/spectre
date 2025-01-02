@@ -196,6 +196,57 @@ Mit `yarn critical` können diese Inline-Styles manuell neu generiert werden.
 
 Sprectre verwendet inline SVG-Icons, die über Handlebars-Partials eingebunden werden. Alle Icons befinden sich in `/partials/icons`. Um ein Icon zu verwenden, einfach den Namen der entsprechenden Datei einbinden, z.B. Um das SVG-Icon in `/partials/icons/rss.hbs` einzubinden - `{{> "icons/rss"}}` verwenden. Weitere Icons können auf die gleiche Weise hinzugefügt werden.
 
+# Third-Party-Requests komplett vermeiden
+
+In der Standard-Konfiguration machen [sowohl Ghost](https://github.com/TryGhost/Ghost/blob/2f09dd888024f143d28a0d81bede1b53a6db9557/PRIVACY.md) als auch [light-yt.js](https://www.labnol.org/internet/light-youtube-embeds/27941/), das Plugin, das ich für datenschutzfreundliche YouTube-Embeds verwende, Requests an Dritte. Datenschutzrechtlich sind diese unproblematisch. Man kann sie aber trotzdem umgehen.
+
+## JSDelivr-Requests (Ghost)
+
+Für das Portal, die Suche und (falls aktiviert) die Kommentar-Funktion bindet Ghost Skripte und Stylesheets von JSDelivr ein. Es ist jedoch auch möglich, eigene URLs in der Konfigurationsdatei `config.[env].json` zu hinterlegen (👉 [offizielle Dokumentation](https://ghost.org/docs/config/#privacy)).
+
+Ich habe [einen Cloudflare-Worker](https://gist.github.com/hutt/7b3c254a995849e6a06709a872840685) geschrieben, der Requests an JSDelivr proxied und cached. Wenn man diesen über die Route `meine-ghost-website.de/cdn-jsdelivr/*`, unter der selben Domain wie die Ghost-Instanz auch, verfügbar macht, können Third-Party-Requests vermieden werden. Die Konfigurationsdatei müsste man in diesem Fall lediglich um die folgenden Zeilen erweitern:
+
+```json
+{
+  "url": "http://localhost:2368",
+  "server": {
+    "port": 2368,
+    "host": "::"
+  },
+  [...]
+  "portal": {
+    "url": "/cdn-jsdelivr/npm/@tryghost/portal@~{version}/umd/portal.min.js"
+  },
+  "sodoSearch": {
+      "url": "/cdn-jsdelivr/npm/@tryghost/sodo-search@~{version}/umd/sodo-search.min.js",
+      "styles": "/cdn-jsdelivr/npm/@tryghost/sodo-search@~{version}/umd/main.css"
+  },
+  "comments": {
+      "url": "/cdn-jsdelivr/npm/@tryghost/comments-ui@~{version}/umd/comments-ui.min.js",
+      "styles": "/cdn-jsdelivr/npm/@tryghost/comments-ui@~{version}/umd/main.css"
+  }
+  [...]
+}
+```
+
+## Requests an YouTube (light-yt.js)
+
+Ruft man eine Seite auf, in die ein YouTube-Video mit light-yt.js eingebettet wurde, macht das Plugin zwei Requests:
+
+- Von `https://www.youtube-nocookie.com` wird ein JSON-Objekt mit Informationen zum eingebetteten Video abgerufen
+- Das Thumbnail wird von `https://i.ytimg.com` geladen.
+
+Auch diese Requests können mithilfe eines [Cloudflare-Workers](https://gist.github.com/hutt/62e9355afb0d4ff0eeecd39bc51652de) geproxied werden. Stellt man den Worker mithilfe einer Route, z.B. `meine-ghost-website.de/yt-proxy/*` (unter der selben Domain wie die Ghost-Instanz auch) zur Verfügung, kann man die alternativen URLs zum Laden dieser Daten mithilfe eines Script-Tags im globalen Site-Header hinterlegen:
+
+```html
+<script>
+  // load YouTube video data via proxy
+  const YT_DATA_URL_PREFIX = "/yt-proxy/data";
+  // load YouTube Thumbnails via proxy
+  const YT_THUMBNAIL_URL_PREFIX = "/yt-proxy/thumbnail";
+</script>
+```
+
 # Copyright & Lizenz
 
 Copyright (c) 2013–2023 [Ghost Foundation](https://ghost.org); 2023–2024 [Jannis Hutt](https://hutt.io). Dieses Theme basiert auf [Source](https://github.com/TryGhost/Source) der [Ghost Foundation](https://ghost.org) und wird ebenfalls unter der [MIT-Lizenz](LICENSE) veröffentlicht.

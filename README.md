@@ -196,6 +196,57 @@ Spectre uses inline SVG icons, which are included via Handlebars partials. All i
 
 Additional SVG icons can be added in the same manner.
 
+# Avoiding Third-Party Requests Completely
+
+In the default configuration, both [Ghost](https://github.com/TryGhost/Ghost/blob/2f09dd888024f143d28a0d81bede1b53a6db9557/PRIVACY.md) and [light-yt.js](https://www.labnol.org/internet/light-youtube-embeds/27941/) (the plugin I use for privacy-friendly YouTube embeds) make requests to third parties. From a data protection perspective, these are unproblematic. However, they can be circumvented as well.
+
+## JSDelivr Requests (Ghost)
+
+For the portal, search, and (if activated) the comments function, Ghost includes scripts and stylesheets from JSDelivr. However, it is also possible to specify custom URLs in the configuration file `config.[env].json` (👉 [official documentation](https://ghost.org/docs/config/#privacy)).
+
+I have written [a Cloudflare Worker](https://gist.github.com/hutt/7b3c254a995849e6a06709a872840685) that proxies and caches requests to JSDelivr. If you make this available via the route `my-ghost-website.com/cdn-jsdelivr/*`, under the same domain as the Ghost instance, third-party requests can be avoided. In this case, you would only need to extend the configuration file with the following lines:
+
+```json
+{
+  "url": "http://localhost:2368",
+  "server": {
+    "port": 2368,
+    "host": "::"
+  },
+  [...]
+  "portal": {
+    "url": "/cdn-jsdelivr/npm/@tryghost/portal@~{version}/umd/portal.min.js"
+  },
+  "sodoSearch": {
+      "url": "/cdn-jsdelivr/npm/@tryghost/sodo-search@~{version}/umd/sodo-search.min.js",
+      "styles": "/cdn-jsdelivr/npm/@tryghost/sodo-search@~{version}/umd/main.css"
+  },
+  "comments": {
+      "url": "/cdn-jsdelivr/npm/@tryghost/comments-ui@~{version}/umd/comments-ui.min.js",
+      "styles": "/cdn-jsdelivr/npm/@tryghost/comments-ui@~{version}/umd/main.css"
+  }
+  [...]
+}
+```
+
+## Requests to YouTube (light-yt.js)
+
+When you access a page with a YouTube video embedded using light-yt.js, the plugin makes two requests:
+
+- A JSON object with information about the embedded video is retrieved from `https://www.youtube-nocookie.com`
+- The thumbnail is loaded from `https://i.ytimg.com`
+
+These requests can also be proxied using a [Cloudflare Worker](https://gist.github.com/hutt/62e9355afb0d4ff0eeecd39bc51652de). If you make the worker available using a route, e.g., `my-ghost-website.com/yt-proxy/*` (under the same domain as the Ghost instance), you can specify the alternative URLs for loading this data using a script tag in the global site header:
+
+```html
+<script>
+  // load YouTube video data via proxy
+  const YT_DATA_URL_PREFIX = "/yt-proxy/data";
+  // load YouTube Thumbnails via proxy
+  const YT_THUMBNAIL_URL_PREFIX = "/yt-proxy/thumbnail";
+</script>
+```
+
 # Copyright & License
 
 Copyright (c) 2013–2023 [Ghost Foundation](https://ghost.org); 2023–2024 [Jannis Hutt](https://hutt.io). This theme is based on [Ghost Foundation](https://ghost.org)'s theme [Source](https://github.com/TryGhost/Source) and released under the [MIT license](LICENSE).
