@@ -182,6 +182,10 @@
                 "type": "text",
                 "default": ""
             },
+            "threads": {
+                "type": "text",
+                "default": ""
+            },
             "instagram": {
                 "type": "text",
                 "default": ""
