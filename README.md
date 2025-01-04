@@ -196,7 +196,7 @@ Spectre uses inline SVG icons, which are included via Handlebars partials. All i
 
 Additional SVG icons can be added in the same manner.
 
-# Avoiding Third-Party Requests Completely
+# Eliminating Third-Party Requests Completely
 
 In the default configuration, both [Ghost](https://github.com/TryGhost/Ghost/blob/2f09dd888024f143d28a0d81bede1b53a6db9557/PRIVACY.md) and [light-yt.js](https://www.labnol.org/internet/light-youtube-embeds/27941/) (the plugin I use for privacy-friendly YouTube embeds) make requests to third parties. From a data protection perspective, these are unproblematic. However, they can be circumvented as well.
 
