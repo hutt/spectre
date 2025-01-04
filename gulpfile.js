@@ -17,6 +17,9 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const easyimport = require('postcss-easy-import');
 
+// fetch für externes cards-Stylesheet
+const axios = require('axios');
+
 // penthouse laden
 const penthouse = require('penthouse');
 
@@ -69,33 +72,40 @@ function css(done) {
     ], handleError(done));
 }
 
-function generateCriticalCSS(done, category, url) {
-    penthouse({
-        url: url,
-        css: 'assets/built/screen.css',
-        width: 390,
-        height: 1280,
-        keepLargerMediaQueries: true,
-        //forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[\.\-\w\s]*/g', '/\#gh\-navigation/g', '/\.gh\-main/g', '/\.gh\-inner/g', '/\.has\-sans\-title \:is\(\.is\-title,\.gh\-content[\.\-\>\*\+\[\]\w\s]*/g', '/\.gh\-content\>\:is\(hr\,blockquote\,iframe\)/g'],
-        forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[\.\-\w\s]*/g', '/\#gh\-navigation/g', '/\.gh\-content[\.\-\>\*\+\[\]\w\s]*/g', '\.kg\-blockquote\-alt/g'],
-        renderWaitTime: 500,
-        blockJSRequests: false,
-    })
-    .then(criticalCss => {
-        // remove all @font-face and @import rules
-        //const regex = /@font-face\s*\{[^}]*\}|@import\s+url\([^)]+\)[^;]*;/g;
-        // replace all links
+async function generateCriticalCSS(done, category, url) {
+    try {
+        // Fetch the external CSS
+        const externalCssResponse = await axios.get('http://hegel.hutt/public/cards.min.css');
+        const externalCss = externalCssResponse.data;
+
+        // Read the main stylesheet
+        const mainCss = fs.readFileSync('assets/built/screen.css', 'utf8');
+
+        // Combine the stylesheets
+        const combinedCss = mainCss + '\n' + externalCss;
+
+        // Generate critical CSS using the combined stylesheet
+        const criticalCss = await penthouse({
+            url: url,
+            cssString: combinedCss,  // Use cssString instead of css file path
+            width: 390,
+            height: 1280,
+            keepLargerMediaQueries: true,
+            forceInclude: ['/\.youtube\-player[.\w\s]*/g', '/\.gh\-navigation[\.\-\w\s]*/g', '/\#gh\-navigation/g', '/\.gh\-content[\.\-\>\*\+\[\]\w\s]*/g', '/\.kg\-blockquote\-alt/g', '/\.kg\-header\-card/g', '/\.kg\-header\-card\-content/g', '/\.kg\-header\-card\-image/g'],
+            renderWaitTime: 1000,
+            blockJSRequests: false,
+        });
+
+        // Process the critical CSS
         const regex = /url\((?:'|"|)(\.\.\/)([^)'"]+)(?:'|"|)\)/g;
         const cleanedCss = criticalCss.replace(regex, (match, p1, p2) => `url('/assets/${p2}')`);
         fs.writeFileSync(`partials/css/${category}.critical.css.hbs`, `<style>\n${cleanedCss}\n</style>`);
-    })
-    .catch(err => {
+    } catch (err) {
         console.error(err);
         done(err);
-    })
-    .finally(() => {
+    } finally {
         done();
-    });
+    }
 }
 
 function critical(done) {

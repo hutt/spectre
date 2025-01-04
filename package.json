@@ -206,6 +206,7 @@
         ]
     },
     "dependencies": {
+        "axios": "^1.7.9",
         "caniuse-lite": "^1.0.30001690"
     }
 }
