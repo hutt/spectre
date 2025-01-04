@@ -28,7 +28,13 @@
     <link rel="stylesheet" type="text/css" media="print" href="{{asset "built/print.css"}}">
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings, it should always be the last tag before the closing head tag --}}
-    {{ghost_head}}
+
+    {{#is "post"}}
+        {{!-- Load comments helper scripts only for posts --}}
+        {{ghost_head}}
+    {{else}}
+        {{ghost_head exclude="comment_counts"}}
+    {{/is}}
 
     {{> "components/inline-js"}}
 
