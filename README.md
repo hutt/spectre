@@ -8,7 +8,7 @@ A spectre is haunting Europe. This is its website's theme. 👻 [Ghost](https://
 
 # Demo
 
-- [spectre.hutt.io](spectre.hutt.io)
+- [spectre.hutt.io](https://spectre.hutt.io)
 - [Ines Schwerdtner](https://inesschwerdtner.de)
 - [BAG Betrieb und Gewerkschaft](https://betriebundgewerkschaft.de)
 
