@@ -157,6 +157,7 @@ function zipper(done) {
             '**',
             '!node_modules', '!node_modules/**',
             '!dist', '!dist/**',
+            '!grafik', '!grafik/**',
             '!yarn-error.log',
             '!yarn.lock',
             '!gulpfile.js'
