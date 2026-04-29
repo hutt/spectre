@@ -8,9 +8,13 @@ Ein Gespenst geht um in Europa. Dies ist sein Theme. 👻 [Ghost](https://github
 
 # Demo
 
-- [spectre.hutt.io](spectre.hutt.io)
-- [Ines Schwerdtner](https://inesschwerdtner.de)
-- [BAG Betrieb und Gewerkschaft](https://betriebundgewerkschaft.de)
+- [spectre.hutt.io](https://spectre.hutt.io/)
+- [Ines Schwerdtner, MdB](https://inesschwerdtner.de/)
+- [Maik Brückner, MdB](https://maik-brueckner.de/)
+- [Cansu Özdemir, MdB](https://cansu-oezdemir.de/)
+- [Eric Stehr](https://ericstehr.de/)
+- [BAG Kindheit und Jugend](https://bag-kindheitundjugend.de/)
+- [BAG Betrieb und Gewerkschaft](https://betriebundgewerkschaft.de/)
 
 # Mockup & Screenshots
 
