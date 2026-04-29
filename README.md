@@ -1,6 +1,6 @@
 # Spectre
 
-[!de](README.de.md)
+[![de](https://img.shields.io/badge/lang-de-blue.svg)](README.de.md)
 
 ![Header Graphic](/assets/readme-header.png)
 
