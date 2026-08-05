@@ -170,38 +170,6 @@
                 "default": "List",
                 "group": "homepage"
             },
-            "x": {
-                "type": "text",
-                "default": ""
-            },
-            "bluesky": {
-                "type": "text",
-                "default": ""
-            },
-            "mastodon": {
-                "type": "text",
-                "default": ""
-            },
-            "threads": {
-                "type": "text",
-                "default": ""
-            },
-            "instagram": {
-                "type": "text",
-                "default": ""
-            },
-            "tiktok": {
-                "type": "text",
-                "default": ""
-            },
-            "youtube": {
-                "type": "text",
-                "default": ""
-            },
-            "facebook": {
-                "type": "text",
-                "default": ""
-            },
             "podcast": {
                 "type": "text",
                 "default": ""
