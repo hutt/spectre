@@ -169,10 +169,6 @@
                 ],
                 "default": "List",
                 "group": "homepage"
-            },
-            "podcast": {
-                "type": "text",
-                "default": ""
             }
         }
     },
