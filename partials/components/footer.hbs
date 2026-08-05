@@ -31,7 +31,11 @@
             <nav class="gh-footer-icons">
                 <ul class="social-icons">
                     {{#social_accounts @site}}
-                        <li><a href="{{href}}" class="icon" title="{{name}}">{{#> (concat "icons/" type)}}</a></li>
+                        <li><a href="{{href}}" class="icon" target="_blank" rel="noopener" aria-label="{{name}}" title="{{name}}">
+                            {{#> (concat "icons/" type)}}
+                                <span>{{name}}</span>
+                            {{/undefined}}
+                        </a></li>
                     {{/social_accounts}}
                 </ul>
             </nav>
